@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTR 2 FIA GT Racing · White Cat Game Vault</title>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../scripts/game/game-detail.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-img-wrap">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <img id="lb-img" src="" alt="">
+  </div>
+  <div class="lb-nav">
+    <span class="lb-counter" id="lb-counter">1 / 5</span>
+    <div class="lb-controls">
+      <button class="lb-arrow" onclick="lbMove(-1)">&#8592; Back</button>
+      <button class="lb-arrow" onclick="lbMove(1)">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../../../index.html">
+    <img class="logo-img" src="../../../assets/logo.webp" alt="White Cat" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <a class="header-back" href="../../../game_index.html" aria-label="Back to games">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M19 12H5M12 5l-7 7 7 7"/>
+  </svg>
+</a>
+</header>
+
+<div class="game-hero">
+  <div class="game-hero-bg" style="background-image:url('cover.webp')"></div>
+  <div class="game-hero-content">
+    <div class="game-hero-tag">&#9670; Racing &bull; Simulation &bull; 2006</div>
+    <h1 class="game-hero-title">GTR 2<br><span>FIA GT Racing</span></h1>
+    <p class="game-hero-sub">SimBin Studios &bull; The Ultimate GT Racing Simulation</p>
+    <div class="hero-badges">
+      <span class="hero-badge">★★★★★ 8.8 / 10</span>
+      <span class="hero-badge soul">Very Positive</span>
+      <span class="hero-badge green">Simulation Classic</span>
+      <span class="hero-badge">Unlimited Hours</span>
+    </div>
+  </div>
+</div>
+
+<div class="price-float">
+  <div class="price-float-title">GTR 2 – FIA GT RACING GAME</div>
+  <div class="price-float-right">
+    <div class="price-float-rating">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;--</div>
+    <div class="price-float-val">--</div>
+  </div>
+</div>
+
+<div class="game-content">
+
+  <div class="section-block">
+    <div class="gallery-section">
+      <div class="sec-label">&#9670; Screenshots</div>
+      <div class="sec-title">On The Track</div>
+      <div class="cf-wrap">
+        <div class="cf-stage" id="cf-stage"></div>
+      </div>
+      <div class="cf-controls">
+        <div class="cf-dots" id="cf-dots"></div>
+        <div class="cf-nav-row">
+          <button class="cf-nav-btn" onclick="cfMove(-1)">⬅</button>
+          <div class="cf-nav-counter" id="counterEl">1/5</div>
+          <button class="cf-nav-btn" onclick="cfMove(1)">➡</button>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--dim);margin-top:12px;font-family:'Syne',sans-serif;letter-spacing:.1em;">
+      TAP CENTER IMAGE TO ENLARGE &bull; SWIPE TO NAVIGATE
+    </p>
+  </div>
+
+  <div class="section-block">
+    <div class="sec-label">🛡️ Technical Specifications</div>
+    <div class="sec-title">System Requirements</div>
+    <div class="req-grid">
+      <div class="req-box">
+        <div class="req-type">Minimum</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows XP / Vista / 7</span></li>
+          <li><strong>CPU</strong> <span>Intel Pentium 4 / AMD Athlon 2.0 GHz</span></li>
+          <li><strong>RAM</strong> <span>512 MB RAM</span></li>
+          <li><strong>GPU</strong> <span>128 MB DirectX 9 Compatible</span></li>
+          <li><strong>Storage</strong> <span>4 GB available</span></li>
+        </ul>
+      </div>
+      <div class="req-box recommended">
+        <div class="req-type">Recommended</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows XP / Vista / 7 (32/64bit)</span></li>
+          <li><strong>CPU</strong> <span>Intel Core 2 Duo / AMD Athlon 64 X2</span></li>
+          <li><strong>RAM</strong> <span>1 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>256 MB DirectX 9 Compatible</span></li>
+          <li><strong>Storage</strong> <span>4 GB available</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAME OVERVIEW</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">GTR 2 FIA GT Racing - Sim Racing Puristsge Classic</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>GTR 2 kiyala kiyanne hardcore racing sim community eka adath respect karana benchmark title ekak. SimBin Studios 2006 release kala me game eka FIA GT era race structure eka realistic physics ekka denawa. arcade race game walin wenas wenne meka speed fantasy nemei, precision discipline ekak.</p><p>Car setup, tire wear, fuel strategy, weather transitions, and day-night race flow combine wela endurance racing feel eka hadanawa. steering wheel users ta meka thama old-school simulation gold standard ekak widiyata salakenne.</p></div><div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;"><strong>Why You Should Play This</strong><ul style="margin:10px 0 0 18px; padding:0;"><li>Realistic GT handling and race behavior.</li><li>Deep setup tuning for each track condition.</li><li>Strong endurance race atmosphere with day/night cycles.</li><li>Classic FIA GT car roster and circuits.</li><li>Still one of the best training games for race discipline.</li></ul></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAME PHILOSOPHY</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Consistency Over Flash</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>GTR 2 philosophy eka simple: hama lap ekama clean karanna. late braking show-off karala eka lap win karanna puluwan, nam tire and fuel management ignore karoth full race lose wenawa. me game eken players la ganna loku lesson eka thama consistency.</p><p>AI behavior and car balance nisa every class ekata own character ekak thiyenawa. track temperature and weather condition wenas unama braking points and grip levels adjust karanna one.</p><div class="lore-highlight" style="background:linear-gradient(135deg,#161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37; padding:25px; margin:25px 0; border-radius:0 8px 8px 0;"><em style="color:#D4AF37; font-size:1.1em;">"In GTR 2, pace wins laps, but control wins races."</em><p style="color:#a0a0a0; margin-top:10px;">Sim note: race craft + setup thinking ekata equal weight dena nisa meka true simulator feel ekak denna puluwan.</p></div></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; TRACK / ENVIRONMENT</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">FIA GT Circuit Rotation</div><div class="areas-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px; margin-top:20px;"><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ Spa-Francorchamps</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: high-speed technical. Key feature: Eau Rouge commitment. Mood: relentless precision.</p></div><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Monza</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: power circuit. Key feature: heavy braking zones. Mood: slipstream battles.</p></div><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #8e44ad;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Nürburgring</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: technical endurance. Key feature: rhythm complexity. Mood: strategic pressure.</p></div></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAMEPLAY MECHANICS</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Setup, Tire, Fuel, and Racecraft</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Core loop eke practice -> qualify -> race progression thiyenawa. car setup panel eken suspension, gearing, brake balance, and aero adjust karala track-specific tuning karanna puluwan. race length wadi unaama pit strategy and tire conservation critical.</p><div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">✦ <strong>This game's most unique feature is full endurance-style simulation with meaningful mechanical setup depth.</strong></div></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; RACE CLASSES / VEHICLES</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">GT Machinery</div><table style="width:100%; border-collapse:collapse; margin-top:20px;"><thead><tr style="background:#D4AF37;"><th style="padding:12px; color:#111; text-align:left;">Name</th><th style="padding:12px; color:#111; text-align:left;">Class</th><th style="padding:12px; color:#111; text-align:left;">Speed</th><th style="padding:12px; color:#111; text-align:left;">Handling</th><th style="padding:12px; color:#111; text-align:left;">Notes</th></tr></thead><tbody><tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Ferrari 550 Maranello</td><td style="padding:10px; color:#a0a0a0;">GT1</td><td style="padding:10px; color:#a0a0a0;">High</td><td style="padding:10px; color:#a0a0a0;">Demanding</td><td style="padding:10px; color:#a0a0a0;">Powerful but requires smooth inputs.</td></tr><tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Porsche 911 GT3 RSR</td><td style="padding:10px; color:#a0a0a0;">GT2</td><td style="padding:10px; color:#a0a0a0;">Medium-High</td><td style="padding:10px; color:#a0a0a0;">Stable</td><td style="padding:10px; color:#a0a0a0;">Strong all-round endurance option.</td></tr><tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Lamborghini Murcielago R-GT</td><td style="padding:10px; color:#a0a0a0;">GT1</td><td style="padding:10px; color:#a0a0a0;">Very High</td><td style="padding:10px; color:#a0a0a0;">Aggressive</td><td style="padding:10px; color:#a0a0a0;">Fast but punishes overdriving.</td></tr></tbody></table></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAME HISTORY &amp; DEVELOPMENT</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">SimBin Era Engineering</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>GTR 2 developed by SimBin and released 2006. critical circles walin meka praised une realistic force feedback, physics integrity, and race weekend authenticity nisa. community mods support eken game longevity wadi una.</p><p>Sim racing history waladi GTR 2 often mention karanne Assetto/iRacing era kalin simulation seriousness mainstream karapu title ekak widiyata.</p></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; REPLAYABILITY</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Endless Setup and Lap Improvement</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Racing sim nisa official story mode nethi unath replayability exceptionally high. new setups test karala lap delta improve karanna, AI difficulty tune karala long race runs karanna, and modded seasons play karanna puluwan.</p></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px; border:1px solid #D4AF37;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; COMMUNITY CONTENT BOX</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Paddock Notes</div><div class="lore-highlight" style="background:linear-gradient(135deg,#161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37; padding:25px; margin:25px 0; border-radius:0 8px 8px 0;"><em style="color:#D4AF37; font-size:1.1em;">"Many sim racers still use GTR 2 for pure physics-feel benchmarking."</em><p style="color:#a0a0a0; margin-top:10px;">Fun fact: endurance-style day/night transitions were a major wow feature for its generation.</p></div><div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;"><strong>PRO TIP:</strong> race start ekedi aggressive attack karanna epa. tire temp stabilize karala pace build karanna.</div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">"Pure speed is easy. Controlled speed wins championships." - Team Radio</div></div>
+
+  <div class="section-block">
+    <p style="text-align: center; color: var(--hk-gold); font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.2em;">
+      THANK YOU FOR EXPLORING GTR 2
+    </p>
+    <p style="text-align: center; font-size: 13px; color: var(--dim);">
+      Project by White Cat Game Vault &bull; 2026
+    </p>
+  </div>
+
+</div><footer style="padding: 4rem 2rem; border-top: 1px solid var(--border); text-align: center; background: #05060a;">
+  <div style="font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--text); letter-spacing: 2px;">
+    WHITE<span style="color:var(--hk-gold)">CAT</span> VAULT
+  </div>
+  <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">Explore the unseen lore of the gaming world.</p>
+</footer>
+
+<script src="../../../scripts/game/game-detail.js"></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>
+
