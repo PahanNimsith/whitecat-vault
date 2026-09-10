@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halo: Spartan Strike · White Cat Game Vault</title>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../scripts/game/game-detail.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-img-wrap">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <img id="lb-img" src="" alt="Halo: Spartan Strike View">
+  </div>
+  
+  <div class="lb-nav">
+    <span class="lb-counter" id="lb-counter">1 / 10</span>
+    <div class="lb-controls">
+      <button class="lb-arrow" onclick="lbMove(-1)">&#8592; Back</button>
+      <button class="lb-arrow" onclick="lbMove(1)">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../../../index.html">
+    <img class="logo-img" src="../../../assets/logo.webp" alt="White Cat" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <a class="header-back" href="../../../game_index.html" aria-label="Back to games">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M19 12H5M12 5l-7 7 7 7"/>
+  </svg>
+</a>
+</header>
+
+<div class="game-hero">
+  <div class="game-hero-bg" style="background-image:url('cover.webp')"></div>
+  <div class="game-hero-content">
+    <div class="game-hero-tag">&#9670; Twin-Stick Shooter &bull; Action &bull; 2015</div>
+    <h1 class="game-hero-title">HALO:<br><span>SPARTAN STRIKE</span></h1>
+    <p class="game-hero-sub">343 Industries &bull; A New Chapter in the Halo Universe</p>
+    <div class="hero-badges">
+      <span class="hero-badge">★★★★☆ 8.5 / 10</span>
+      <span class="hero-badge soul">Mostly Positive</span>
+      <span class="hero-badge green">Top-Down Action</span>
+      <span class="hero-badge">5-8 Hours</span>
+    </div>
+  </div>
+</div>
+
+<div class="price-float">
+  <div class="price-float-title">HALO: SPARTAN STRIKE</div>
+  <div class="price-float-right">
+    <div class="price-float-rating">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;--</div>
+    <div class="price-float-val">--</div>
+  </div>
+</div>
+
+<div class="game-content">
+  <div class="section-block">
+    <div class="sec-label">&#9670; Official Media</div>
+    <div class="sec-title">Halo Spartan Strike</div>
+    <div class="video-wrap">
+      <iframe 
+        src="https://www.youtube.com/embed/sG3PBPPcYC8"
+        title="HaloSS Gameplay" 
+        allow="autoplay; fullscreen" 
+        frameborder="0" 
+        allowfullscreen 
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="gallery-section">
+      <div class="cf-wrap">
+        <div class="cf-stage" id="cf-stage"></div>
+      </div>
+      <div class="cf-controls">
+
+        <div class="cf-dots" id="cf-dots"></div>
+        <div class="cf-nav-row">
+          <button class="cf-nav-btn" onclick="cfMove(-1)">⬅</button>
+          <div class="cf-nav-counter" id="counterEl">1/10</div>
+          <button class="cf-nav-btn" onclick="cfMove(1)">➡</button>
+        </div>
+      </div>
+
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--dim);margin-top:12px;font-family:'Syne',sans-serif;letter-spacing:.1em;">
+      TAP CENTER IMAGE TO ENLARGE &bull; SWIPE TO NAVIGATE
+    </p>
+  </div>
+<div class="section-block">
+    <div class="sec-label">🛡️ Technical Specifications</div>
+    <div class="sec-title">System Requirements</div>
+    
+    <div class="req-grid">
+      <div class="req-box">
+        <div class="req-type">Minimum</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 7 (32/64bit)</span></li>
+          <li><strong>CPU</strong> <span>Dual core processor</span></li>
+          <li><strong>RAM</strong> <span>1 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>DirectX 10 compatible (512MB)</span></li>
+          <li><strong>Storage</strong> <span>2550 MB available</span></li>
+        </ul>
+      </div>
+
+      <div class="req-box recommended">
+        <div class="req-type">Recommended</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 8.1 / 10</span></li>
+          <li><strong>CPU</strong> <span>Quad core processor</span></li>
+          <li><strong>RAM</strong> <span>2 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>DirectX 10 compatible (1GB)</span></li>
+          <li><strong>Storage</strong> <span>2550 MB available</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+    <div class="section-block" id="Prologue" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAME OVERVIEW</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Halo: Spartan Strike - Fast Tactical Halo Experience</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Spartan Strike kiyala kiyanne Halo universe eka top-down twin-stick shooter format ekata aragena ena compact action game ekak. player eka Spartan-IV operative kenek widiyata UNSC missions complete karanna yanawa. objective-driven map design nisa short sessions walath full tension thiyenawa.</p><p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: A quick but tactical Halo spin-off built for intense mission bursts.</em></p><p>Me game eke biggest strength eka thama movement + aim dual control eka. enemy waves and mission targets continuously wenas wena nisa map awareness and timing meke core skill deka. lore side eken simulation framing ekak use karala Halo war context eka keep karala thiyenawa.</p></div>
+    <div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;"><strong>Why You Should Play This</strong><ul style="margin:10px 0 0 18px; padding:0;"><li>Halo action eka short-session format ekata hoda widiyata adapt karala thiyenawa.</li><li>Twin-stick combat nisa reflex saha positioning deka test wenawa.</li><li>Objective rotation nisa map ekama repeat unath combat flow aluth wenawa.</li><li>Vehicles and power weapons fight variety wada karanawa.</li><li>Lore fans lata side-operation perspective ekak denna puluwan.</li></ul></div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; STORY &amp; LORE</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Classified Simulation Warfare</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Story presentation eka direct cutscene drama walata wada operation logs wage format ekakin yanne. e nisa player ta battlefield record replay karanawa wage feeling ekak enawa. beginning missions wala Covenant control zones clear karanawa; passe Promethean pressure increase unama objectives tika complex wenawa.</p><p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Spartan Strike tells Halo conflict through tactical mission snapshots.</em></p><p>Middle phase waladi enemy mix wenas wena nisa loadout choice and movement paths loku role ekak gannawa. final phase eka multi-step objectives ekka high tempo sequence ekak widiyata close wenawa. me setup eka spin-off ekak unath "small scale, real stakes" tone eka maintain karanawa.</p><div style="position:relative; margin:28px 0 16px 8px; padding-left:26px; border-left:2px solid #D4AF37;"><div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Beginning: Sector Sweep</h4><p style="margin:0; color:#a0a0a0;">Covenant footholds clear karanawa.</p></div><div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Middle: Escalation</h4><p style="margin:0; color:#a0a0a0;">Promethean threats and harder waves.</p></div><div style="position:relative;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">End: Final Push</h4><p style="margin:0; color:#a0a0a0;">Objective chain complete karala tactical win gannawa.</p></div></div></div><div class="lore-highlight" style="background:linear-gradient(135deg,#161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37; padding:25px; margin:25px 0; border-radius:0 8px 8px 0;"><em style="color:#D4AF37; font-size:1.1em;">"Simulations preserve the truth of battles."</em><p style="color:#a0a0a0; margin-top:10px;">Lore note: me game eka frontline hero story ekakata wada operation-level Halo war history eka highlight karanawa.</p></div></div>
+
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; WORLD / MAP / ENVIRONMENT</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Combat Arena Structure</div><div class="areas-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px; margin-top:20px;"><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ Urban Lanes</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: city combat. Key feature: tight crossfire. Mood: pressure.</p></div><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Industrial Routes</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: multi-level maps. Key feature: flank lines. Mood: tactical.</p></div><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Extraction Corridors</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: chase lanes. Key feature: wave pursuit. Mood: urgent.</p></div></div></div>
+
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAMEPLAY MECHANICS</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Twin-Stick Loop and Objective Control</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Core loop eka mission start -> objective clear -> wave survive -> extraction. me cycle eka honda speed ekakin yanne nisa player ta idle wenna chance naha. movement and aiming alagema control karana nisa me game eka reflex + planning combine karanawa.</p><p>Difficulty eka increase unama mistake eka quickly punish wenawa. e nisa spawn points, cover nodes, and power weapon timing honda widiyata mathaka thiyaganna one.</p><div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">✦ <strong>This game's most unique feature is Halo combat adapted to lane-control top-down tactics.</strong></div></div></div>
+
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; CHARACTERS / FACTIONS</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Forces on the Field</div><div class="areas-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px; margin-top:20px;"><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:24px; border-radius:8px; border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">★ Spartan-IV</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: player operator. Faction: UNSC. Bio: speed + precision focus karana mission spearhead.</p></div><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:24px; border-radius:8px; border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">● Covenant Units</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: primary enemies. Bio: mixed unit pressure nisa tactical adaptation one.</p></div><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ UNSC Tactical Command</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: mission authority. Bio: simulation framing ekata narrative direction denna.</p></div></div></div>
+
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; LEVELS / MISSIONS / CAMPAIGN</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Mission Timeline</div><div style="position:relative; margin:10px 0 16px 8px; padding-left:26px; border-left:2px solid #D4AF37;"><div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">1. Initial Sweep</h4><p style="margin:0; color:#a0a0a0;">Objective: clear sectors. Difficulty: Medium.</p></div><div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">2. Heavy Contact</h4><p style="margin:0; color:#a0a0a0;">Objective: survive waves. Difficulty: Medium-High.</p></div><div style="position:relative;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">3. Final Push</h4><p style="margin:0; color:#a0a0a0;">Objective: multi-step finish. Difficulty: High.</p></div></div></div>
+
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; WEAPONS / VEHICLES / TOOLS</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Loadout Table</div><table style="width:100%; border-collapse:collapse; margin-top:20px;"><thead><tr style="background:#D4AF37;"><th style="padding:12px; color:#111; text-align:left;">Name</th><th style="padding:12px; color:#111; text-align:left;">Type</th><th style="padding:12px; color:#111; text-align:left;">Damage</th><th style="padding:12px; color:#111; text-align:left;">Range</th><th style="padding:12px; color:#111; text-align:left;">Notes</th></tr></thead><tbody><tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Suppressor</td><td style="padding:10px; color:#a0a0a0;">Auto</td><td style="padding:10px; color:#a0a0a0;">Medium</td><td style="padding:10px; color:#a0a0a0;">Mid</td><td style="padding:10px; color:#a0a0a0;">Stable sustained fire.</td></tr><tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Scattershot</td><td style="padding:10px; color:#a0a0a0;">Shotgun</td><td style="padding:10px; color:#a0a0a0;">High</td><td style="padding:10px; color:#a0a0a0;">Short</td><td style="padding:10px; color:#a0a0a0;">Great for close waves.</td></tr><tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Warthog</td><td style="padding:10px; color:#a0a0a0;">Vehicle</td><td style="padding:10px; color:#a0a0a0;">High utility</td><td style="padding:10px; color:#a0a0a0;">Route based</td><td style="padding:10px; color:#a0a0a0;">Fast objective rotation.</td></tr></tbody></table></div>
+
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAME HISTORY &amp; DEVELOPMENT</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">343 Industries Spin-Off Timeline</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Spartan Strike, Spartan Assault pasu period eke release wechcha improved iteration ekak. controls responsiveness and mission pacing hadala compact Halo combat experience ekak denna design kara. critics mixed-positive response dunna, nam gameplay flow and accessibility gana hondin kiwwa.</p></div></div>
+
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; REPLAYABILITY</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Score Runs and Mission Mastery</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Multiplayer nethi unath replay value eka loku. mission re-run karala better medals ganna, faster clear times hadaganna, less damage runs karanna puluwan. short sessions walata hoda nisa daily play walata meka fit.</p></div></div>
+
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px; border:1px solid #D4AF37;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; COMMUNITY CONTENT BOX</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Ops Notes</div><div class="lore-highlight" style="background:linear-gradient(135deg,#161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37; padding:25px; margin:25px 0; border-radius:0 8px 8px 0;"><em style="color:#D4AF37; font-size:1.1em;">"Spartan Strike keeps Halo DNA alive in a compact format."</em><p style="color:#a0a0a0; margin-top:10px;">Community note: side title unath tactical fun nisa me game eka hidden gem list walata yanne.</p></div><div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;"><strong>PRO TIP:</strong> Spawn lanes mathaka thiyagena objective route eka pre-plan karanna. random chase karanawata wada ehema karaddi survivability wadai.</div></div>
+
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">"Simulating past victories to secure our future." - UNSC Tactical Command</div></div>
+
+
+
+  <div class="section-block">
+    <p style="text-align: center; color: var(--hk-gold); font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.2em;">
+      THANK YOU FOR EXPLORING HALO: SPARTAN STRIKE
+    </p>
+    <p style="text-align: center; font-size: 13px; color: var(--dim);">
+      Project by White Cat Game Vault &bull; 2026
+    </p>
+  </div>
+
+</div> 
+<footer style="padding: 4rem 2rem; border-top: 1px solid var(--border); text-align: center; background: #05060a;">
+  <div style="font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--text); letter-spacing: 2px;">
+    WHITE<span style="color:var(--hk-gold)">CAT</span> VAULT
+  </div>
+  <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">Explore the unseen lore of the gaming world.</p>
+</footer>
+
+<script src="../../../scripts/game/game-detail.js"></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>
+

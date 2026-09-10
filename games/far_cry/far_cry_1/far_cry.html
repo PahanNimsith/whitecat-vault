@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Far Cry · White Cat Game Vault</title>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../scripts/game/game-detail.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-img-wrap">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <img id="lb-img" src="" alt="">
+  </div>
+  
+  <div class="lb-nav">
+    <span class="lb-counter" id="lb-counter">1 / 14</span>
+    <div class="lb-controls">
+      <button class="lb-arrow" onclick="lbMove(-1)">&#8592; Back</button>
+      <button class="lb-arrow" onclick="lbMove(1)">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../../../index.html">
+    <img class="logo-img" src="../../../assets/logo.webp" alt="White Cat" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <a class="header-back" href="../../../game_index.html" aria-label="Back to games">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M19 12H5M12 5l-7 7 7 7"/>
+  </svg>
+</a>
+</header>
+
+<div class="game-hero">
+  <div class="game-hero-bg" style="background-image:url('cover.webp')"></div>
+  <div class="game-hero-content">
+    <div class="game-hero-tag">&#9670; FPS &bull; Action &bull; 2004</div>
+    <h1 class="game-hero-title">FAR<br><span>CRY</span></h1>
+    <p class="game-hero-sub">Crytek &bull; Welcome to the jungle.</p>
+    <div class="hero-badges">
+      <span class="hero-badge">★★★★★ 8.8 / 10</span>
+      <span class="hero-badge soul">Very Positive</span>
+      <span class="hero-badge green">Tropical Shooter</span>
+      <span class="hero-badge">15+ Hours</span>
+    </div>
+  </div>
+</div>
+
+<div class="price-float">
+  <div class="price-float-title">FAR CRY</div>
+  <div class="price-float-right">
+    <div class="price-float-rating">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;--</div>
+    <div class="price-float-val">--</div>
+  </div>
+</div>
+
+<div class="game-content">
+  <div class="section-block">
+    <div class="sec-label">&#9670; Official Media</div>
+    <div class="sec-title">The Descent Begins</div>
+    <div class="video-wrap">
+      <iframe 
+        src="https://www.youtube.com/embed/NeyY5P35ARs" 
+        title="Far Cry Gameplay" 
+        allow="autoplay; fullscreen" 
+        frameborder="0" 
+        allowfullscreen 
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="gallery-section">
+      <div class="cf-wrap">
+        <div class="cf-stage" id="cf-stage"></div>
+      </div>
+      <div class="cf-controls">
+
+        <div class="cf-dots" id="cf-dots"></div>
+        <div class="cf-nav-row">
+          <button class="cf-nav-btn" onclick="cfMove(-1)">⬅</button>
+          <div class="cf-nav-counter" id="counterEl">1/14</div>
+          <button class="cf-nav-btn" onclick="cfMove(1)">➡</button>
+        </div>
+      </div>
+
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--dim);margin-top:12px;font-family:'Syne',sans-serif;letter-spacing:.1em;">
+      TAP CENTER IMAGE TO ENLARGE &bull; SWIPE TO NAVIGATE
+    </p>
+  </div>
+<div class="section-block">
+    <div class="sec-label">🛡️ Technical Specifications</div>
+    <div class="sec-title">System Requirements</div>
+    
+    <div class="req-grid">
+      <div class="req-box">
+        <div class="req-type">Minimum</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 98/XP</span></li>
+          <li><strong>CPU</strong> <span>Pentium III 1 GHz</span></li>
+          <li><strong>RAM</strong> <span>256 MB RAM</span></li>
+          <li><strong>GPU</strong> <span>64 MB DirectX 9.0b</span></li>
+          <li><strong>Storage</strong> <span>4 GB available</span></li>
+        </ul>
+      </div>
+
+      <div class="req-box recommended">
+        <div class="req-type">Recommended</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows XP/2000</span></li>
+          <li><strong>CPU</strong> <span>Pentium 4 2.0 GHz</span></li>
+          <li><strong>RAM</strong> <span>512 MB RAM</span></li>
+          <li><strong>GPU</strong> <span>128 MB GeForce 4</span></li>
+          <li><strong>Storage</strong> <span>4 GB available</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="section-block" id="Prologue" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAME OVERVIEW</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Far Cry (2004) - Tropical Survival Shooter Pioneer</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Original Far Cry kiyala kiyanne modern open-combat FPS design ekata foundation dapu game ekak. Jack Carver ekka tropical island chain ekakata enna unama mission eka simple rescue operation ekakin start wela, experimental bio-lab warzone ekakata maru wenawa. me game release un kale large draw-distance, dynamic combat, and open encounter space nisa technical wow factor eka loku.</p><p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: A breakthrough shooter that combined visual scale with flexible combat.</em></p><p>Far Cry tone eka stealth, firefight, and survival panic mix ekak. mercenary patrols, jungle cover, and mutant threats combine wela hama mission ekakma unpredictable feel ekak denawa. e nisa old shooter ekak unath gameplay tension eka adath hondin sustain wenawa.</p></div><div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;"><strong>Why You Should Play This</strong><ul style="margin:10px 0 0 18px; padding:0;"><li>CryEngine visuals that were years ahead for 2004.</li><li>Open-ended encounter design before it became standard.</li><li>Strong shift from mercenary war to mutant horror pressure.</li><li>Classic sandbox FPS identity with memorable island settings.</li><li>Important origin point of the Far Cry franchise DNA.</li></ul></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; STORY &amp; LORE</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Jack Carver vs Krieger's Island Experiment</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Jack ge boat guide job eka mission disaster ekakata maru wenne journalist Valerie rescue karanna giya gaman. early chapters waladi mercenary units and pirate-like defenses against Jack pressure create karanawa. pase story eka reveal karanne Dr. Krieger ge Trigen genetic project eka, which turns island conflict into biohazard war.</p><p>middle and end missions waladi mercenary politics, command hierarchy, and experimental control collapse eka pennanawa. Trigen outbreak eka widin human-vs-human shooter pattern eka human-vs-monster survival mode ekata move wenawa. final arc ekedi Jack target karanne Krieger infrastructure destroy karala chain catastrophe eka nawathana eka.</p><div style="position:relative; margin:28px 0 16px 8px; padding-left:26px; border-left:2px solid #D4AF37;"><div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Beginning: Rescue Gone Wrong</h4><p style="margin:0; color:#a0a0a0;">Jack enters armed conflict while searching for Valerie.</p></div><div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Middle: Trigen Reveal</h4><p style="margin:0; color:#a0a0a0;">Krieger experiments change battlefield rules.</p></div><div style="position:relative;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">End: Lab Collapse</h4><p style="margin:0; color:#a0a0a0;">Jack fights to stop full island catastrophe.</p></div></div></div><div class="lore-highlight" style="background:linear-gradient(135deg,#161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37; padding:25px; margin:25px 0; border-radius:0 8px 8px 0;"><em style="color:#D4AF37; font-size:1.1em;">"Far Cry starts as a mercenary thriller and ends as a science nightmare."</em><p style="color:#a0a0a0; margin-top:10px;">Lore note: military contracts and unethical science combine unaama control break wenna beri disaster pattern eka me game eka honda widiyata pennanawa.</p></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; WORLD / MAP / ENVIRONMENT</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Island Combat Zones</div><div class="areas-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px; margin-top:20px;"><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ Beach and Coastal Camps</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: landing zones. Key feature: open sightlines. Mood: exposed firefights.</p></div><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Jungle Corridors</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: stealth routes. Key feature: foliage cover. Mood: ambush tension.</p></div><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Research Facilities</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: interior labs. Key feature: Trigen encounters. Mood: panic and claustrophobia.</p></div></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAMEPLAY MECHANICS</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Open Combat + Stealth Flexibility</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Far Cry gameplay loop eka encounter approach choose karana freedom eka moolika karanawa. player ta silenced infiltration karanna puluwan, noisen firefight ekata yanna puluwan, nathnam flank route ekak hadala enemies isolate karanna puluwan. enemy AI flank and suppress karana hati kaleta wada smart una nisa careless rush punishing.</p><p>Progression tree system loku nathi unath weapon swap, ammo scarcity, and terrain usage nisa practical skill progression ekak hithanna wenawa. me old-school FPS ekanamath tactical readability eka hondai.</p><div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">✦ <strong>This game's most unique feature is large open encounter spaces with multiple tactical entries.</strong></div></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; CHARACTERS / FACTIONS</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Key Figures on the Island</div><div class="areas-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px; margin-top:20px;"><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:24px; border-radius:8px; border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">★ Jack Carver</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: Protagonist. Bio: practical ex-special-ops survivor who adapts fast under pressure.</p></div><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:24px; border-radius:8px; border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">● Dr. Krieger</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: Main antagonist. Bio: scientific obsession leads to bioweapon disaster.</p></div><div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Valerie Constantine</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: Journalist catalyst. Bio: investigation thread that pulls Jack into island war.</p></div></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; WEAPONS / TOOLS</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Core Arsenal</div><table style="width:100%; border-collapse:collapse; margin-top:20px;"><thead><tr style="background:#D4AF37;"><th style="padding:12px; color:#111; text-align:left;">Name</th><th style="padding:12px; color:#111; text-align:left;">Type</th><th style="padding:12px; color:#111; text-align:left;">Damage</th><th style="padding:12px; color:#111; text-align:left;">Range</th><th style="padding:12px; color:#111; text-align:left;">Notes</th></tr></thead><tbody><tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">M4</td><td style="padding:10px; color:#a0a0a0;">Rifle</td><td style="padding:10px; color:#a0a0a0;">High</td><td style="padding:10px; color:#a0a0a0;">Mid-Long</td><td style="padding:10px; color:#a0a0a0;">Reliable general combat.</td></tr><tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Sniper Rifle</td><td style="padding:10px; color:#a0a0a0;">Precision</td><td style="padding:10px; color:#a0a0a0;">Very High</td><td style="padding:10px; color:#a0a0a0;">Long</td><td style="padding:10px; color:#a0a0a0;">Best for outpost picks.</td></tr><tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">P90</td><td style="padding:10px; color:#a0a0a0;">SMG</td><td style="padding:10px; color:#a0a0a0;">Medium</td><td style="padding:10px; color:#a0a0a0;">Short-Mid</td><td style="padding:10px; color:#a0a0a0;">Fast close engagements.</td></tr></tbody></table></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAME HISTORY &amp; DEVELOPMENT</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Crytek Technical Leap</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Far Cry developed by Crytek and published by Ubisoft. CryEngine large outdoor rendering capability nisa 2004 FPS landscape eka wenas kala. critics visual tech and open mission structure praise kala; Metacritic PC score mid-to-high 80s range etha.</p><p>me game success eka passe franchise direction Ubisoft internal studios walata maru una, nam origin title eka still respected for engine innovation and combat openness.</p></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; REPLAYABILITY</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Tactical Replays and Route Mastery</div><div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Far Cry replay karanne main reason eka encounter routes. same mission eka stealth, sniper, or loud assault widiyata repeat karala variation ganna puluwan. me flexibility nisa old campaign ekak unath replay runs interesting.</p></div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px; border:1px solid #D4AF37;"><div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; COMMUNITY CONTENT BOX</div><div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Field Notes</div><div class="lore-highlight" style="background:linear-gradient(135deg,#161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37; padding:25px; margin:25px 0; border-radius:0 8px 8px 0;"><em style="color:#D4AF37; font-size:1.1em;">"Far Cry 2004 was one of the biggest PC hardware benchmark games of its era."</em><p style="color:#a0a0a0; margin-top:10px;">Fun fact: many players upgraded GPUs specifically to run Far Cry at higher settings.</p></div><div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;"><strong>PRO TIP:</strong> distant patrols eliminate karanna sniper use karala camps eka step-by-step clear karanna.</div></div>
+  <div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;"><div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">"On this island, the jungle is only the second deadliest thing." - Field Intel</div></div>
+
+  <div class="section-block">
+    <p style="text-align: center; color: var(--hk-gold); font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.2em;">
+      THANK YOU FOR EXPLORING FAR CRY
+    </p>
+    <p style="text-align: center; font-size: 13px; color: var(--dim);">
+      Project by White Cat Game Vault &bull; 2026
+    </p>
+  </div>
+
+</div> <footer style="padding: 4rem 2rem; border-top: 1px solid var(--border); text-align: center; background: #05060a;">
+  <div style="font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--text); letter-spacing: 2px;">
+    WHITE<span style="color:var(--hk-gold)">CAT</span> VAULT
+  </div>
+  <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">Explore the unseen lore of the gaming world.</p>
+</footer>
+
+<script src="../../../scripts/game/game-detail.js"></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>
