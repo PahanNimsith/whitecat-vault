@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battlefield Bad Company 2 · White Cat Game Vault</title>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../scripts/game/game-detail.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-img-wrap">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <img id="lb-img" src="" alt="">
+  </div>
+  
+  <div class="lb-nav">
+    <span class="lb-counter" id="lb-counter">1 / 15</span>
+    <div class="lb-controls">
+      <button class="lb-arrow" onclick="lbMove(-1)">&#8592; Back</button>
+      <button class="lb-arrow" onclick="lbMove(1)">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../../../index.html">
+    <img class="logo-img" src="../../../assets/logo.webp" alt="White Cat" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <a class="header-back" href="../../../game_index.html" aria-label="Back to games">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M19 12H5M12 5l-7 7 7 7"/>
+  </svg>
+</a>
+</header>
+
+<div class="game-hero">
+  <div class="game-hero-bg" style="background-image:url('cover.webp')"></div>
+  <div class="game-hero-content">
+    <div class="game-hero-tag">&#9670; Action &bull; FPS &bull; 2010</div>
+    <h1 class="game-hero-title">BATTLEFIELD<br><span>BAD COMPANY 2</span></h1>
+    <p class="game-hero-sub">EA DICE &bull; Destruction Redefined</p>
+    <div class="hero-badges">
+      <span class="hero-badge">★★★★★ 9.2 / 10</span>
+      <span class="hero-badge soul">Must-Play Classic</span>
+      <span class="hero-badge green">Destruction 2.0</span>
+      <span class="hero-badge">15–20+ Hours</span>
+    </div>
+  </div>
+</div>
+
+<div class="price-float">
+  <div class="price-float-title">BATTLEFIELD BC2</div>
+  <div class="price-float-right">
+    <div class="price-float-rating">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;--</div>
+    <div class="price-float-val">--</div>
+  </div>
+</div>
+
+<div class="game-content">
+
+  <div class="section-block">
+    <div class="sec-label">&#9670; Deployment Brief</div>
+    <div class="sec-title">Gameplay Preview</div>
+    <div class="video-wrap">
+      <iframe 
+        src="https://www.youtube.com/embed/j3YTiv2DzK8" 
+        title="Battlefield Bad Company 2 Gameplay" 
+        allow="autoplay; fullscreen" 
+        frameborder="0" 
+        allowfullscreen 
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="gallery-section">
+      <div class="cf-wrap">
+        <div class="cf-stage" id="cf-stage"></div>
+      </div>
+      <div class="cf-controls">
+        <div class="cf-dots" id="cf-dots"></div>
+        <div class="cf-nav-row">
+          <button class="cf-nav-btn" onclick="cfMove(-1)">⬅</button>
+          <div class="cf-nav-counter" id="counterEl">1/15</div>
+          <button class="cf-nav-btn" onclick="cfMove(1)">➡</button>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--dim);margin-top:12px;font-family:'Syne',sans-serif;letter-spacing:.1em;">
+      TAP CENTER IMAGE TO ENLARGE &bull; SWIPE TO NAVIGATE
+    </p>
+  </div>
+
+  <div class="section-block">
+    <div class="sec-label">🛡️ Technical Specifications</div>
+    <div class="sec-title">System Requirements</div>
+    <div class="req-grid">
+      <div class="req-box">
+        <div class="req-type">Minimum</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows XP / Vista / 7</span></li>
+          <li><strong>CPU</strong> <span>Core 2 Duo @ 2.0GHz</span></li>
+          <li><strong>RAM</strong> <span>2 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>256 MB (GeForce 7800GT)</span></li>
+          <li><strong>Storage</strong> <span>15 GB available</span></li>
+        </ul>
+      </div>
+
+      <div class="req-box recommended">
+        <div class="req-type">Recommended</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 10 / 11 (64bit)</span></li>
+          <li><strong>CPU</strong> <span>Intel Quad-Core</span></li>
+          <li><strong>RAM</strong> <span>4 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>512 MB (GeForce GTX 260)</span></li>
+          <li><strong>Storage</strong> <span>15 GB available</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<style>
+  :root {
+    --gold: #d4af37;
+    --dim: #888;
+    --border: rgba(212, 175, 55, 0.3);
+    --card-bg: #111114;
+  }
+
+  .note-box { 
+    background-color: #1e1e24; 
+    border-left: 4px solid var(--gold); 
+    padding: 18px; 
+    margin: 25px 0; 
+    font-size: 0.95em; 
+    font-style: italic; 
+    color: #ccc; 
+    line-height: 1.6;
+  }
+
+  .feature-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 25px 0; 
+    background-color: #0c0c0c; 
+    color: #fff; 
+    font-size: 0.9em;
+  }
+  .feature-table th { 
+    background-color: var(--gold); 
+    color: #000; 
+    padding: 15px; 
+    text-align: left; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .feature-table td { 
+    border: 1px solid #222; 
+    padding: 15px; 
+    vertical-align: top;
+  }
+
+  .highlight-box { 
+    background: rgba(212, 175, 55, 0.05); 
+    border: 1px solid var(--gold); 
+    padding: 30px; 
+    text-align: center; 
+    font-weight: bold; 
+    margin: 30px 0; 
+    border-radius: 4px; 
+    color: var(--gold); 
+  }
+
+  .gold-map-card {
+    background: var(--card-bg);
+    border-top: 3px solid var(--gold);
+    padding: 25px;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  .map-title { color: var(--gold); font-weight: bold; font-size: 1.2em; text-transform: uppercase; margin-bottom: 12px; display: block; }
+  
+  .story-text p { line-height: 1.9; margin-bottom: 20px; color: #e0e0e0; text-align: justify; }
+  .sec-label { color: var(--gold); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.9em; border-bottom: 1px solid var(--border); display: inline-block; padding-bottom: 5px; margin-bottom: 15px; }
+  .sec-title { color: #ffffff; font-size: 2.2em; font-weight: bold; text-transform: uppercase; margin-bottom: 30px; letter-spacing: 1px; }
+
+  ul.lore-list { list-style: none; padding: 0; }
+  ul.lore-list li { margin-bottom: 15px; padding-left: 20px; border-left: 2px solid var(--gold); }
+  ul.lore-list strong { color: var(--gold); text-transform: uppercase; font-size: 0.9em; }
+</style>
+
+<div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;">
+  <div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAME OVERVIEW</div>
+  <div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Battlefield: Bad Company 2 - Squad War and Destruction 2.0</div>
+  <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;">
+    <p>Battlefield: Bad Company 2 කියන්නේ modern military FPS genre එකේ destruction-driven team warfare එක practical විදිහට popular කරපු classic එකක්. campaign එකේ B Company squad එක Cold War-era superweapon trail එකක් පසුපස යන අතර, playerට gunplay එක විතරක් නෙවෙයි terrain usage, cover break, flank timing වගේ tactical decisions හැම fight එකකම ගන්න වෙනවා.</p>
+    <p><em style="color:#D4AF37;">English: BC2 combines squad personality, map destruction, and objective warfare into one complete FPS package.</em></p>
+    <p>tone එක serious battlefield stakes එක්ක dark humor mix කරලා යන නිසා characters memorable. multiplayer වල Rush mode objective pressure එක, class synergy, and vehicle support එක game flow එක escalate කරනවා. map එකේ building එකක් safe cover කියලා assume කරලා ඉන්න බැරි game එකක් මේක.</p>
+    <p><em style="color:#D4AF37;">English: Every match changes shape because the environment itself is destructible.</em></p>
+  </div>
+  <div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">
+    <strong>Why You Should Play This</strong>
+    <ul style="margin:10px 0 0 18px; padding:0; color:#D4AF37;">
+      <li>Destruction 2.0 still feels impactful and tactical.</li>
+      <li>Rush mode objective design is one of Battlefield's best.</li>
+      <li>Strong class identity with meaningful team roles.</li>
+      <li>Memorable campaign squad chemistry and pacing.</li>
+      <li>Classic sound design and weapon feedback quality.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;">
+  <div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; STORY &amp; LORE</div>
+  <div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">B Company Mission Arc</div>
+  <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;">
+    <p>කතාව ආරම්භ වෙන්නේ B Company (Preston Marlowe, Sarge, Sweetwater, Haggard) squad එක politically sensitive conflict zone operations වලට drop වෙන තැනින්. ඔවුන් සරල frontline order follow කරන unit එකක් වගේ පේනවා, නමුත් ඉක්මනින්ම hidden weapon program එකකට සම්බන්ධ intel chain එකක් හොයාගන්නවා. මේ හේතුවෙන් mission scope එක local warfront එකෙන් global threat scenario එකකට shift වෙනවා.</p>
+    <p><em style="color:#D4AF37;">English: What starts as a standard deployment becomes a race to stop a strategic superweapon.</em></p>
+    <p>middle chapter එකේ snow zones, jungle attacks, armored pushes, සහ covert intercept operations mix වෙලා squad cohesion test කරනවා. squad members අතර banter එක campaign එකට human layer එකක් දෙන්නෙ stress අතර camaraderie maintain කරන නිසා. satire-like humor තිබුණත් battlefield losses සහ command-level manipulation නිසා story stakes clear.</p>
+    <p><em style="color:#D4AF37;">English: BC2 balances personality-driven dialogue with high-stakes military escalation.</em></p>
+    <p>end chapter එකේ weapon launch chain එක break කරන්න coordinated assault එකක් execute වෙනවා. final battles වල destruction-heavy engagements playerට "static cover" concept එක බිඳ දමනවා. victory ලැබුණත් battlefield politics ඉවර වෙන්නේ නැතිව conflict cycle එක ඉදිරියට යනවා කියන note එක game එක තබනවා.</p>
+    <p><em style="color:#D4AF37;">English: The campaign resolves the immediate threat while preserving the larger war context.</em></p>
+  </div>
+  <div style="position:relative; margin:28px 0 16px 8px; padding-left:26px; border-left:2px solid #D4AF37;">
+    <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Beginning</h4><p style="margin:0; color:#a0a0a0;">B Company deploys and uncovers unusual military intel.</p></div>
+    <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Middle</h4><p style="margin:0; color:#a0a0a0;">Global pursuit missions reveal the scale of the weapon threat.</p></div>
+    <div style="position:relative;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">End</h4><p style="margin:0; color:#a0a0a0;">Final strike stops launch chain and secures fragile victory.</p></div>
+  </div>
+</div>
+
+<div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;">
+  <div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; WORLD / MAP / ENVIRONMENT</div>
+  <div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Combat Theaters</div>
+  <div class="areas-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px; margin-top:20px;">
+    <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ Atacama Desert</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: open armor zone | Key Feature: long sightlines and vehicle dominance | Mood: exposed and aggressive.</p></div>
+    <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Arica Harbor</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: mixed urban-industrial | Key Feature: breakable cover lanes | Mood: chaotic objective pressure.</p></div>
+    <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #8e44ad;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Valparaiso</h4><p style="color:#a0a0a0; font-size:0.9em;">Type: jungle-river flank map | Key Feature: narrow routes and ambush angles | Mood: tense and unpredictable.</p></div>
+  </div>
+  <div style="margin-top:22px; border:1px solid #2a2a2a; border-radius:8px; padding:16px; background:#141414;">
+    <div style="color:#D4AF37; font-weight:700; margin-bottom:8px;">World Structure</div>
+    <div style="color:#a0a0a0;">Intel Contact -> Regional Ops -> Heavy Vehicle Front -> Final Weapon Intercept</div>
+  </div>
+</div>
+
+<div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;">
+  <div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAMEPLAY MECHANICS</div>
+  <div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Squad Loop, Roles, and Destruction</div>
+  <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;">
+    <p>BC2 gameplay loop එක objective capture/arm-defend cycle එක මත build වෙලා තියෙනවා. team එකේ class composition balance නැත්නම් match control නැති වෙනවා: Assault ammo sustain දෙන්න, Medic revive momentum maintain කරන්න, Engineer vehicle threats neutralize කරන්න, Recon intel සහ demolition setups හදන්න ඕන.</p>
+    <p><em style="color:#D4AF37;">English: Winning in BC2 depends on role discipline, not just kill count.</em></p>
+    <p>Destruction 2.0 නිසා tactical behavior වෙනස් වෙනවා. enemy window nest එකක් නම් wall blow කරලා lane open කරන්න පුළුවන්. building-based defense එක prolonged කරන්න repair/relocate decisions අනිවාර්යයි. මේ නිසා match එක dynamic battlefield simulation එකක් වගේ evolve වෙනවා.</p>
+    <p><em style="color:#D4AF37;">English: Cover is temporary, and map control is constantly redefined.</em></p>
+  </div>
+  <div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">✦ <strong>This game's most unique feature is full combat flow shaped by real-time structural destruction.</strong><br>මෙම game එකේ විශේෂත්වය තමයි cover architecture එකත් tactical resource එකක් ලෙස destroy/reshape කරගන්න පුළුවන් වීම.</div>
+  <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+    <thead><tr style="background:#D4AF37;"><th style="padding:12px; color:#111; text-align:left;">Control</th><th style="padding:12px; color:#111; text-align:left;">Function</th></tr></thead>
+    <tbody>
+      <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">W / A / S / D</td><td style="padding:10px; color:#a0a0a0;">Movement and lane positioning</td></tr>
+      <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Mouse Right / Left</td><td style="padding:10px; color:#a0a0a0;">Aim and fire control</td></tr>
+      <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">3 / 4 / G</td><td style="padding:10px; color:#a0a0a0;">Class gadgets and grenades</td></tr>
+      <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Q</td><td style="padding:10px; color:#a0a0a0;">Spotting for team intel</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;">
+  <div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; CHARACTERS / FACTIONS</div>
+  <div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">B Company Core Team</div>
+  <div class="areas-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px; margin-top:20px;">
+    <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">★ Preston Marlowe</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: Player-protagonist rifleman. battlefield chaos අස්සේ squad orders follow කරලා key objective executions complete කරන operational anchor character එක.</p></div>
+    <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Sergeant Redford</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: Squad leader. mission tempo control කරලා chaos අතර direction දෙන්නෙ මෙයා. hard-command tone එක squad survival direct affect කරනවා.</p></div>
+    <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">● Colonel Kirilenko</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: Strategic antagonist node. advanced weapon threat chain එකට සම්බන්ධ hostile command influence එක represent කරන figure එකක්.</p></div>
+  </div>
+  <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+    <thead><tr style="background:#D4AF37;"><th style="padding:12px; color:#111; text-align:left;">Faction</th><th style="padding:12px; color:#111; text-align:left;">Side</th><th style="padding:12px; color:#111; text-align:left;">Goal</th><th style="padding:12px; color:#111; text-align:left;">Signature Ability</th></tr></thead>
+    <tbody>
+      <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">B Company</td><td style="padding:10px; color:#a0a0a0;">Allied</td><td style="padding:10px; color:#a0a0a0;">Neutralize global weapon threat</td><td style="padding:10px; color:#a0a0a0;">Adaptive squad operations</td></tr>
+      <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">US Command Network</td><td style="padding:10px; color:#a0a0a0;">Allied</td><td style="padding:10px; color:#a0a0a0;">Strategic containment</td><td style="padding:10px; color:#a0a0a0;">Combined-arms deployment</td></tr>
+      <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Kirilenko Forces</td><td style="padding:10px; color:#a0a0a0;">Hostile</td><td style="padding:10px; color:#a0a0a0;">Weapon leverage and escalation</td><td style="padding:10px; color:#a0a0a0;">Heavy mechanized resistance</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;">
+  <div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; LEVELS / MISSIONS / CAMPAIGN</div>
+  <div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Mission Timeline</div>
+  <div style="position:relative; margin:10px 0 16px 8px; padding-left:26px; border-left:2px solid #D4AF37;">
+    <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">1. Operation Aurora</h4><p style="margin:0; color:#a0a0a0;">Objective: frontline survival and regroup | Difficulty: Medium | Location: mountain conflict sector.</p></div>
+    <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">2. Heavy Metal</h4><p style="margin:0; color:#a0a0a0;">Objective: armored breakthrough | Difficulty: High | Location: desert battlefield.</p></div>
+    <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">3. Sangre del Toro</h4><p style="margin:0; color:#a0a0a0;">Objective: jungle extraction and intel push | Difficulty: Medium-High | Location: forest combat zone.</p></div>
+    <div style="position:relative;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">4. Final Intercept</h4><p style="margin:0; color:#a0a0a0;">Objective: superweapon shutdown | Difficulty: High | Location: frozen terminal sector.</p></div>
+  </div>
+  <div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">Campaign එක සාමාන්‍යයෙන් 8-12 hours range එකේ යනවා. multiplayer progression එකත් එක්ක total playtime easily ගොඩක් වැඩි වෙනවා.</div>
+</div>
+
+<div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;">
+  <div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; WEAPONS / VEHICLES / TOOLS</div>
+  <div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Battlefield Loadout Essentials</div>
+  <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+    <thead><tr style="background:#D4AF37;"><th style="padding:12px; color:#111; text-align:left;">Name</th><th style="padding:12px; color:#111; text-align:left;">Type</th><th style="padding:12px; color:#111; text-align:left;">Damage</th><th style="padding:12px; color:#111; text-align:left;">Range</th><th style="padding:12px; color:#111; text-align:left;">Notes</th></tr></thead>
+    <tbody>
+      <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">M416</td><td style="padding:10px; color:#a0a0a0;">Assault Rifle</td><td style="padding:10px; color:#a0a0a0;">High</td><td style="padding:10px; color:#a0a0a0;">Medium</td><td style="padding:10px; color:#a0a0a0;">Balanced control for objective pushes.</td></tr>
+      <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">RPG-7</td><td style="padding:10px; color:#a0a0a0;">Launcher</td><td style="padding:10px; color:#a0a0a0;">Very High</td><td style="padding:10px; color:#a0a0a0;">Medium</td><td style="padding:10px; color:#a0a0a0;">Essential anti-vehicle pressure tool.</td></tr>
+      <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">M1A2 Abrams</td><td style="padding:10px; color:#a0a0a0;">Tank</td><td style="padding:10px; color:#a0a0a0;">Heavy</td><td style="padding:10px; color:#a0a0a0;">Long</td><td style="padding:10px; color:#a0a0a0;">Dominates open sectors with support crew.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;">
+  <div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; GAME HISTORY &amp; DEVELOPMENT</div>
+  <div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">DICE Frostbite Era Growth</div>
+  <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;">
+    <p>Bad Company 2 developed by DICE and released in 2010. Frostbite engine destruction tech එක mainstream FPS audience එකකට practical value එකක් එක්ක deliver කරපු game එකක් විදිහට BC2 often mention වෙනවා. reviewers ලා weapon feel, soundscape, and Rush mode design highly praise කළා.</p>
+    <p><em style="color:#D4AF37;">English: BC2 is remembered as one of Battlefield's most balanced and memorable entries.</em></p>
+  </div>
+  <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+    <thead><tr style="background:#D4AF37;"><th style="padding:12px; color:#111; text-align:left;">DLC / Expansion</th><th style="padding:12px; color:#111; text-align:left;">Content</th><th style="padding:12px; color:#111; text-align:left;">Year</th></tr></thead>
+    <tbody>
+      <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Onslaught Mode</td><td style="padding:10px; color:#a0a0a0;">Co-op objective missions</td><td style="padding:10px; color:#a0a0a0;">2010</td></tr>
+      <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Vietnam</td><td style="padding:10px; color:#a0a0a0;">New era maps, weapons, vehicles</td><td style="padding:10px; color:#a0a0a0;">2010</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px;">
+  <div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; MULTIPLAYER / ONLINE</div>
+  <div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Rush, Conquest, and Squad Pressure</div>
+  <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;">
+    <p>Core multiplayer modes අතර Rush and Conquest main pillars. Rush වල attackers objective stations destroy කරන්න ඕන, defenders coordinated hold maintain කරන්න ඕන. squad spawn system නිසා lone-wolf play එකට වඩා coordinated movement reward වෙනවා. player count platform අනුව වෙනස් වුණත් match flow හැමවිටම objective-centered.</p>
+    <p><em style="color:#D4AF37;">English: BC2 multiplayer is at its best when squads communicate and specialize.</em></p>
+  </div>
+</div>
+
+<div class="section-block" style="background:#111111; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9); margin-bottom:40px; border:1px solid #D4AF37;">
+  <div class="sec-label" style="color:#D4AF37; font-size:0.9em; text-transform:uppercase; letter-spacing:2px;">&#9670; COMMUNITY CONTENT BOX</div>
+  <div class="sec-title" style="color:#ffffff; font-size:2.2em; font-weight:800; margin-bottom:20px;">Veteran Brief</div>
+  <div class="lore-highlight" style="background:linear-gradient(135deg,#161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37; padding:25px; margin:25px 0; border-radius:0 8px 8px 0;">
+    <em style="color:#D4AF37; font-size:1.1em;">"Few FPS games made destruction this readable and tactical in every match."</em>
+    <p style="color:#a0a0a0; margin-top:10px;">Fun Fact: BC2 audio mix එක අදත් FPS weapon sound design reference list වල regularly සඳහන් වෙනවා.</p>
+  </div>
+  <div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">
+    <strong>PRO TIP:</strong> Rush defense වල static cover එකට cling වෙන්න එපා. enemy demolition line spot කරලා fallback positions කලින්ම plan කරන්න.
+  </div>
+</div>
+
+<div class="section-block">
+  <p style="text-align: center; color: var(--hk-gold); font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.2em;">
+    THANK YOU FOR SERVING WITH B COMPANY
+  </p>
+  <p style="text-align: center; font-size: 13px; color: var(--dim);">
+    Project by White Cat Game Vault &bull; 2026
+  </p>
+</div>
+
+</div>
+
+<footer style="width: 100%; padding: 4rem 2rem; border-top: 1px solid var(--border); text-align: center; background: #05060a; box-sizing: border-box;">
+  <div style="font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--text); letter-spacing: 2px;">
+    WHITE<span style="color:var(--hk-gold)">CAT</span> VAULT
+  </div>
+  <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">Explore the unseen lore of the gaming world.</p>
+</footer>
+
+<script src="../../../scripts/game/game-detail.js"></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>
