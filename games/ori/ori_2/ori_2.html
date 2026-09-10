@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ori and the Will of the Wisps · White Cat Game Vault</title>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../scripts/game/game-detail.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-img-wrap">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <img id="lb-img" src="" alt="Ori View">
+  </div>
+  
+  <div class="lb-nav">
+    <span class="lb-counter" id="lb-counter">1 / 16</span>
+    <div class="lb-controls">
+      <button class="lb-arrow" onclick="lbMove(-1)">&#8592; Back</button>
+      <button class="lb-arrow" onclick="lbMove(1)">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../../../index.html">
+    <img class="logo-img" src="../../../assets/logo.webp" alt="White Cat" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <a class="header-back" href="../../../game_index.html" aria-label="Back to games">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M19 12H5M12 5l-7 7 7 7"/>
+  </svg>
+</a>
+</header>
+
+<div class="game-hero">
+  <div class="game-hero-bg" style="background-image:url('cover.webp')"></div>
+  <div class="game-hero-content">
+    <div class="game-hero-tag">&#9670; Platformer &bull; Metroidvania &bull; 2020</div>
+    <h1 class="game-hero-title">ORI AND THE WILL OF THE<br><span>WISPS</span></h1>
+    <p class="game-hero-sub">Moon Studios &bull; Unravel Ori's True Destiny</p>
+    <div class="hero-badges">
+      <span class="hero-badge">★★★★★ 9.7 / 10</span>
+      <span class="hero-badge soul">Overwhelmingly Positive</span>
+      <span class="hero-badge green">Stunning Visuals</span>
+      <span class="hero-badge">15–20 Hours</span>
+    </div>
+  </div>
+</div>
+
+<div class="price-float">
+  <div class="price-float-title">ORI AND THE WILL OF THE WISPS</div>
+  <div class="price-float-right">
+    <div class="price-float-rating">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;--</div>
+    <div class="price-float-val">--</div>
+  </div>
+</div>
+
+<div class="game-content">
+  <div class="section-block">
+    <div class="sec-label">&#9670; Official Media</div>
+    <div class="sec-title">The Journey Continues</div>
+    <div class="video-wrap">
+      <iframe 
+        src="https://www.youtube.com/embed/2reK8k8nwBc" 
+        title="Ori and the Will of the Wisps Gameplay" 
+        allow="autoplay; fullscreen" 
+        frameborder="0" 
+        allowfullscreen 
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="gallery-section">
+      <div class="cf-wrap">
+        <div class="cf-stage" id="cf-stage"></div>
+      </div>
+      <div class="cf-controls">
+
+        <div class="cf-dots" id="cf-dots"></div>
+        <div class="cf-nav-row">
+          <button class="cf-nav-btn" onclick="cfMove(-1)">⬅</button>
+          <div class="cf-nav-counter" id="counterEl">1/16</div>
+          <button class="cf-nav-btn" onclick="cfMove(1)">➡</button>
+        </div>
+      </div>
+
+
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--dim);margin-top:12px;font-family:'Syne',sans-serif;letter-spacing:.1em;">
+      TAP CENTER IMAGE TO ENLARGE &bull; SWIPE TO NAVIGATE
+    </p>
+  </div>
+
+  <div class="section-block">
+    <div class="sec-label">🛡️ Technical Specifications</div>
+    <div class="sec-title">System Requirements</div>
+    
+    <div class="req-grid">
+      <div class="req-box">
+        <div class="req-type">Minimum</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 10</span></li>
+          <li><strong>CPU</strong> <span>Intel Core i5 4460 / AMD Athlon X4</span></li>
+          <li><strong>RAM</strong> <span>8 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>Nvidia GTX 950 / AMD R7 370</span></li>
+          <li><strong>Storage</strong> <span>20 GB available</span></li>
+        </ul>
+      </div>
+
+      <div class="req-box recommended">
+        <div class="req-type">Recommended</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 10</span></li>
+          <li><strong>CPU</strong> <span>Intel i5 Skylake / AMD Ryzen 3</span></li>
+          <li><strong>RAM</strong> <span>8 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>Nvidia GTX 970 / AMD RX 570</span></li>
+          <li><strong>Storage</strong> <span>20 GB available</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block" id="Prologue" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAME OVERVIEW</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Ori and the Will of the Wisps: A Bigger, Deeper Sequel</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Will of the Wisps Blind Forest foundation එක expand කරලා larger combat system, deeper quest structure, and richer region design එක්ක build කරපු sequel එක. Oriගේ mission එක Ku rescue කිරීමෙන් start වෙලා Niwen කියන damaged land එක save කරන mythic journey එකකට turn වෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The sequel keeps Ori's soul while adding scale, depth, and stronger systems.</em></p>
+      <p>Game tone එක hopeful sorrow style එක maintain කරන අතර combat shard builds, side quests, NPC hubs, සහ boss encounters add කරලා pacing diversify කරයි. platforming still elite, but now player expression combat builds හරහාත් visible.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Ori 2 is both emotional and mechanically richer.</em></p>
+    </div>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;">
+      <strong>Why You Should Play This</strong>
+      <ul style="margin:10px 0 0 18px; padding:0;">
+        <li>Best-in-class animation and lighting in 2D platforming.</li>
+        <li>Improved combat with Spirit Shards and weapon variety.</li>
+        <li>Memorable boss fights and movement-heavy escape segments.</li>
+        <li>Strong emotional arc around Ori, Ku, and Shriek.</li>
+        <li>Large interconnected map with meaningful optional content.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; STORY &amp; LORE</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Ku, Niwen, and the Last Light</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Ori සහ Ku bonding opening එකෙන් story start වෙනවා. Storm එකෙන් දෙන්නා Niwen වෙත විසිවෙලා Ku අතුරුදන් වෙන තැනින් Oriගේ rescue mission එක build වෙයි. මේ time story scope forest restoration එකට වඩා larger - entire land lifecycle restore කිරීම.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Ori's search for Ku becomes a mission to heal a broken kingdom.</em></p>
+      <p>Seir, Wisps, Shriek, සහ old spirit legacy elements lore backbone එක. Shriek character එක pure villain trope එකක් නොවී rejection සහ fear shaped tragedy එකක්. Ending එක bittersweet tone එකෙන් Ori arc mature closure එකකට ගෙනියනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The conflict is tragic, and the ending is powerful because it is not simplistic.</em></p>
+      <div style="position:relative; margin:28px 0 16px 8px; padding-left:26px; border-left:2px solid #D4AF37;">
+        <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Beginning: Ku Lost</h4><p style="margin:0; color:#a0a0a0;">Ori enters Niwen to find Ku.</p></div>
+        <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Middle: Wisp Recovery</h4><p style="margin:0; color:#a0a0a0;">Wisps are gathered to rebuild Niwen's spirit core.</p></div>
+        <div style="position:relative;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">End: Ori's Legacy</h4><p style="margin:0; color:#a0a0a0;">Final sacrifice creates a new cycle of life.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; WORLD / MAP / ENVIRONMENT</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Niwen Biomes and Flow</div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ Inkwater Marsh</h4><p style="color:#a0a0a0; font-size:0.9em;">Opening zone and combat onboarding.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Wellspring Glades</h4><p style="color:#a0a0a0; font-size:0.9em;">NPC hub with upgrades and quests.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Luma Pools</h4><p style="color:#a0a0a0; font-size:0.9em;">Water traversal and visual showcase biome.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">● Willow's End</h4><p style="color:#a0a0a0; font-size:0.9em;">Endgame danger zone and final confrontation path.</p></div>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAMEPLAY MECHANICS</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Combat + Movement Hybrid Mastery</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;"><p>Sequel gameplay highlight එක combat depth. Spirit Edge, Spirit Arc, Sentry, Launch, Burrow, Grapple වගේ tools mix කරලා builds customize කරන්න පුළුවන්. Movement still central, but now combat decisions equally important.</p><p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Ori 2 adds real build variety without losing platforming identity.</em></p></div>
+    <div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">✦ This game's most unique feature is the Spirit Shard system that lets players shape Ori's playstyle around mobility, offense, or survival.</div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; CHARACTERS / FACTIONS</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Main Cast of Niwen</div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">★ Ori</h4><p style="color:#a0a0a0; font-size:0.9em;">Spirit hero carrying Ku rescue and Niwen restoration.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Shriek</h4><p style="color:#a0a0a0; font-size:0.9em;">Tragic antagonist formed by isolation and fear.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">● Ku / Seir</h4><p style="color:#a0a0a0; font-size:0.9em;">Emotional core and spirit-light guidance.</p></div>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; LEVELS / MISSIONS / CAMPAIGN</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Campaign Milestone Timeline</div>
+    <div style="position:relative; margin:22px 0 8px 8px; padding-left:28px; border-left:2px solid #D4AF37;">
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">1</span><p style="margin:0; color:#ffffff;"><strong>Search for Ku</strong> | Objective: Reach Niwen heartland | Difficulty: Medium | Location: Inkwater Marsh</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">2</span><p style="margin:0; color:#ffffff;"><strong>Wellspring Repair</strong> | Objective: Restore water network | Difficulty: Hard | Location: The Wellspring</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">3</span><p style="margin:0; color:#ffffff;"><strong>Gather Wisps</strong> | Objective: Recover memory, eyes, strength | Difficulty: Hard | Location: Multiple biomes</p></div>
+      <div style="position:relative;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">4</span><p style="margin:0; color:#ffffff;"><strong>Final Light</strong> | Objective: Restore Niwen spirit cycle | Difficulty: Very Hard | Location: Willow's End</p></div>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; WEAPONS / TOOLS / ABILITIES</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Combat and Ability Table</div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead><tr style="background:#D4AF37;"><th style="padding:12px; color:#111; text-align:left;">Name</th><th style="padding:12px; color:#111; text-align:left;">Type</th><th style="padding:12px; color:#111; text-align:left;">Power</th><th style="padding:12px; color:#111; text-align:left;">Notes</th></tr></thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Spirit Edge</td><td style="padding:10px; color:#a0a0a0;">Melee</td><td style="padding:10px; color:#a0a0a0;">High</td><td style="padding:10px; color:#a0a0a0;">Fast close combat opener</td></tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Spirit Arc</td><td style="padding:10px; color:#a0a0a0;">Ranged</td><td style="padding:10px; color:#a0a0a0;">Medium</td><td style="padding:10px; color:#a0a0a0;">Precision shot control</td></tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Launch</td><td style="padding:10px; color:#a0a0a0;">Mobility</td><td style="padding:10px; color:#a0a0a0;">N/A</td><td style="padding:10px; color:#a0a0a0;">Major late-game movement breakpoints</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAME HISTORY &amp; DEVELOPMENT</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">From Sequel Vision to Genre Peak</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Will of the Wisps 2020 release එකෙන් Moon Studios combat and quest systems massively expand කළා. Launch පස්සේ performance-focused patches rapid cadence එකෙන් release කරලා experience stabilize කළා. Critical reception very strong - major outlets and players දෙපාර්ශ්වයෙන් high praise.</p></div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; REPLAYABILITY</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Build Variety and Completion Routes</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>No multiplayer mode, but replay value high thanks to shard builds, difficulty modifiers, side quest completion, and time-trial/challenge cleanup. Combat-oriented and mobility-oriented runs feel different.</p></div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; COMMUNITY CONTENT BOX</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Vault Notes</div>
+    <div class="lore-highlight" style="background:linear-gradient(135deg,
+  #161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37;
+  padding:25px; margin:25px 0; border-radius:0 8px 8px 0;"><em style="color:#D4AF37; font-size:1.1em;">"Fun Fact: Ori 2's opening and ending are often cited among the most emotional sequences in modern platformers."</em><p style="color:#a0a0a0; margin-top:10px;">Music direction + hand animation pacing make those scenes feel almost film-like.</p></div>
+    <div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;"><strong>PRO TIP:</strong> Spirit Shard slots early game random fill කරන්නෙ නැතිව combat core + survivability core දෙකකට split කරලා build කරන්න.</div>
+  </div>
+
+  <div class="section-block">
+    <div class="highlight-box">
+      "Embrace the light, and uncover the true destiny that awaits beyond the forest." - Moon Studios
+    </div>
+  </div>
+
+  <div class="section-block">
+    <p style="text-align: center; color: var(--hk-gold); font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.2em;">
+      THANK YOU FOR EXPLORING ORI AND THE WILL OF THE WISPS
+    </p>
+    <p style="text-align: center; font-size: 13px; color: var(--dim);">
+      Project by White Cat Game Vault &bull; 2026
+    </p>
+  </div>
+
+</div> 
+<footer style="padding: 4rem 2rem; border-top: 1px solid var(--border); text-align: center; background: #05060a;">
+  <div style="font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--text); letter-spacing: 2px;">
+    WHITE<span style="color:var(--hk-gold)">CAT</span> VAULT
+  </div>
+  <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">Explore the unseen lore of the gaming world.</p>
+</footer>
+
+<script src="../../../scripts/game/game-detail.js"></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>

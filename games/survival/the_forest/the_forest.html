@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Forest · White Cat Game Vault</title>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../scripts/game/game-detail.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-img-wrap">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <img id="lb-img" src="" alt="The Forest View">
+  </div>
+  
+  <div class="lb-nav">
+    <span class="lb-counter" id="lb-counter">1 / 19</span>
+    <div class="lb-controls">
+      <button class="lb-arrow" onclick="lbMove(-1)">&#8592; Back</button>
+      <button class="lb-arrow" onclick="lbMove(1)">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../../../index.html">
+    <img class="logo-img" src="../../../assets/logo.webp" alt="White Cat" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <a class="header-back" href="../../../game_index.html" aria-label="Back to games">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M19 12H5M12 5l-7 7 7 7"/>
+  </svg>
+</a>
+</header>
+
+<div class="game-hero">
+  <div class="game-hero-bg" style="background-image:url('cover.webp')"></div>
+  <div class="game-hero-content">
+    <div class="game-hero-tag">&#9670; Survival &bull; Horror &bull; 2018</div>
+    <h1 class="game-hero-title">THE<br><span>FOREST</span></h1>
+    <p class="game-hero-sub">Endnight Games &bull; Survive, Build, Explore</p>
+    <div class="hero-badges">
+      <span class="hero-badge">★★★★★ 9.1 / 10</span>
+      <span class="hero-badge soul">Overwhelmingly Positive</span>
+      <span class="hero-badge green">Survival Horror</span>
+      <span class="hero-badge">30–50+ Hours</span>
+    </div>
+  </div>
+</div>
+
+<div class="price-float">
+  <div class="price-float-title">THE FOREST</div>
+  <div class="price-float-right">
+    <div class="price-float-rating">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;--</div>
+    <div class="price-float-val">--</div>
+  </div>
+</div>
+
+<div class="game-content">
+  <div class="section-block">
+    <div class="sec-label">&#9670; Official Media</div>
+    <div class="sec-title">The Descent Begins</div>
+    <div class="video-wrap">
+      <iframe 
+        src="https://www.youtube.com/embed/ay3tDjnBziY" 
+        title="The Forest Gameplay" 
+        allow="autoplay; fullscreen" 
+        frameborder="0" 
+        allowfullscreen 
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="gallery-section">
+      <div class="cf-wrap">
+        <div class="cf-stage" id="cf-stage"></div>
+      </div>
+      <div class="cf-controls">
+        <div class="cf-dots" id="cf-dots"></div>
+        <div class="cf-nav-row">
+          <button class="cf-nav-btn" onclick="cfMove(-1)">⬅</button>
+          <div class="cf-nav-counter" id="counterEl">1/19</div>
+          <button class="cf-nav-btn" onclick="cfMove(1)">➡</button>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--dim);margin-top:12px;font-family:'Syne',sans-serif;letter-spacing:.1em;">
+      TAP CENTER IMAGE TO ENLARGE &bull; SWIPE TO NAVIGATE
+    </p>
+  </div>
+
+  <div class="section-block">
+    <div class="sec-label">🛡️ Technical Specifications</div>
+    <div class="sec-title">System Requirements</div>
+    
+    <div class="req-grid">
+      <div class="req-box">
+        <div class="req-type">Minimum</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 7 (64bit)</span></li>
+          <li><strong>CPU</strong> <span>Intel Dual-Core 2.4 GHz</span></li>
+          <li><strong>RAM</strong> <span>4 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>NVIDIA GeForce 8800GT</span></li>
+          <li><strong>Storage</strong> <span>5 GB available</span></li>
+        </ul>
+      </div>
+
+      <div class="req-box recommended">
+        <div class="req-type">Recommended</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 7 (64bit)</span></li>
+          <li><strong>CPU</strong> <span>Quad Core Processor</span></li>
+          <li><strong>RAM</strong> <span>4 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>NVIDIA GeForce GTX 560</span></li>
+          <li><strong>Storage</strong> <span>5 GB available</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">
+      &#9670; GAME OVERVIEW
+    </div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">The Forest: Isolated Survival Horror</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>The Forest කියන්නේ remote peninsula එකක දරුණු isolation එකත්, primal fear එකත් එකට ගැලපෙන survival horror අත්දැකීමක්. ඔබ play කරන්නේ Eric LeBlanc ලෙසයි. passenger plane crash එකකින් පස්සේ ඔබගේ පුතා Timmy අතුරුදන් වෙලා, unknown cannibal tribes සහ mutant creatures පිරුණු වනාන්තරයක් මැද ඔබ තනියම ඉතුරු වෙනවා. මෙතන mood එක action-heavy game එකක් වගේ නෙවෙයි; calm daylight scavenging එකක් හදිසියේම night terror එකක් වෙලා හැරෙන psychological pressure එක තමයි game එකේ හෘදය.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: You survive a crash as Eric, search for Timmy, and endure a day-night cycle that turns quiet exploration into relentless horror.</em></p>
+      <p>Game loop එක සරල වගේ පේනත් depth එක ලොකුයි. දවල්ට logs කපලා shelter build කරනවා, rabbits හෝ fish hunt කරනවා, medicine collect කරනවා, cave entrances mark කරනවා. රාත්‍රියට defenses check කරනවා, stealth mode එකෙන් patrol කරන cannibals avoid කරනවා, හෝ traps use කරලා base එක protect කරනවා. HUD minimal නිසා immersion එක තවත් වැඩිවෙලා, map එක full reveal වෙන්නේ ඔබ literally walk කරලා landmarks මතක තියාගත්තාම විතරයි.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Building, scavenging, hunting, and cave exploration blend into a tense loop where preparation by day decides survival at night.</em></p>
+      <p>Tone එක cinematic වුණත් scripted corridor horror එකක් නොවෙයි. AI tribes ඔබගේ behavior එක observe කරන එක, base location එක memorize කරන එක, සහ attacks escalate කරන එක නිසා every playthrough එක වෙනස්. ඒකයි The Forest එක today තවමත් discussed වෙන්නේ emergent horror sandbox එකක් විදිහට. <strong>Steam reviews are Overwhelmingly Positive (about 95%)</strong>, සහ Steam page linked <strong>Metacritic score is 83</strong>, එනම් critical හා player reception දෙකම strong.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The game stands out for emergent AI-driven horror, strong replay value, and consistently high player and critic reception.</em></p>
+    </div>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;">
+      <strong>Why You Should Play This</strong>
+      <ul style="margin:10px 0 0 18px; padding:0;">
+        <li>දවල් planning + රාත්‍රී panic cycle එකෙන් true survival tension ලැබෙනවා. <strong>Day prep decides night survival.</strong></li>
+        <li>Dynamic cannibal AI නිසා scripted jump scare වලට වඩා unpredictable horror ලැබෙනවා. <strong>Enemies study your habits.</strong></li>
+        <li>Cave network design එක puzzle, combat, lore discovery තුනම එකතු කරනවා. <strong>Exploration always matters.</strong></li>
+        <li>Solo සහ co-op දෙකම solid; friends එක්ක base building chaos එක memorable. <strong>Great replay value in co-op.</strong></li>
+        <li>Crafting system එක lightweight නමුත් tactical depth තියෙනවා. <strong>Simple inputs, meaningful outcomes.</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">
+      &#9670; STORY &amp; LORE
+    </div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">From Plane Crash to Sahara Truth</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>කතාව ආරම්භ වෙන්නේ routine flight එකක් catastrophic crash එකකට හැරෙද්දී. Eric LeBlanc unconscious වෙන අතරතුර red paint ගාපු stranger කෙනෙක් Timmy ව අරගෙන යන দৃශ්‍යයෙන් game එකේ first emotional hook එක ගොඩනැගෙන්නේ. ඒ මොහොතෙන් පස්සේ player motivation එක simple objective එකකට reduce වෙනවා: survive and find Timmy. නමුත් forest එක ඔබට quick answers දෙන්නේ නැහැ. camp sites, wreckage pieces, passenger manifests වගේ clues එකින් එක එකතු කරද්දී, crash එක random accident එකක්ද නැද්ද කියන සැකය ගැඹුරු වෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Eric's search for Timmy starts as survival, then slowly reveals a deeper and more deliberate mystery.</em></p>
+      <p>Middle arc එකේ ප්‍රධාන core එක caves. Hanging Cave, Wet Cave, Chasm Cave, Submerged Cave වගේ පද්ධති ඇතුළට බැහැලා යද්දී surface horror එකට වඩා scientific horror එකක් පෙනෙන්න පටන් ගන්නවා. mutilated explorers, religious effigies, old expedition gear, keycard-gated sectors වලින් lore pieces assemble වෙන්නේ fragmented documentary එකක් වගේ. Cannibal tribes purely monster faction එකක් නෙවෙයි; territorial behavior, ritual spaces, night raids pattern වලින් culture fragments එකිනෙක පෙන්නනවා. player එකා predator ද prey ද කියන moral line එකත් blurred වෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The cave arc transforms the game from wilderness fear into bio-experiment and ritual horror with layered world-building.</em></p>
+      <p>End arc එක Sahara Therapeutics facility එකෙන් climax වෙනවා. Dr. Mathew Cross, Megan Cross, Artifact experiments, resurrection research, child sacrifice mechanics එකට සම්බන්ධ records හරහා Timmy case එක isolated tragedy එකක් නොවෙන බව clear වෙනවා. Final choice එක player ට moral burden දෙකක් දෙයි: Timmy බේරගන්න වෙනත් අය පාවාදෙනවද, නැත්නම් cycle එක නවත්වලා sacrifice accept කරනවද. ඒ නිසා The Forest ending එක pure victory එකක් නොවෙයි, <strong>survival cost එක ගැන uncomfortable question</strong> එකක්.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The finale exposes Sahara's experiments and forces a morally heavy decision rather than a clean heroic ending.</em></p>
+      <div style="position:relative; margin:28px 0 16px 8px; padding-left:26px; border-left:2px solid #D4AF37;">
+        <div style="position:relative; margin-bottom:18px;">
+          <span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span>
+          <h4 style="color:#ffffff; margin:0 0 6px 0;">Beginning: Flight 742 Crash</h4>
+          <p style="margin:0; color:#a0a0a0;">Timmy kidnapped by the Red Man, forcing immediate survival and tracking.</p>
+        </div>
+        <div style="position:relative; margin-bottom:18px;">
+          <span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span>
+          <h4 style="color:#ffffff; margin:0 0 6px 0;">Middle: Cave Network Descent</h4>
+          <p style="margin:0; color:#a0a0a0;">Keycards, mutant specimens, and expedition evidence reveal controlled experimentation.</p>
+        </div>
+        <div style="position:relative;">
+          <span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span>
+          <h4 style="color:#ffffff; margin:0 0 6px 0;">End: Sahara Facility Choice</h4>
+          <p style="margin:0; color:#a0a0a0;">Choose between activating extraction protocol or breaking the cycle permanently.</p>
+        </div>
+      </div>
+    </div>
+    <div class="lore-highlight" style="background:linear-gradient(135deg,
+  #161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37;
+  padding:25px; margin:25px 0; border-radius:0 8px 8px 0;">
+      <em style="color:#D4AF37; font-size:1.1em;">"The island is not haunted by ghosts; it is haunted by choices people made in labs."</em>
+      <p style="color:#a0a0a0; margin-top:10px;">මෙම lore එකේ depth එක තියෙන්නේ cannibal tribe එක monster trope එකක් අස්සේ අහුරා නොතබා, corporate secrecy, සහ human resurrection obsession එකෙන් island ecosystem එක කොච්චර විකෘති වුණාද කියන තැනට ගෙනියන නිසා. player එකාට හමුවෙන්නේ purely supernatural curse එකක් නෙවෙයි, <strong>human ambition gone wrong</strong> කියන darker truth එක.</p>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">
+      &#9670; WORLD / MAP / ENVIRONMENT
+    </div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Peninsula Layout and Cave Ecology</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>The Forest world එක handcrafted peninsula එකක් වුණත් procedural unpredictability එකක් තියෙනවා AI patrols, weather shifts, resource depletion patterns නිසා. Coastal zones වල turtle spawning, inland ponds වල drinking routes, ridge lines වල scouting advantage, සහ dense forest patches වල stealth cover වගේ practical map logic එක player decisions shape කරනවා. Sinkhole landmark එක central navigation anchor එකක්; player කොහේ ගියත් orientation තියාගන්න මේ massive crater එක visual compass එකක් වගේ වැඩ කරනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The peninsula is readable yet dangerous, with landmarks and resource routes that reward spatial memory.</em></p>
+      <p>Underground layer එක තවත් map එකක් වගේ. surface freedom තිබුණත් progression-critical tools බොහෝදුරට caves වල lock කරලා තියෙන්නේ intentionally. Cave 2 Hanging Cave එකේ ropes සහ corpses වලින් psychological pressure build කරනවා, Cave 7 Chasm Cave vertical traversal emphasize කරනවා, waterlogged tunnels torch management force කරනවා. Final laboratory sectors modern facility aesthetics එකකට switch වෙලා environmental storytelling tone shift එකක් දෙයි. ඒකෙන් wilderness horror එක scientific horror එකට smooth transition වෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Surface and cave layers interlock, pushing players from natural survival into engineered nightmare spaces.</em></p>
+    </div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #D4AF37;">
+        <h4 style="color:#ffffff; margin-bottom:8px;">✦ Main Cannibal Village</h4>
+        <p style="color:#a0a0a0; font-size:0.9em;">Type: Surface settlement | Key Feature: Effigies, patrol origin, loot tents | Mood: Ritualistic dread and constant surveillance.</p>
+      </div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #c0392b;">
+        <h4 style="color:#ffffff; margin-bottom:8px;">◆ Cave 2: Hanging Cave</h4>
+        <p style="color:#a0a0a0; font-size:0.9em;">Type: Early critical cave | Key Feature: Suspended bodies, narrow drops, key progression loot | Mood: Claustrophobic panic.</p>
+      </div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #2980b9;">
+        <h4 style="color:#ffffff; margin-bottom:8px;">▸ The Sinkhole</h4>
+        <p style="color:#a0a0a0; font-size:0.9em;">Type: Geological core landmark | Key Feature: Vertical descent routes and late-game access paths | Mood: Monumental, hopeless scale.</p>
+      </div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #27ae60;">
+        <h4 style="color:#ffffff; margin-bottom:8px;">● The Yacht</h4>
+        <p style="color:#a0a0a0; font-size:0.9em;">Type: Coastal safe checkpoint | Key Feature: Story clues, temporary shelter, ocean approach | Mood: False comfort before danger.</p>
+      </div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #8e44ad;">
+        <h4 style="color:#ffffff; margin-bottom:8px;">★ Sahara Laboratory</h4>
+        <p style="color:#a0a0a0; font-size:0.9em;">Type: Endgame facility | Key Feature: Artifact chambers, medical records, boss encounter area | Mood: Clinical horror and moral collapse.</p>
+      </div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #e67e22;">
+        <h4 style="color:#ffffff; margin-bottom:8px;">🎮 Snow Mountain Ridge</h4>
+        <p style="color:#a0a0a0; font-size:0.9em;">Type: High-altitude biome edge | Key Feature: Cold exposure, lower visibility, sparse resources | Mood: Empty, hostile silence.</p>
+      </div>
+    </div>
+    <div style="margin-top:24px; background:#141414; border:1px solid #2a2a2a; border-radius:8px; padding:18px;">
+      <p style="margin:0 0 12px 0; color:#D4AF37; font-weight:700;">World Structure Diagram</p>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">Crash Sites &amp; Beaches</div>
+        <div style="width:2px; height:14px; background:#D4AF37;"></div>
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">Forest Interior &amp; Villages</div>
+        <div style="width:2px; height:14px; background:#D4AF37;"></div>
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">Cave Network Layer</div>
+        <div style="width:2px; height:14px; background:#D4AF37;"></div>
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">Sinkhole Access Corridor</div>
+        <div style="width:2px; height:14px; background:#D4AF37;"></div>
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">Sahara Laboratory Endgame</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">
+      &#9670; GAMEPLAY MECHANICS
+    </div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Survival Loop, Progression, and Systems</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Main gameplay loop එක cycle-based: scout, gather, craft, fortify, defend, repeat. Daytime scouting phase එකේ sticks, logs, rocks, cloth, medicine, snacks collect කරන අතර resource routes plan කරනවා. Evening build phase එකේ defensive walls, deadfall traps, noose traps, drying racks, water collectors place කරනවා. Night defense phase එකේ sound cues, torch visibility, enemy pathing patterns observe කරලා direct combat හෝ stealth evasion තීරණය කරනවා. මෙහි tension එක balance වෙන්නේ action skill එකෙන් විතරක් නෙවෙයි, preparation discipline එකෙන්.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The core loop rewards planning as much as fighting, making each day a setup for each dangerous night.</em></p>
+      <p>Progression system එක RPG menu-heavy style එකක් නැහැ; instead, skill progression emerges from behavior. ඔබ sprint වැඩියෙන් කරද්දී athleticism වෙනස් වෙනවා, melee combat repeat කළාම strength build වෙනවා, food management fail වුණොත් stamina and energy collapse වෙනවා. Economy traditional currency නොතිබුණත්, cloth, bones, feathers, booze, meds, circuit boards වගේ crafting materials "soft economy" එකක් build කරනවා. Difficulty spike වෙන්නේ scripted level gate එකකින් නොවෙයි; cannibal aggression scale, armor durability loss, winter exposure, cave darkness pressure එක combine වෙලා player mistakes punish කරනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Progression is stat-based through action, while resource scarcity and AI pressure create natural difficulty scaling.</em></p>
+      <p>Combat system එකට light/heavy weapon choice, block timing, fire damage, poison effects, ranged accuracy, trap synergy ඇතුළත්. Crafted Bow early game flexible weapon එකක්, Modern Bow high precision late game tool එකක්, Molotov crowd control opener එකක්. Base building mechanic එකේ blueprint ghost system use කරලා mega-fort construction possible, නමුත් oversized base එක defense burden වැඩි කරනවා. Co-op වලදී role split කිරීම effective: one player logs and walls, another caves and key items, another perimeter trap maintenance. ඒ synergy එකෙන් The Forest strategic survival sandbox එකක් වෙයි.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Weapon variety, building choices, and cooperative role division turn simple crafting into deep tactical survival.</em></p>
+    </div>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;">
+      ✦ This game's most unique feature is dynamic cannibal AI behavior that reacts to your base location, routines, and aggression patterns.
+      <br>✦ මේ game එකේ අද්විතීයම දේ තමයි enemy AI එක scripted spawn machine එකක් නොවී player behavior observe කරලා adaptive pressure එක build කරන එක.
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Control</th>
+          <th style="padding:12px; color:#111; text-align:left;">Action</th>
+          <th style="padding:12px; color:#111; text-align:left;">Usage Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">W A S D / Left Stick</td>
+          <td style="padding:10px; color:#a0a0a0;">Movement &amp; Positioning</td>
+          <td style="padding:10px; color:#a0a0a0;">Strafe during melee to avoid wide mutant swings.</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Left Mouse / RT</td>
+          <td style="padding:10px; color:#a0a0a0;">Primary Attack</td>
+          <td style="padding:10px; color:#a0a0a0;">Chain light hits, then reposition before counterattacks.</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Right Mouse / LT</td>
+          <td style="padding:10px; color:#a0a0a0;">Block / Aim</td>
+          <td style="padding:10px; color:#a0a0a0;">Blocking reduces burst damage when swarmed.</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">B / Circle</td>
+          <td style="padding:10px; color:#a0a0a0;">Crafting Mat</td>
+          <td style="padding:10px; color:#a0a0a0;">Combine cloth, booze, and rope without opening base menu.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">
+      &#9670; CHARACTERS / FACTIONS
+    </div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">People Behind the Horror</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>The Forest එකේ named characters අඩු වුණත්, ඔවුන්ගේ choices ලෝකය විනාශ කළ පරාසය ලොකුයි. Eric, Timmy, Mathew Cross, Megan Cross සහ Sahara Therapeutics organization එක එකට බැඳෙලා playable horror එකට emotional සහ ethical weight දෙයි.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: A small cast drives a large moral conflict, linking family survival to corporate experimentation.</em></p>
+    </div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #D4AF37; grid-column:span 2;">
+        <h4 style="color:#ffffff; margin-bottom:8px;">★ Eric LeBlanc - Protagonist</h4>
+        <p style="color:#a0a0a0; font-size:0.9em;">Role: Father, survival lead | Faction: Survivor | Bio: Eric LeBlanc කියන්නේ sensational writer හෝ action hero archetype එකක් නොවී vulnerable parent කෙනෙක්. crash එකෙන් පස්සේ ඔහුගේ decisions සියල්ලම Timmy restore කරගැනීමේ obsession එකෙන් drive වෙනවා. gameplay perspective එකෙන් Eric blank slate වගේ පේනත්, environmental clues වලින් ඔහු mentally deteriorate වෙන හැටි දැනගන්න පුළුවන්: sleep deprivation, desperation crafting, cave dives with almost no safety margin. ඒ වගේම player විසින් base build කරන ආකාරය, enemies avoid කරන ආකාරය, final choice එක තෝරන ආකාරය Eric characterization එක directly shape කරනවා. Silent protagonist format එක නිසා ඔබගේ ethics තමයි Ericගේ personality. <strong>He survives physically, but the game asks whether he survives morally.</strong></p>
+      </div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #c0392b; grid-column:span 2;">
+        <h4 style="color:#ffffff; margin-bottom:8px;">◆ Dr. Mathew Cross (Red Man) - Antagonist</h4>
+        <p style="color:#a0a0a0; font-size:0.9em;">Role: Researcher turned extremist | Faction: Sahara-linked actor | Bio: Mathew Cross outwardly crazed killer වගේ පෙනුණත් underlying motive grief-driven obsession. තම දියණිය Megan revive කරන්න Artifact power exploit කරන අතර, ඒ process එකට required child sacrifice logic එක accept කරලා humanity line cross කරනවා. red paint visual code එක ritual authority symbol එකක් විදිහට game එක පුරා දිගටම repeat වෙනවා. Mathew villainy එක simple evil නෙවෙයි; scientific knowledge, personal loss, සහ ethics abandonment එක combine වූ tragedy. ඒ නිසා final reveal එක player ට shock එකක් පමණක් නෙවෙයි warning එකක්: intelligence without restraint can become predatory. <strong>He is terrifying because he still believes he is doing the necessary thing.</strong></p>
+      </div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #2980b9;">
+        <h4 style="color:#ffffff; margin-bottom:8px;">● Timmy LeBlanc - Catalyst Character</h4>
+        <p style="color:#a0a0a0; font-size:0.9em;">Role: Missing child / narrative objective | Faction: Civilian victim | Bio: Timmy gameplay තුළ combat participant කෙනෙක් නොවුණත් entire story engine එක ඔහු. notebook drawings, toy references, parental memory cues හරහා Timmy presence indirect වශයෙන් player psychology එක influence කරනවා. rescue objective එක නිසා players riskier cave runs attempt කරනවා, over-commit resources, සහ fatigue ignored decisions ගන්නවා. Ending route එකකදී Timmy revival success වුණත් long-term effects ambiguous ලෙස පෙන්වලා game එක perfect reunion fantasy එක refuse කරනවා. Timmy character function එක මෙහිදී emotional reward device එකකට වඩා moral test device එකක්: ඔබ ඔහු වෙනුවෙන් කොච්චර දුර යන්න සූදානම්ද, සහ ඒ මිල ගෙවන්නේ කවුද? <strong>His absence is the loudest presence in the game.</strong></p>
+      </div>
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Faction</th>
+          <th style="padding:12px; color:#111; text-align:left;">Side</th>
+          <th style="padding:12px; color:#111; text-align:left;">Goal</th>
+          <th style="padding:12px; color:#111; text-align:left;">Signature Ability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Survivor (Eric)</td>
+          <td style="padding:10px; color:#a0a0a0;">Player Side</td>
+          <td style="padding:10px; color:#a0a0a0;">Find Timmy, stay alive, escape peninsula</td>
+          <td style="padding:10px; color:#a0a0a0;">Adaptive crafting and fortification</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Cannibal Tribes</td>
+          <td style="padding:10px; color:#a0a0a0;">Hostile Native Group</td>
+          <td style="padding:10px; color:#a0a0a0;">Territorial control and ritual defense</td>
+          <td style="padding:10px; color:#a0a0a0;">Pack scouting, intimidation, night raids</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Sahara Therapeutics</td>
+          <td style="padding:10px; color:#a0a0a0;">Secret Corporate Actor</td>
+          <td style="padding:10px; color:#a0a0a0;">Artifact research and resurrection experiments</td>
+          <td style="padding:10px; color:#a0a0a0;">Lab technology and containment systems</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">
+      &#9670; LEVELS / MISSIONS / CAMPAIGN
+    </div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Campaign Milestones and Objective Flow</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>The Forest mission log UI එකක් නැති open objective design එකක් use කරන නිසා player විසින්ම chapter flow එක build කරගන්නවා. පහත timeline එක story-critical progression route එකකට practical blueprint එකක්.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: There are no hard mission markers, so progression emerges through discovered tools and locations.</em></p>
+      <div style="position:relative; margin:22px 0 8px 8px; padding-left:28px; border-left:2px solid #D4AF37;">
+        <div style="position:relative; margin-bottom:18px;">
+          <span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">1</span>
+          <p style="margin:0; color:#ffffff;"><strong>Crash Landing</strong> | Objective: Immediate shelter + food | Difficulty: Medium | Location: Plane Wreck Region</p>
+        </div>
+        <div style="position:relative; margin-bottom:18px;">
+          <span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">2</span>
+          <p style="margin:0; color:#ffffff;"><strong>Initial Cave Descent</strong> | Objective: Collect modern tools and clues | Difficulty: Hard | Location: Cave 2 Hanging Cave</p>
+        </div>
+        <div style="position:relative; margin-bottom:18px;">
+          <span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">3</span>
+          <p style="margin:0; color:#ffffff;"><strong>Keycard Hunt</strong> | Objective: Reach locked sectors via story items | Difficulty: Hard | Location: Lawyer Cave Route</p>
+        </div>
+        <div style="position:relative; margin-bottom:18px;">
+          <span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">4</span>
+          <p style="margin:0; color:#ffffff;"><strong>Sinkhole Entry</strong> | Objective: Descend safely with climbing prep | Difficulty: Very Hard | Location: Central Sinkhole</p>
+        </div>
+        <div style="position:relative; margin-bottom:18px;">
+          <span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">5</span>
+          <p style="margin:0; color:#ffffff;"><strong>Sahara Lab Infiltration</strong> | Objective: Recover Timmy and uncover experiment files | Difficulty: Very Hard | Location: Underground Facility</p>
+        </div>
+        <div style="position:relative;">
+          <span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">6</span>
+          <p style="margin:0; color:#ffffff;"><strong>Final Decision</strong> | Objective: Choose rescue route or shutdown route | Difficulty: Moral Choice | Location: Artifact Control Room</p>
+        </div>
+      </div>
+      <p style="margin-top:16px;">Campaign length සාමාන්‍යයෙන් 15-25 hours solo run එකකට යනවා; completionist cave exploration, blueprints, achievements target කළාම 35+ hours යනවා. Side content ලෙස large-scale base architecture, animal hunting challenges, creative mode experiments, co-op fortress projects තියෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Main story can be finished quickly, but exploration and building dramatically extend playtime.</em></p>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">
+      &#9670; WEAPONS / TOOLS / ABILITIES
+    </div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Combat and Survival Loadout</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>The Forest combat meta එක ranged opening + melee finish pattern එකට අනුකූලයි. armor pieces manage කරලා traps with fire combos භාවිතා කළාම difficult cave encounters safer වෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Balanced loadouts and trap usage are more reliable than pure aggression.</em></p>
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Name</th>
+          <th style="padding:12px; color:#111; text-align:left;">Type</th>
+          <th style="padding:12px; color:#111; text-align:left;">Damage</th>
+          <th style="padding:12px; color:#111; text-align:left;">Range</th>
+          <th style="padding:12px; color:#111; text-align:left;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Modern Axe</td>
+          <td style="padding:10px; color:#a0a0a0;">Melee Tool</td>
+          <td style="padding:10px; color:#a0a0a0;">High</td>
+          <td style="padding:10px; color:#a0a0a0;">Short</td>
+          <td style="padding:10px; color:#a0a0a0;">Best all-rounder for combat + tree chopping efficiency.</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Katana</td>
+          <td style="padding:10px; color:#a0a0a0;">Melee Blade</td>
+          <td style="padding:10px; color:#a0a0a0;">Medium</td>
+          <td style="padding:10px; color:#a0a0a0;">Short</td>
+          <td style="padding:10px; color:#a0a0a0;">Very fast swing speed, excellent for stagger chaining.</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Crafted Bow</td>
+          <td style="padding:10px; color:#a0a0a0;">Ranged</td>
+          <td style="padding:10px; color:#a0a0a0;">Medium</td>
+          <td style="padding:10px; color:#a0a0a0;">Long</td>
+          <td style="padding:10px; color:#a0a0a0;">Early-game silent option; cheap ammo recovery.</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Modern Bow</td>
+          <td style="padding:10px; color:#a0a0a0;">Ranged</td>
+          <td style="padding:10px; color:#a0a0a0;">High</td>
+          <td style="padding:10px; color:#a0a0a0;">Long</td>
+          <td style="padding:10px; color:#a0a0a0;">Late-game precision weapon for caves and patrol picks.</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Flintlock Pistol</td>
+          <td style="padding:10px; color:#a0a0a0;">Ranged Firearm</td>
+          <td style="padding:10px; color:#a0a0a0;">Very High</td>
+          <td style="padding:10px; color:#a0a0a0;">Medium</td>
+          <td style="padding:10px; color:#a0a0a0;">Powerful burst, but long reload and rare ammo parts.</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Molotov Cocktail</td>
+          <td style="padding:10px; color:#a0a0a0;">Thrown Utility</td>
+          <td style="padding:10px; color:#a0a0a0;">Area Burn</td>
+          <td style="padding:10px; color:#a0a0a0;">Medium</td>
+          <td style="padding:10px; color:#a0a0a0;">Great crowd control against clustered cannibals.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">
+      &#9670; GAME HISTORY &amp; DEVELOPMENT
+    </div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Endnight's Development Journey</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>The Forest නිර්මාණය කළේ Endnight Games Ltd කියන small team studio එක. Unity engine එක භාවිතා කරලා cinematic first-person survival horror එකක් sandbox freedom එක්ක mix කිරීම ඔවුන්ගේ core vision එක. 2014 මැයි මාසයේ Early Access launch එකෙන් පස්සේ nearly four years community feedback cycle එකක් ගියා. ඒ කාලයේ base building stability, cannibal AI behavior, cave content, crafting UX, co-op performance, story completion path වගේ core systems iterate කරමින් game identity එක sharpen කළා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: A small team used long-form Early Access iteration to shape mechanics, horror pacing, and replayability.</em></p>
+      <p>Official PC 1.0 release April 30, 2018 දා Steam මත නිකුත් වුණා; PlayStation 4 release November 6, 2018 දා ආවා. Post-launch updates වලින් co-op refinement, bug fixes, performance improvements, VR support polish, සහ content tuning සිදු වුණා. Paid DLC model එකකට යනවට වඩා core package එක maintain කරමින් community longevity maximize කළා. Development history එක බලද්දී The Forest success එකේ රහස flashy marketing campaign එකක් නෙවෙයි; consistent patch cadence, unique enemy AI, සහ strong word-of-mouth momentum එක.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The release strategy favored a complete core game with steady updates over expansion-heavy monetization.</em></p>
+      <p>Critical recognition පැත්තෙන් game එකට mainstream AAA review volume අඩු වුණත් measurable impact එක clear. Steam user sentiment Overwhelmingly Positive level එකේ long-term තියාගෙන යෑම, Steam page මත Metacritic 83 linkage, සහ survival genre discussion වල frequently referenced AI behavior model එක The Forest එක lasting cult-classic status එකට ගෙනිච්චා. Indie scale project එකක් large community memory එකක් ගොඩනගන්න පුළුවන් කියලා prove කරපු උදාහරණයක් මේක.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Strong long-term player reception and distinctive systems gave The Forest durable critical relevance.</em></p>
+    </div>
+    <div style="margin-top:20px; background:#141414; border:1px solid #2a2a2a; border-radius:8px; padding:20px;">
+      <p style="margin:0 0 12px 0; color:#D4AF37; font-weight:700;">Milestone Timeline</p>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="width:10px; height:10px; border-radius:50%; background:#D4AF37; display:inline-block;"></span>
+          <span style="color:#a0a0a0;">2014 Alpha / Early Access</span>
+        </div>
+        <div style="height:2px; flex:1; min-width:40px; background:#D4AF37;"></div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="width:10px; height:10px; border-radius:50%; background:#D4AF37; display:inline-block;"></span>
+          <span style="color:#a0a0a0;">2018 PC v1.0</span>
+        </div>
+        <div style="height:2px; flex:1; min-width:40px; background:#D4AF37;"></div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="width:10px; height:10px; border-radius:50%; background:#D4AF37; display:inline-block;"></span>
+          <span style="color:#a0a0a0;">2018 PS4 Launch</span>
+        </div>
+        <div style="height:2px; flex:1; min-width:40px; background:#D4AF37;"></div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="width:10px; height:10px; border-radius:50%; background:#D4AF37; display:inline-block;"></span>
+          <span style="color:#a0a0a0;">2019 VR/Controller Patches</span>
+        </div>
+      </div>
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Edition / Expansion</th>
+          <th style="padding:12px; color:#111; text-align:left;">Content</th>
+          <th style="padding:12px; color:#111; text-align:left;">Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">PC Standard Release</td>
+          <td style="padding:10px; color:#a0a0a0;">Complete story arc, co-op, cave network, building systems</td>
+          <td style="padding:10px; color:#a0a0a0;">2018</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">PlayStation 4 Edition</td>
+          <td style="padding:10px; color:#a0a0a0;">Console launch with controller-optimized experience</td>
+          <td style="padding:10px; color:#a0a0a0;">2018</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Post-Launch Updates</td>
+          <td style="padding:10px; color:#a0a0a0;">No paid DLC; stability, VR and gameplay improvements</td>
+          <td style="padding:10px; color:#a0a0a0;">2018-2019</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;">
+      <strong>Major Patches That Mattered</strong><br>
+      <strong>PC v1.0:</strong> Full story ending, final balance pass, broad stability uplift.<br>
+      <strong>PS4 v1.14:</strong> Camcorder pickup and console-side gameplay fixes.<br>
+      <strong>PS4 v1.15:</strong> Stability improvements and hole-cutter related bug fix.<br>
+      <strong>V1.12 VR:</strong> Valve Index controller support and VR-specific issue cleanup.<br>
+      <strong>Recognition:</strong> <strong>Steam Overwhelmingly Positive (about 95%)</strong> and <strong>Metacritic 83</strong> visibility on Steam listing.
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">
+      &#9670; MULTIPLAYER / ONLINE
+    </div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Co-op Survival and Replay Value</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>The Forest online mode එක සරල matchmaking shell එකක් වගේ පේනත්, actual gameplay synergy හොඳට design කරලා තියෙනවා. players කිහිපදෙනෙක් base construction, cave runs, food logistics, perimeter defense roles වලට split වුණාම solo mode එකට වඩා strategic layer එකක් ලැබෙනවා. Friendly fire, shared panic moments, and resource mistakes නිසා emergent storytelling value වැඩි වෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Co-op turns survival into role-based teamwork, creating memorable unscripted moments.</em></p>
+      <p>Modes ලෙස single-player, online co-op, සහ LAN co-op support තියෙනවා. dedicated ranked ladder system එකක් නැති නිසා experience එක competitive esports angle එකකට නොයා cooperative sandbox direction එකේ තියෙනවා. community servers huge MMO scale එකක් නොවුණත්, Steam community සහ friend-hosted sessions හරහා player base steady. replayability එක වැඩි කරන ප්‍රධාන factors තුන: randomized spawn routes, dynamic enemy pressure, and varied base architecture experiments.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: With no ranked scene, online play focuses on collaborative horror and long-term replayability.</em></p>
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Mode</th>
+          <th style="padding:12px; color:#111; text-align:left;">Player Count</th>
+          <th style="padding:12px; color:#111; text-align:left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Single Player</td>
+          <td style="padding:10px; color:#a0a0a0;">1</td>
+          <td style="padding:10px; color:#a0a0a0;">Most immersive narrative pace with full tension on one player.</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Online Co-op</td>
+          <td style="padding:10px; color:#a0a0a0;">Up to 8</td>
+          <td style="padding:10px; color:#a0a0a0;">Shared world survival with role split for combat/building/scouting.</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">LAN Co-op</td>
+          <td style="padding:10px; color:#a0a0a0;">Up to 8</td>
+          <td style="padding:10px; color:#a0a0a0;">Local-network play with stable low-latency sessions.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">
+      &#9670; COMMUNITY CONTENT BOX
+    </div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Vault Notes for Survivors</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Community එක දිගටම repeat කරන recommendation එක simple: panic build නොකර routine build කරන්න. Base එක ලස්සන කරන්නේ final step; first step always safe water, drying rack, trap lane, and fallback shelter.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Veteran players prioritize survival infrastructure before aesthetics.</em></p>
+    </div>
+    <div class="lore-highlight" style="background:linear-gradient(135deg,
+  #161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37;
+  padding:25px; margin:25px 0; border-radius:0 8px 8px 0;">
+      <em style="color:#D4AF37; font-size:1.1em;">"Fun Fact: Cannibal patrols often circle your base first; they do not always rush instantly, which reveals their scouting behavior model."</em>
+      <p style="color:#a0a0a0; margin-top:10px;">මෙකෙන් practical lesson එක තියෙන්නේ visual contact maintain කරලා attack window predict කරගන්න පුළුවන් බව. Scout phase detect කළොත් unnecessary damage avoid කරන්න ඉක්මනින් torch off කරලා silent reposition කරන්න.</p>
+    </div>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;">
+      <strong>PRO TIP:</strong> Day 1-3 අතර beach shelter + drying rack + water collector trio එක build කරලා පසුව cave runs start කරන්න. <strong>Early infrastructure is stronger than early aggression.</strong>
+    </div>
+  </div>
+    <div class="section-block">
+    <div class="highlight-box">
+      "They are watching you... waiting for the night." - Survivor's Journal
+    </div>
+  </div>
+<div class="section-block">
+    <p style="text-align: center; color: var(--hk-gold); font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.2em;">
+      THANK YOU FOR EXPLORING THE FOREST
+    </p>
+    <p style="text-align: center; font-size: 13px; color: var(--dim);">
+      Project by White Cat Game Vault &bull; 2026
+    </p>
+  </div>
+</div>
+
+<footer style="padding: 4rem 2rem; border-top: 1px solid var(--border); text-align: center; background: #05060a;">
+  <div style="font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--text); letter-spacing: 2px;">
+    WHITE<span style="color:var(--hk-gold)">CAT</span> VAULT
+  </div>
+  <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">Explore the unseen lore of the gaming world.</p>
+</footer>
+
+<script src="../../../scripts/game/game-detail.js"></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>
+
+
+
+
