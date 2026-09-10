@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="White Cat Drive — Pro Software Collection. Game tools, video editing, coding, MS Office, pixel art and more.">
+<meta name="theme-color" content="#080a0e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="canonical" href="https://whitecatvault.netlify.app/tool_index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="White Cat Vault">
+<meta property="og:title" content="White Cat Tool Vault">
+<meta property="og:description" content="White Cat Drive — Pro Software Collection. Game tools, video editing, coding, MS Office, pixel art and more.">
+<meta property="og:url" content="https://whitecatvault.netlify.app/tool_index.html">
+<meta property="og:image" content="https://whitecatvault.netlify.app/assets/preview_banner.webp">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="White Cat Tool Vault">
+<meta name="twitter:description" content="White Cat Drive — Pro Software Collection. Game tools, video editing, coding, MS Office, pixel art and more.">
+<meta name="twitter:image" content="https://whitecatvault.netlify.app/assets/preview_banner.webp">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="White Cat Studio">
+<meta name="keywords" content="software tools, pro software collection, game tools, video editing tools, MS Office, pixel art software, Sri Lanka">
+<link rel="alternate" hreflang="en" href="https://whitecatvault.netlify.app/tool_index.html">
+<title>White Cat · Tool Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "White Cat Vault",
+      "item": "https://whitecatvault.netlify.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tool Vault",
+      "item": "https://whitecatvault.netlify.app/tool_index.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "White Cat Vault \u2014 Tool Vault",
+  "url": "https://whitecatvault.netlify.app/tool_index.html",
+  "description": "White Cat Drive \u2014 Pro Software Collection. Game tools, video editing, coding and more.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://whitecatvault.netlify.app/",
+    "name": "White Cat Vault"
+  }
+}
+</script>
+
+<style>
+@keyframes fadeUp { from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)} }
+@keyframes shimmerGold {
+  0%{background-position:-200% center}100%{background-position:200% center}
+}
+
+/* ════════════════════════════
+   HERO
+════════════════════════════ */
+.tv-hero {
+  padding: 4rem 2rem 2.5rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.tv-hero-orb1 {
+  position: absolute; top: 0; left: 20%; width: 600px; height: 300px;
+  background: radial-gradient(ellipse, rgba(232,197,90,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.tv-hero-orb2 {
+  position: absolute; bottom: 0; right: 10%; width: 400px; height: 200px;
+  background: radial-gradient(ellipse, rgba(78,203,113,.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.tv-hero-label {
+  font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: .35em; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1rem; position: relative; z-index: 1;
+  opacity: 0; animation: fadeUp .7s ease .1s forwards;
+}
+.tv-hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(52px, 10vw, 100px); line-height: .9;
+  background: linear-gradient(140deg, #eaeaea 0%, #f0d06a 45%, var(--gold) 70%, var(--gold2) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  letter-spacing: .05em; margin-bottom: .5rem; position: relative; z-index: 1;
+  opacity: 0; animation: fadeUp .7s ease .25s forwards;
+}
+.tv-hero-sub {
+  font-size: 14px; color: var(--muted); max-width: 480px;
+  margin: 0 auto 2rem; position: relative; z-index: 1;
+  opacity: 0; animation: fadeUp .7s ease .4s forwards;
+}
+.tv-stats {
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+  opacity: 0; animation: fadeUp .7s ease .55s forwards;
+}
+.tv-stat { text-align: center; padding: 0 28px; }
+.tv-stat-num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 32px;
+  color: var(--gold); letter-spacing: .05em; line-height: 1;
+  text-shadow: 0 0 20px rgba(232,197,90,.35);
+}
+.tv-stat-lbl {
+  font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-top: 4px;
+}
+.tv-stat-div {
+  width: 1px; height: 36px;
+  background: linear-gradient(to bottom, transparent, var(--border), transparent);
+}
+
+/* ════════════════════════════
+   SEARCH BAR
+════════════════════════════ */
+.tv-search-wrap {
+  display: flex; justify-content: center; padding: 1.6rem 2rem .8rem;
+}
+.tv-search-box { position: relative; width: 100%; max-width: 480px; }
+.tv-search-box svg {
+  position: absolute; left: 14px; top: 50%;
+  transform: translateY(-50%); color: var(--muted); pointer-events: none;
+}
+.tv-search-input {
+  width: 100%; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 100px; padding: 11px 20px 11px 44px;
+  font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 600;
+  letter-spacing: .05em; color: var(--text); outline: none;
+  transition: border-color .25s, box-shadow .25s;
+}
+.tv-search-input::placeholder { color: var(--dim); }
+.tv-search-input:focus {
+  border-color: rgba(232,197,90,.4);
+  box-shadow: 0 0 0 3px rgba(232,197,90,.07);
+}
+
+/* ════════════════════════════
+   FILTER BAR
+════════════════════════════ */
+.tv-filter-section {
+  display: flex; justify-content: center; padding: .5rem 2rem 1.2rem;
+}
+.tv-filter-bar {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;
+}
+.tv-filter-lbl {
+  font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700;
+  letter-spacing: .25em; text-transform: uppercase; color: var(--dim); margin-right: 4px;
+}
+.tv-filter-btn {
+  font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+  background: transparent; border: 1px solid var(--border);
+  padding: 7px 16px; border-radius: 100px; cursor: pointer; transition: all .2s;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.tv-filter-btn:hover { color: var(--gold); border-color: rgba(232,197,90,.3); }
+.tv-filter-btn.active { color: var(--bg); background: var(--gold); border-color: var(--gold); }
+.tv-filter-btn img {
+  width: 14px; height: 14px; object-fit: contain;
+  opacity: .7; flex-shrink: 0;
+}
+.tv-filter-btn.active img { opacity: 1; filter: brightness(0); }
+
+/* ════════════════════════════
+   MAIN WRAP
+════════════════════════════ */
+.tv-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px 5rem;
+}
+
+/* ════════════════════════════
+   CONTROLS ROW
+════════════════════════════ */
+.tv-controls {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 10px;
+  padding: .8rem 0 1.4rem;
+}
+.tv-count {
+  font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase; color: var(--dim);
+}
+.tv-sort-wrap { display: flex; align-items: center; gap: 8px; }
+.tv-sort-lbl {
+  font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--dim);
+}
+.tv-sort-select {
+  background: var(--surface); border: 1px solid var(--border); color: var(--text);
+  font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 100px; cursor: pointer; outline: none;
+  transition: border-color .2s;
+}
+.tv-sort-select:hover { border-color: rgba(232,197,90,.3); }
+.tv-sort-select option { background: #11141c; }
+
+/* ════════════════════════════
+   RECOMMENDED BANNER
+════════════════════════════ */
+.tv-rec-banner {
+  position: relative; overflow: hidden;
+  border: 1px solid rgba(232,197,90,.35);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(232,197,90,.06) 0%, rgba(196,154,42,.04) 50%, rgba(232,197,90,.06) 100%);
+  background-size: 200% auto;
+  padding: 1.6rem 1.8rem 1.4rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 40px rgba(232,197,90,.06), inset 0 0 60px rgba(232,197,90,.03);
+  opacity: 0; transform: translateY(20px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.tv-rec-banner.visible { opacity: 1; transform: translateY(0); }
+.tv-rec-banner::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 20%, var(--gold2) 80%, transparent 100%);
+  box-shadow: 0 0 12px rgba(232,197,90,.4);
+}
+.tv-rec-banner-hdr {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.2rem; flex-wrap: wrap; gap: 10px;
+}
+.tv-rec-banner-label {
+  display: flex; align-items: center; gap: 10px;
+}
+.tv-rec-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gold); box-shadow: 0 0 10px rgba(232,197,90,.6);
+  flex-shrink: 0;
+}
+.tv-rec-title {
+  font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: .25em; text-transform: uppercase; color: var(--gold);
+}
+.tv-rec-count {
+  font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+}
+/* RECOMMENDED CARDS GRID */
+.tv-rec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+/* ════════════════════════════
+   CATEGORY HEADER
+════════════════════════════ */
+.tv-cat-hdr {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 16px; margin: .4rem 0 .8rem;
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); position: relative; overflow: hidden;
+}
+.tv-cat-hdr::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+}
+.tv-cat-hdr.gold::before  { background: var(--gold);  box-shadow: 0 0 8px rgba(232,197,90,.5); }
+.tv-cat-hdr.blue::before  { background: var(--soul);  box-shadow: 0 0 8px rgba(155,184,255,.5); }
+.tv-cat-hdr.green::before { background: var(--green); box-shadow: 0 0 8px rgba(78,203,113,.5); }
+.tv-cat-hdr.red::before   { background: #ff6b6b;      box-shadow: 0 0 8px rgba(255,107,107,.5); }
+
+.tv-cat-icon {
+  width: 32px; height: 32px; object-fit: contain; flex-shrink: 0;
+}
+.tv-cat-name {
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: .07em; flex: 1;
+}
+.tv-cat-hdr.gold  .tv-cat-name { color: var(--gold); }
+.tv-cat-hdr.blue  .tv-cat-name { color: var(--soul); }
+.tv-cat-hdr.green .tv-cat-name { color: var(--green); }
+.tv-cat-hdr.red   .tv-cat-name { color: #ff6b6b; }
+
+.tv-cat-desc {
+  font-size: 11px; color: var(--dim); flex: 2; line-height: 1.4;
+  display: none;
+}
+@media (min-width: 640px) { .tv-cat-desc { display: block; } }
+
+.tv-cat-count {
+  font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase; color: var(--muted);
+  white-space: nowrap;
+}
+.tv-cat-toggle {
+  font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--gold); background: rgba(232,197,90,.08);
+  border: 1px solid rgba(232,197,90,.2);
+  padding: 5px 14px; border-radius: 100px; cursor: pointer;
+  transition: all .2s; white-space: nowrap;
+}
+.tv-cat-toggle:hover { background: rgba(232,197,90,.15); }
+.tv-cat-toggle.open { background: var(--gold); color: var(--bg); }
+
+/* ════════════════════════════
+   TOOLS GRID (collapsed by default)
+════════════════════════════ */
+.tv-cat-body {
+  overflow: hidden;
+  height: 0;
+  transition: height .45s cubic-bezier(.4,0,.2,1);
+}
+.tv-cat-body.open { height: auto; }
+
+.tv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  padding-bottom: 1.2rem;
+}
+
+/* ════════════════════════════
+   TOOL CARD
+════════════════════════════ */
+.tv-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem 1.1rem;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: border-color .3s, box-shadow .3s, transform .35s cubic-bezier(.23,.1,.32,1.1);
+  opacity: 0; transform: translateY(14px);
+}
+.tv-card.visible { opacity: 1; transform: translateY(0); }
+.tv-card:hover {
+  border-color: rgba(232,197,90,.25);
+  box-shadow: 0 12px 40px rgba(0,0,0,.4), 0 0 24px rgba(232,197,90,.06);
+  transform: translateY(-3px);
+}
+/* gold accent top line on hover */
+.tv-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0; transition: opacity .3s; border-radius: var(--radius) var(--radius) 0 0;
+}
+.tv-card { position: relative; }
+.tv-card:hover::before { opacity: 1; }
+
+/* RECOMMENDED card variant */
+.tv-card.is-rec {
+  border-color: rgba(232,197,90,.3);
+  background: linear-gradient(145deg, rgba(232,197,90,.05) 0%, var(--surface) 60%);
+}
+.tv-card.is-rec::before { opacity: .6; }
+
+/* ── Card top row: icon + name + version ── */
+.tv-card-top {
+  display: flex; align-items: center; gap: 12px;
+}
+.tv-card-icon {
+  width: 48px; height: 48px; object-fit: contain;
+  flex-shrink: 0; border-radius: 10px;
+  background: rgba(255,255,255,.03);
+  padding: 4px;
+}
+.tv-card-icon-err {
+  width: 48px; height: 48px; flex-shrink: 0;
+  border-radius: 10px; background: var(--surface2);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif; font-size: 14px;
+  color: var(--dim); letter-spacing: .05em;
+}
+.tv-card-name-wrap { flex: 1; min-width: 0; }
+.tv-card-name {
+  font-family: 'Bebas Neue', sans-serif; font-size: 19px;
+  letter-spacing: .06em; color: var(--text); line-height: 1;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.tv-card-version {
+  font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--dim); margin-top: 3px;
+}
+.tv-rec-badge {
+  font-family: 'Syne', sans-serif; font-size: 8px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--bg); background: var(--gold);
+  padding: 3px 8px; border-radius: 100px;
+  white-space: nowrap; flex-shrink: 0;
+}
+
+/* ── Description ── */
+.tv-card-desc {
+  font-size: 12.5px; color: var(--muted); line-height: 1.6;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden; line-clamp: 3;
+  flex: 1;
+}
+
+/* ── Tags ── */
+.tv-card-tags {
+  display: flex; flex-wrap: wrap; gap: 5px;
+}
+.tv-tag {
+  font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  background: rgba(232,197,90,.07); color: rgba(232,197,90,.7);
+  border: 1px solid rgba(232,197,90,.14); border-radius: 100px;
+  padding: 3px 9px;
+}
+.tv-tag.blue {
+  background: rgba(155,184,255,.07); color: rgba(155,184,255,.8);
+  border-color: rgba(155,184,255,.15);
+}
+
+/* ── Card footer: price + button ── */
+.tv-card-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,.04);
+}
+.tv-price {
+  display: flex; flex-direction: column;
+}
+.tv-price-lbl {
+  font-family: 'Syne', sans-serif; font-size: 8px; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--dim);
+}
+.tv-price-val {
+  font-family: 'Bebas Neue', sans-serif; font-size: 18px;
+  color: var(--gold); letter-spacing: .05em; line-height: 1;
+}
+.tv-price-val.free { color: var(--green); }
+
+.tv-card-btn {
+  font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--bg); background: var(--gold);
+  border: none; padding: 8px 16px; border-radius: 100px;
+  cursor: pointer; text-decoration: none; display: inline-block;
+  transition: background .2s, transform .2s;
+  white-space: nowrap;
+}
+.tv-card-btn:hover { background: #f0d06a; transform: translateX(3px); }
+.tv-card-btn.link-btn {
+  background: transparent; color: var(--gold);
+  border: 1px solid rgba(232,197,90,.3);
+}
+.tv-card-btn.link-btn:hover {
+  background: rgba(232,197,90,.1); transform: translateX(3px);
+}
+
+/* ════════════════════════════
+   NO RESULTS
+════════════════════════════ */
+.tv-no-results {
+  text-align: center; padding: 4rem 1rem;
+  display: none;
+}
+.tv-no-results-icon {
+  font-family: 'Bebas Neue', sans-serif; font-size: 48px;
+  color: var(--dim); letter-spacing: .1em; margin-bottom: .5rem;
+}
+.tv-no-results p {
+  font-size: 14px; color: var(--muted);
+}
+
+/* ════════════════════════════
+   RESPONSIVE
+════════════════════════════ */
+@media (max-width: 640px) {
+  .tv-hero { padding: 3rem 1.2rem 2rem; }
+  .tv-wrap { padding: 0 14px 4rem; }
+  .tv-stat { padding: 0 16px; }
+  .tv-rec-grid { grid-template-columns: 1fr; }
+  .tv-grid { grid-template-columns: 1fr; }
+  .tv-controls { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .tv-cat-hdr { padding: 8px 12px; }
+  .tv-rec-banner { padding: 1.2rem; }
+}
+@media (min-width: 641px) and (max-width: 900px) {
+  .tv-grid { grid-template-columns: repeat(2, 1fr); }
+  .tv-rec-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="ambient"></div>
+
+<header class="site-header">
+  <a class="logo" href="index.html">
+    <img class="logo-img" src="assets/logo.webp" alt="White Cat Vault Logo" width="38" height="38" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <button class="nav-toggle" onclick="toggleNav()" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation"></nav>
+</header>
+
+<!-- ══════════════════════════════
+     HERO
+══════════════════════════════ -->
+<main id="main-content">
+<section class="tv-hero">
+  <div class="tv-hero-orb1"></div>
+  <div class="tv-hero-orb2"></div>
+  <p class="tv-hero-label">&#9670; White Cat Drive · Pro Software Collection</p>
+  <h1 class="tv-hero-title">TOOL<br><span style="-webkit-text-fill-color:var(--gold)">VAULT</span></h1>
+  <p class="tv-hero-sub">Game tools, video editing, coding, art, office software and more — handpicked and organised.</p>
+  <div class="tv-stats">
+    <div class="tv-stat">
+      <div class="tv-stat-num" id="stat-tools">—</div>
+      <div class="tv-stat-lbl">Total Tools</div>
+    </div>
+    <div class="tv-stat-div"></div>
+    <div class="tv-stat">
+      <div class="tv-stat-num" id="stat-cats">—</div>
+      <div class="tv-stat-lbl">Categories</div>
+    </div>
+    <div class="tv-stat-div"></div>
+    <div class="tv-stat">
+      <div class="tv-stat-num">LK</div>
+      <div class="tv-stat-lbl">Sri Lanka</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     SEARCH
+══════════════════════════════ -->
+<div class="tv-search-wrap">
+  <div class="tv-search-box">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <input
+      id="tv-search"
+      class="tv-search-input"
+      type="text"
+      placeholder="Search tools, software, apps…"
+      oninput="applyFilters()"
+      autocomplete="off"
+    >
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     FILTER BAR
+══════════════════════════════ -->
+<div class="tv-filter-section">
+  <div class="tv-filter-bar" id="tv-filter-bar">
+    <span class="tv-filter-lbl">Filter:</span>
+    <button class="tv-filter-btn active" onclick="setFilter('all',this)">All</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     MAIN CONTENT
+══════════════════════════════ -->
+<div class="tv-wrap">
+
+  <div class="tv-controls">
+    <div class="tv-count" id="tv-count">Loading…</div>
+    <div class="tv-sort-wrap">
+      <span class="tv-sort-lbl">Sort:</span>
+      <select class="tv-sort-select" id="tv-sort" onchange="applyFilters()">
+        <option value="default">Default</option>
+        <option value="alpha">A → Z</option>
+        <option value="price-asc">Price: Low → High</option>
+        <option value="price-desc">Price: High → Low</option>
+        <option value="free">Free First</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- CATEGORY SECTIONS -->
+  <div id="tv-cat-sections"></div>
+
+  <!-- NO RESULTS -->
+  <div class="tv-no-results" id="tv-no-results">
+    <div class="tv-no-results-icon">NO RESULTS</div>
+    <p>No tools match your search. Try a different keyword or clear the filter.</p>
+  </div>
+
+  <!-- RECOMMENDED BANNER -->
+  <div class="tv-rec-banner" id="tv-rec-banner">
+    <div class="tv-rec-banner-hdr">
+      <div class="tv-rec-banner-label">
+        <div class="tv-rec-dot"></div>
+        <span class="tv-rec-title">&#9670; Recommended by White Cat</span>
+      </div>
+      <span class="tv-rec-count" id="rec-count"></span>
+    </div>
+    <div class="tv-rec-grid" id="tv-rec-grid"></div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+
+
+</main>
+<footer class="site-footer">
+  <div class="footer-left">White Cat &middot; Tool Vault</div>
+  <div class="footer-right">Built by <a href="about_index.html">PMax</a> &middot; WhiteCat &middot; 2026</div>
+</footer>
+
+<script src="/scripts/site/nav-links.js" defer></script>
+<script src="/site.js" defer></script>
+<script src="/scripts/tool/tool-library.js"></script>
+<script src="/scripts/site/site-stats.js" defer></script>
+<script>
+/* ═══════════════════════════════════════════
+   TOOL VAULT — PAGE LOGIC
+   ═══════════════════════════════════════════ */
+
+var CATS    = Array.isArray(window.TOOL_CATEGORIES) ? window.TOOL_CATEGORIES : [];
+var TOOLS   = Array.isArray(window.TOOL_CATALOG)    ? window.TOOL_CATALOG    : [];
+var STATS   = window.TOOL_STATS || {};
+var activeFilter = 'all';
+
+/* ── helpers ── */
+function numericPrice(p) {
+  if (!p || p === 'Free') return 0;
+  var m = p.replace(/[^0-9.]/g, '');
+  return parseFloat(m) || 0;
+}
+
+function iconErr(el, name) {
+  var wrap = el.parentElement;
+  var abbr = (name || '??').substring(0, 3).toUpperCase();
+  wrap.innerHTML = '<div class="tv-card-icon-err">' + abbr + '</div>';
+}
+
+/* ── build one tool card ── */
+function buildCard(tool) {
+  var isFree = tool.price === 'Free' || !tool.price;
+  var tags = (tool.tags || []).map(function(t){ return '<span class="tv-tag">' + t + '</span>'; }).join('');
+  var tagsBlue = (tool.tagsBlue || []).map(function(t){ return '<span class="tv-tag blue">' + t + '</span>'; }).join('');
+  var recBadge = tool.recommended ? '<span class="tv-rec-badge">&#9670; Recommended</span>' : '';
+
+  var btnHtml;
+  if (tool.link) {
+    btnHtml = '<a class="tv-card-btn link-btn" href="' + tool.link + '" target="_blank" rel="noopener">' + (tool.linkLabel || 'Get Tool') + ' &#8594;</a>';
+  } else {
+    btnHtml = '<span class="tv-card-btn">' + (tool.linkLabel || 'Get Tool') + '</span>';
+  }
+
+  var card = document.createElement('div');
+  card.className = 'tv-card' + (tool.recommended ? ' is-rec' : '');
+  card.dataset.id       = tool.id;
+  card.dataset.category = tool.category;
+  card.dataset.name     = (tool.name || '').toLowerCase();
+  card.dataset.tags     = ((tool.tags || []).concat(tool.tagsBlue || [])).join(' ').toLowerCase();
+  card.dataset.price    = numericPrice(tool.price);
+  card.dataset.free     = isFree ? '1' : '0';
+
+  card.innerHTML =
+    '<div class="tv-card-top">' +
+      '<img class="tv-card-icon" src="' + tool.icon + '" alt="' + tool.name + '" width="48" height="48" ' +
+           'onerror="iconErr(this,\'' + (tool.name||'').replace(/'/g,"\\'") + '\')">' +
+      '<div class="tv-card-name-wrap">' +
+        '<div class="tv-card-name">' + tool.name + '</div>' +
+        '<div class="tv-card-version">v&nbsp;' + (tool.version || '—') + '</div>' +
+      '</div>' +
+      recBadge +
+    '</div>' +
+    '<p class="tv-card-desc">' + (tool.desc || '') + '</p>' +
+    '<div class="tv-card-tags">' + tags + tagsBlue + '</div>' +
+    '<div class="tv-card-foot">' +
+      '<div class="tv-price">' +
+        '<div class="tv-price-lbl">Price</div>' +
+        '<div class="tv-price-val' + (isFree ? ' free' : '') + '">' + (tool.price || 'Free') + '</div>' +
+      '</div>' +
+      btnHtml +
+    '</div>';
+
+  return card;
+}
+
+/* ── build page ── */
+function buildPage() {
+  /* stats */
+  document.getElementById('stat-tools').textContent = STATS.totalTools || TOOLS.length;
+  document.getElementById('stat-cats').textContent  = STATS.totalCategories || CATS.length;
+
+  /* filter buttons */
+  var bar = document.getElementById('tv-filter-bar');
+  CATS.forEach(function(cat) {
+    var btn = document.createElement('button');
+    btn.className = 'tv-filter-btn';
+    btn.dataset.cat = cat.id;
+    btn.innerHTML =
+      '<img src="' + cat.icon + '" alt="' + cat.label + '" width="14" height="14" ' +
+           'onerror="this.style.display=\'none\'">' +
+      cat.label.split(' &')[0].split(',')[0]; /* short label */
+    btn.onclick = function() { setFilter(cat.id, this); };
+    bar.appendChild(btn);
+  });
+
+  /* recommended banner */
+  var recGrid = document.getElementById('tv-rec-grid');
+  var recTools = TOOLS.filter(function(t){ return t.recommended; });
+  document.getElementById('rec-count').textContent = recTools.length + ' pick' + (recTools.length !== 1 ? 's' : '');
+  recTools.forEach(function(tool) {
+    var card = buildCard(tool);
+    recGrid.appendChild(card);
+  });
+
+  /* category sections */
+  var sections = document.getElementById('tv-cat-sections');
+  CATS.forEach(function(cat) {
+    var catTools = TOOLS.filter(function(t){ return t.category === cat.id; });
+    if (!catTools.length) return;
+
+    /* wrapper */
+    var wrap = document.createElement('div');
+    wrap.className = 'tv-cat-section';
+    wrap.dataset.catId = cat.id;
+
+    /* header */
+    var hdr = document.createElement('div');
+    hdr.className = 'tv-cat-hdr ' + (cat.color || 'gold');
+    hdr.dataset.catHdr = cat.id;
+    hdr.innerHTML =
+      '<img class="tv-cat-icon" src="' + cat.icon + '" alt="' + cat.label + '" width="32" height="32" ' +
+           'onerror="this.style.display=\'none\'">' +
+      '<div class="tv-cat-name">' + cat.label + '</div>' +
+      '<div class="tv-cat-desc">' + cat.desc + '</div>' +
+      '<div class="tv-cat-count">' + catTools.length + ' tool' + (catTools.length !== 1 ? 's' : '') + '</div>' +
+      '<button class="tv-cat-toggle" data-cat="' + cat.id + '">View All &#8595;</button>';
+
+    /* body */
+    var body = document.createElement('div');
+    body.className = 'tv-cat-body';
+    body.dataset.catBody = cat.id;
+
+    var grid = document.createElement('div');
+    grid.className = 'tv-grid';
+
+    catTools.forEach(function(tool, i) {
+      var card = buildCard(tool);
+      card.style.transitionDelay = Math.min(i * 0.04, 0.3) + 's';
+      grid.appendChild(card);
+    });
+
+    body.appendChild(grid);
+    wrap.appendChild(hdr);
+    wrap.appendChild(body);
+    sections.appendChild(wrap);
+
+    /* toggle */
+    hdr.querySelector('.tv-cat-toggle').addEventListener('click', function() {
+      toggleCat(cat.id, this);
+    });
+  });
+
+  /* count */
+  document.getElementById('tv-count').textContent = 'Showing all ' + TOOLS.length + ' tools';
+
+  /* scroll observer */
+  initObserver();
+
+  /* recommended banner entrance */
+  setTimeout(function() {
+    var banner = document.getElementById('tv-rec-banner');
+    if (banner) banner.classList.add('visible');
+    banner.querySelectorAll('.tv-card').forEach(function(c) {
+      setTimeout(function() { c.classList.add('visible'); }, 80);
+    });
+  }, 400);
+}
+
+/* ── toggle category open/close ── */
+function toggleCat(catId, btn) {
+  var body = document.querySelector('[data-cat-body="' + catId + '"]');
+  if (!body) return;
+  var isOpen = body.classList.contains('open');
+
+  if (isOpen) {
+    body.style.height = body.scrollHeight + 'px';
+    requestAnimationFrame(function() {
+      body.style.transition = 'height .4s cubic-bezier(.4,0,.2,1)';
+      body.style.height = '0';
+    });
+    body.classList.remove('open');
+    btn.textContent = 'View All ↓';
+    btn.classList.remove('open');
+  } else {
+    body.classList.add('open');
+    body.style.transition = 'height .45s cubic-bezier(.4,0,.2,1)';
+    body.style.height = body.scrollHeight + 'px';
+    body.addEventListener('transitionend', function h() {
+      body.style.height = 'auto';
+      body.removeEventListener('transitionend', h);
+    });
+    btn.textContent = 'Collapse ↑';
+    btn.classList.add('open');
+    /* animate cards */
+    body.querySelectorAll('.tv-card').forEach(function(c, i) {
+      setTimeout(function() { c.classList.add('visible'); }, i * 30);
+    });
+  }
+}
+
+/* ── filter / sort / search ── */
+function setFilter(catId, btn) {
+  activeFilter = catId;
+  document.querySelectorAll('.tv-filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  applyFilters();
+}
+
+function applyFilters() {
+  var query = (document.getElementById('tv-search').value || '').toLowerCase().trim();
+  var sort  = document.getElementById('tv-sort').value;
+
+  /* recommended banner visibility */
+  var banner = document.getElementById('tv-rec-banner');
+  var showBanner = activeFilter === 'all' && query === '';
+  banner.style.display = showBanner ? '' : 'none';
+
+  /* category sections */
+  var sections = document.querySelectorAll('.tv-cat-section');
+  var totalVisible = 0;
+
+  sections.forEach(function(sec) {
+    var catId = sec.dataset.catId;
+    var catMatch = activeFilter === 'all' || activeFilter === catId;
+
+    var cards = sec.querySelectorAll('.tv-card');
+    var visibleInCat = 0;
+
+    var arr = Array.from(cards);
+
+    /* sort */
+    if (sort !== 'default') {
+      arr.sort(function(a, b) {
+        if (sort === 'alpha')       return a.dataset.name.localeCompare(b.dataset.name);
+        if (sort === 'price-asc')   return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+        if (sort === 'price-desc')  return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+        if (sort === 'free')        return parseInt(b.dataset.free) - parseInt(a.dataset.free);
+        return 0;
+      });
+      var grid = sec.querySelector('.tv-grid');
+      arr.forEach(function(c) { grid.appendChild(c); });
+    }
+
+    arr.forEach(function(card) {
+      var nameOk = query === '' || card.dataset.name.includes(query) || card.dataset.tags.includes(query);
+      var show   = catMatch && nameOk;
+      card.style.display = show ? '' : 'none';
+      if (show) visibleInCat++;
+    });
+
+    sec.style.display = (catMatch && visibleInCat > 0) ? '' : 'none';
+    totalVisible += visibleInCat;
+  });
+
+  /* update count */
+  var label = activeFilter === 'all' && query === ''
+    ? 'Showing all ' + totalVisible + ' tools'
+    : 'Showing ' + totalVisible + ' tool' + (totalVisible !== 1 ? 's' : '');
+  document.getElementById('tv-count').textContent = label;
+
+  /* no results */
+  document.getElementById('tv-no-results').style.display = totalVisible === 0 ? 'block' : 'none';
+}
+
+/* ── scroll entrance observer ── */
+function initObserver() {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.06 });
+
+  /* observe cards that are already visible (inside open sections) */
+  document.querySelectorAll('.tv-card').forEach(function(c) { io.observe(c); });
+}
+
+/* ── INIT ── */
+document.addEventListener('DOMContentLoaded', function() {
+  buildPage();
+});
+</script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>

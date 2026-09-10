@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="WhiteCat Counter — Official page. Inventory, sales, receipts web app for WhiteCat stores.">
+<meta name="theme-color" content="#080a0e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://whitecatvault.netlify.app/about/whitecat-counter.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="White Cat Vault">
+<meta property="og:title" content="WhiteCat Counter — Official Info">
+<meta property="og:description" content="WhiteCat Counter official info page — features, tabs, account management, data storage details.">
+<meta property="og:url" content="https://whitecatvault.netlify.app/about/whitecat-counter.html">
+<meta property="og:image" content="https://whitecatvault.netlify.app/assets/about/whitecat_counter/preview_banner.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WhiteCat Counter — Official Info">
+<meta name="twitter:image" content="https://whitecatvault.netlify.app/assets/about/whitecat_counter/preview_banner.webp">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="White Cat Studio">
+<title>WhiteCat Counter — Official Info</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "WhiteCat Counter",
+  "description": "Official WhiteCat Counter - Inventory, sales, receipts web app for WhiteCat stores",
+  "url": "https://whitecatvault.netlify.app/about/whitecat-counter.html",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web Browser",
+  "image": "https://whitecatvault.netlify.app/assets/about/whitecat_counter/preview_banner.webp"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "White Cat Vault",
+      "item": "https://whitecatvault.netlify.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "WhiteCat Counter",
+      "item": "https://whitecatvault.netlify.app/about/whitecat-counter.html"
+    }
+  ]
+}
+</script>
+<style>
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp     { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+@keyframes accentPulse{ 0%,100% { opacity:.7; } 50% { opacity:1; } }
+@keyframes bannerFloat{ 0%,100% { transform:scale(1.02); } 50% { transform:scale(1); } }
+@keyframes shimmer    { 0% { background-position:-200% center; } 100% { background-position:200% center; } }
+
+/* ── HERO ── */
+.wc-hero {
+  position:relative; z-index:1;
+  max-width:1120px; margin:0 auto;
+  padding:3rem 2.5rem 0;
+  text-align:center;
+}
+
+.wc-banner-wrap {
+  position:relative; border-radius:22px; overflow:hidden;
+  box-shadow:0 28px 64px rgba(0,0,0,.35), 0 0 0 1px rgba(232,197,90,.12);
+  margin-bottom:2rem;
+}
+.wc-banner-wrap::before {
+  content:''; position:absolute; inset:0; z-index:1;
+  background:linear-gradient(to bottom, transparent 55%, rgba(8,10,14,.85) 100%);
+}
+.wc-banner-img {
+  width:100%; height:auto; display:block;
+  animation:bannerFloat 8s ease-in-out infinite;
+}
+.wc-banner-badge {
+  display:inline-flex; margin:1rem auto 0; padding:8px 18px;
+  font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:.32em; text-transform:uppercase; color:var(--gold);
+  background:rgba(255,255,255,.05); border:1px solid rgba(232,197,90,.18);
+  border-radius:999px; backdrop-filter:blur(6px);
+}
+
+.wc-label {
+  font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:.38em; text-transform:uppercase; color:var(--gold);
+  margin-bottom:.7rem; display:block;
+  animation:fadeUp .7s ease .1s both;
+}
+.wc-title {
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(52px,9vw,88px); line-height:.88; letter-spacing:.04em;
+  background:linear-gradient(140deg, #ffffff 0%, #f5e9b0 35%, var(--gold) 65%, var(--gold2) 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  animation:fadeUp .7s ease .2s both;
+}
+.wc-subtitle {
+  font-family:'Syne',sans-serif; font-size:12px; font-weight:700;
+  letter-spacing:.32em; text-transform:uppercase; color:var(--muted);
+  margin-top:.4rem; animation:fadeUp .7s ease .3s both;
+}
+.wc-tagline {
+  max-width:760px; margin:1.2rem auto 0;
+  font-size:15px; color:#8a91b0; line-height:1.9;
+  animation:fadeUp .7s ease .4s both;
+}
+.wc-btns {
+  display:flex; justify-content:center; flex-wrap:wrap; gap:12px;
+  margin-top:1.6rem; margin-bottom:2.8rem;
+  animation:fadeUp .7s ease .5s both;
+}
+.wc-btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  min-width:148px; padding:12px 20px; border-radius:999px;
+  font-family:'Syne',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase;
+  text-decoration:none; transition:all .25s;
+}
+.wc-btn.gold {
+  background:linear-gradient(135deg,#f1d36a 0%,#d2a832 100%);
+  color:#080a0e; border:1px solid transparent;
+  box-shadow:0 10px 28px rgba(232,197,90,.28);
+}
+.wc-btn.gold:hover { transform:translateY(-2px); box-shadow:0 14px 36px rgba(232,197,90,.38); }
+.wc-btn.outline {
+  background:rgba(232,197,90,.06); color:var(--gold);
+  border:1px solid rgba(232,197,90,.22);
+}
+.wc-btn.outline:hover { background:rgba(232,197,90,.14); border-color:rgba(232,197,90,.38); transform:translateY(-1px); }
+.wc-btn.ghost {
+  background:rgba(255,255,255,.04); color:var(--muted);
+  border:1px solid rgba(255,255,255,.08);
+}
+.wc-btn.ghost:hover { background:rgba(255,255,255,.08); color:var(--text); transform:translateY(-1px); }
+
+/* ── CONTENT AREA ── */
+.wc-content {
+  position:relative; z-index:1;
+  max-width:1120px; margin:0 auto;
+  padding:0 32px 6rem;
+}
+
+/* ── PANELS ── */
+.wc-panel {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--radius); padding:2rem 2rem 2rem;
+  margin-bottom:1.8rem; position:relative; overflow:hidden;
+  animation:fadeUp .7s ease .15s both;
+}
+.wc-panel::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent 5%, rgba(232,197,90,.55) 35%, rgba(232,197,90,.8) 50%, rgba(232,197,90,.55) 65%, transparent 95%);
+  animation:accentPulse 4s ease-in-out infinite;
+}
+.wc-panel::after {
+  content:''; position:absolute; top:0; right:0;
+  width:200px; height:180px;
+  background:radial-gradient(circle at top right, rgba(232,197,90,.06), transparent 65%);
+  pointer-events:none;
+}
+.wc-panel h2 {
+  font-family:'Bebas Neue',sans-serif; font-size:32px; letter-spacing:.08em;
+  color:var(--text); margin-bottom:1rem;
+  background:linear-gradient(135deg, #fff 0%, var(--gold) 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.wc-panel h3 {
+  font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:.07em;
+  color:var(--text); margin-bottom:.7rem; margin-top:1.2rem;
+}
+.wc-panel p {
+  color:#98a1c7; line-height:1.85; font-size:14px; margin-bottom:.9rem;
+}
+.wc-panel p:last-child { margin-bottom:0; }
+
+/* Tab grid */
+.tab-grid {
+  display:grid; grid-template-columns:repeat(2, 1fr); gap:14px;
+  margin:1.2rem 0;
+}
+@media (max-width:820px) {
+  .wc-hero { padding:2rem 1.6rem 0; }
+  .wc-banner-wrap { margin-bottom:1rem; }
+  .wc-banner-badge { margin-top:1rem; }
+  .wc-title { font-size:clamp(46px,10vw,78px); }
+  .wc-tagline { max-width:100%; font-size:15px; }
+  .wc-btns { justify-content:center; gap:10px; }
+  .wc-btn { min-width:138px; }
+  .wc-content { padding:0 18px 5rem; }
+  .wc-panel { padding:1.6rem; }
+  .tab-grid { grid-template-columns:1fr; }
+  .stat-grid { grid-template-columns:1fr; }
+}
+
+@media (max-width:520px) {
+  .wc-hero { padding:1.5rem 1rem 0; }
+  .wc-title { font-size:clamp(42px,14vw,66px); }
+  .wc-subtitle { font-size:11px; }
+  .wc-btn { width:100%; max-width:320px; }
+  .wc-btns { flex-direction:column; }
+  .wc-content { padding:0 14px 4rem; }
+  .wc-panel { padding:1.4rem; }
+  .stat-grid { grid-template-columns:1fr; }
+}
+
+@media (max-width:680px) { .tab-grid { grid-template-columns:1fr; } }
+
+.tab-card {
+  background:rgba(255,255,255,.02); border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--radius-sm); padding:1.3rem;
+  position:relative; overflow:hidden;
+  transition:border-color .25s, box-shadow .25s, transform .25s;
+}
+.tab-card:hover {
+  border-color:rgba(232,197,90,.2);
+  box-shadow:0 8px 28px rgba(0,0,0,.14);
+  transform:translateY(-2px);
+}
+.tab-card-header {
+  display:flex; align-items:center; gap:10px; margin-bottom:.7rem;
+}
+.tab-card-icon {
+  width:48px; height:48px; border-radius:14px; flex-shrink:0;
+  background:rgba(232,197,90,.08); border:1px solid rgba(232,197,90,.16);
+  overflow:hidden; display:flex; align-items:center; justify-content:center;
+}
+.tab-card-icon img {
+  width:100%; height:100%; object-fit:cover; display:block;
+}
+.tab-card-name {
+  font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:.07em;
+  color:var(--text); line-height:1;
+}
+.tab-card-sub {
+  font-family:'Syne',sans-serif; font-size:8.5px; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--gold);
+}
+.tab-card-desc { color:#98a1c7; font-size:13px; line-height:1.75; }
+
+/* note box */
+.note-box {
+  background:rgba(232,197,90,.05); border:1px solid rgba(232,197,90,.14);
+  border-radius:var(--radius-sm); padding:1.3rem 1.5rem;
+  color:#e8d67a; font-size:13.5px; line-height:1.8;
+  margin:1.2rem 0;
+  position:relative;
+}
+.note-box::before {
+  content:'ℹ'; position:absolute; top:1.1rem; left:1.2rem;
+  font-size:15px; opacity:.6;
+}
+.note-box.note-warn {
+  background:rgba(255,200,80,.04); border-color:rgba(255,200,80,.12);
+  color:#f5d97a;
+}
+.note-box.note-danger {
+  background:rgba(220,60,60,.05); border-color:rgba(220,60,60,.14);
+  color:#f5a0a0;
+}
+.note-box { padding-left:2.6rem; }
+
+/* list */
+.wc-list {
+  list-style:none; padding:0; margin:.6rem 0;
+  overflow-wrap:break-word;
+}
+.wc-list li {
+  display:flex; align-items:flex-start; gap:10px;
+  flex-wrap:wrap;
+  color:#98a1c7; font-size:13.5px; line-height:1.8;
+  padding:.5rem 0;
+  border-bottom:1px solid rgba(255,255,255,.04);
+  min-width:0;
+}
+.wc-list li:last-child { border-bottom:none; }
+.wc-list li::before {
+  content:'◈'; color:var(--gold); font-size:10px; flex-shrink:0; margin-top:.36rem;
+}
+@media (max-width:680px) {
+  .wc-list li {
+    display:block;
+    padding:.6rem 0;
+  }
+  .wc-list li::before {
+    display:inline-block;
+    margin-bottom:.45rem;
+  }
+  .wc-list li strong,
+  .wc-list li span {
+    display:inline;
+    word-break:break-word;
+  }
+}
+
+/* stat boxes */
+.stat-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+  margin:1rem 0;
+}
+@media (max-width:820px) { .stat-grid { grid-template-columns:1fr; } }
+@media (max-width:520px) { .stat-grid { grid-template-columns:1fr; } }
+.stat-box {
+  background:rgba(232,197,90,.04); border:1px solid rgba(232,197,90,.1);
+  border-radius:var(--radius-sm); padding:1.1rem; text-align:center;
+  transition:border-color .25s;
+}
+.stat-box:hover { border-color:rgba(232,197,90,.22); }
+.stat-box-num {
+  font-family:'Bebas Neue',sans-serif; font-size:28px;
+  color:var(--gold); letter-spacing:.05em; line-height:1;
+}
+.stat-box-lbl {
+  font-family:'Syne',sans-serif; font-size:9px; font-weight:700;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--muted); margin-top:4px;
+}
+
+/* workflow steps */
+.flow-steps {
+  display:flex; flex-direction:column; gap:0;
+  margin:1rem 0;
+}
+.flow-step {
+  display:flex; gap:16px; align-items:flex-start; padding:.9rem 0;
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.flow-step:last-child { border-bottom:none; }
+.flow-step-num {
+  width:28px; height:28px; border-radius:50%; flex-shrink:0;
+  background:linear-gradient(135deg, rgba(232,197,90,.2), rgba(232,197,90,.06));
+  border:1px solid rgba(232,197,90,.25);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Bebas Neue',sans-serif; font-size:14px; color:var(--gold);
+  margin-top:2px;
+}
+.flow-step-body { flex:1; }
+.flow-step-title {
+  font-family:'Syne',sans-serif; font-size:12px; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--text);
+  margin-bottom:.25rem;
+}
+.flow-step-desc { color:#98a1c7; font-size:13px; line-height:1.75; }
+
+/* terms */
+.terms-panel {
+  background:rgba(255,255,255,.02); border:1px solid rgba(255,255,255,.05);
+  border-radius:var(--radius-sm); padding:1.4rem 1.6rem; margin-top:.6rem;
+}
+.terms-panel h3 {
+  font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:.08em;
+  color:var(--muted); margin-bottom:.8rem; margin-top:0;
+}
+
+/* label strip */
+.panel-label {
+  font-family:'Syne',sans-serif; font-size:9.5px; font-weight:700;
+  letter-spacing:.3em; text-transform:uppercase; color:var(--gold);
+  display:flex; align-items:center; gap:10px; margin-bottom:1rem;
+}
+.panel-label::after {
+  content:''; flex:1; height:1px;
+  background:linear-gradient(90deg, rgba(232,197,90,.35), transparent);
+}
+
+/* sinhala emphasis */
+.si-em { color:var(--text); font-weight:500; }
+.gold-em { color:var(--gold); }
+
+@media (max-width:680px) {
+  .tab-card[style*="span 2"] { grid-column:span 1 !important; }
+}
+
+/* footer */
+</style>
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<header class="site-header">
+  <a class="logo" href="../index.html">
+    <img class="logo-img" src="../assets/logo.webp" alt="White Cat" onerror="this.src='../assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
+  <nav class="site-nav" id="site-nav"></nav>
+</header>
+
+<!-- ══ HERO ══ -->
+<section class="wc-hero">
+  <div class="wc-banner-wrap">
+    <img class="wc-banner-img"
+         src="../assets/about/whitecat_counter/preview_banner.webp"
+         alt="WhiteCat Counter preview banner"
+         loading="eager">
+  </div>
+  <span class="wc-banner-badge">&#9670; Official Product</span>
+  <span class="wc-label">&#9670; Official Product Page</span>
+  <h1 class="wc-title">WhiteCat Counter</h1>
+  <p class="wc-subtitle">Inventory &nbsp;·&nbsp; Sales &nbsp;·&nbsp; Receipts</p>
+  <p class="wc-tagline">
+    WhiteCat Counter — shop inventory manage කරලා, sales record කරලා, receipt print කරන්නෙකු සඳහා හදන ලද official web app.
+    මේ page හරහා app features, tab details, account management සහ data storage ගැන සියල්ල දැනගන්නට පුළුවන්.
+  </p>
+  <div class="wc-btns">
+    <a class="wc-btn gold" href="https://whitecat-counter.netlify.app/" target="_blank" rel="noreferrer">
+      නව User — App Open කරන්න &#8599;
+    </a>
+    <a class="wc-btn outline" href="https://whitecat-counter.netlify.app/WhiteCatCounter.html" target="_blank" rel="noreferrer">
+      Login User — Counter වෙත යන්න &#8599;
+    </a>
+    <a class="wc-btn ghost" href="../about_index.html">
+      &#8592; WhiteCat Vault
+    </a>
+  </div>
+</section>
+
+<!-- ══ CONTENT ══ -->
+<div class="wc-content">
+
+  <!-- Official Summary -->
+  <div class="wc-panel">
+    <h2>App Summary</h2>
+    <p>
+      <span class="si-em">WhiteCat Counter</span> කියන්නේ shop business manage කරන්නෙකු සඳහා WhiteCat Team විසින් හදන ලද
+      official web app එකක්. Items add කිරීම, sales bill හැදීම, receipt print කිරීම, stock monitor කිරීම,
+      cashier manage කිරීම සහ account settings handle කිරීම — සියල්ල මේ app එකේ ඇතුළත් වෙනවා.
+    </p>
+    <p>
+      App එකේ hosting <span class="gold-em">Netlify</span> platform එකේ run වෙනවා.
+      User data cloud database හරහා store කරනවා.
+      Email, username, password use කරලා account create කරලා login වෙලා use කරන්නට පුළුවන්.
+      Login වූ ගමන් cloud data page load වෙද්දීම automatic ලෙස pull කරලා load කරනවා.
+    </p>
+    <div class="note-box">
+      නව user කෙනෙකු නම් — <strong>Login page</strong> එකේ <strong>Sign Up</strong> tab click කරලා username, email, password දීලා account create කරන්නට පුළුවන්.
+      දැනටමත් account ඇති user කෙනෙකු නම් — <strong>Login</strong> tab use කරලා direct Counter page වෙත යන්නට පුළුවන්.
+    </div>
+  </div>
+
+  <!-- Tab / Page Breakdown -->
+  <div class="wc-panel">
+    <h2>Page &amp; Tab Details</h2>
+    <p>
+      WhiteCat Counter app එකේ main sections 5ක් තිබෙනවා.
+      Header nav bar හරහා ඕනෑම page එකකට direct ලෙස යන්නට පුළුවන්.
+    </p>
+
+    <div class="tab-grid">
+
+      <!-- Counter -->
+      <div class="tab-card">
+        <div class="tab-card-header">
+          <div class="tab-card-icon">
+            <img src="../assets/about/whitecat_counter/counter.png" alt="Counter icon" width="48" height="48">
+          </div>
+          <div>
+            <div class="tab-card-name">Counter</div>
+            <div class="tab-card-sub">Billing Page</div>
+          </div>
+        </div>
+        <p class="tab-card-desc">
+          <span class="si-em">Counter page</span> — shop billing handle කරන main page.
+          Item name, SKU, barcode scan / type කරලා bill table එකට add කරන්නට පුළුවන්.
+          Quantity, unit price, serial number (has serial number ඇති items සඳහා) enter කරන්නට option දෙනවා.
+          Bill hold කරලා තියලා, load කරලා continue කරන්නත් (Hold Bill) පුළුවන්.
+          <br><br>
+          Payment methods: <span class="gold-em">Cash, Card, QR Pay</span>.
+          Discount percentage (%) හෝ fixed amount ලෙස apply කරන්නට option දෙනවා — reason field required.
+          Tax On / Off කරන්නත්, tax rate (%) change කරන්නත් counter page හරහාම කරන්නට පුළුවන්.
+          Customer name, phone number enter කරලා cashier select කරලා <span class="gold-em">Complete Sale &amp; Print</span> click කළ විට bill save වෙලා receipt print window open වෙනවා.
+        </p>
+      </div>
+
+      <!-- Add Items -->
+      <div class="tab-card">
+        <div class="tab-card-header">
+          <div class="tab-card-icon">
+            <img src="../assets/about/whitecat_counter/add_items.png" alt="Add Items icon" width="48" height="48">
+          </div>
+          <div>
+            <div class="tab-card-name">Add Items</div>
+            <div class="tab-card-sub">Inventory / Product DB</div>
+          </div>
+        </div>
+        <p class="tab-card-desc">
+          <span class="si-em">Add Items page</span> — shop products add කරලා manage කරන page.
+          Product name, brand, category, SKU, barcode, warranty months, cost price, selling price,
+          stock quantity, low stock alert number set කරන්නට fields ඇත.
+          <br><br>
+          Categories: Computer Hardware, Peripherals, Printing &amp; Imaging, Gaming Equipment,
+          Networking &amp; Security, POS Hardware, Software &amp; ICT Services.
+          <br><br>
+          <span class="gold-em">Allow negative stock</span> — stock 0 ට අඩු වුනත් bill කරන්නට allow කරන option.
+          <span class="gold-em">Has serial number</span> — sale කරද්දී serial number enter කරන option.
+          Deleted products <span class="gold-em">Recovery Bin</span> tab එකේ 30 days ගොඩ නගා ගන්නට (restore) හෝ permanent delete කරන්නට පුළුවන්.
+        </p>
+      </div>
+
+      <!-- Sales Details -->
+      <div class="tab-card">
+        <div class="tab-card-header">
+          <div class="tab-card-icon">
+            <img src="../assets/about/whitecat_counter/sales_details.png" alt="Sales Details icon" width="48" height="48">
+          </div>
+          <div>
+            <div class="tab-card-name">Sales Details</div>
+            <div class="tab-card-sub">Transaction History</div>
+          </div>
+        </div>
+        <p class="tab-card-desc">
+          <span class="si-em">Sales Details page</span> — සියලු transactions view, filter, print කරන page.
+          Date range, payment method, invoice number, customer name, phone number use කරලා filter කරන්නට පුළුවන්.
+          <br><br>
+          Daily summary box: bills count, revenue, profit, items sold, discounts, average bill show වෙනවා.
+          Each invoice <span class="gold-em">View</span> button click කළ විට full receipt detail modal open වෙනවා — serial numbers ද show වෙනවා.
+          <span class="gold-em">Print</span> button click කළ විට receipt print window open කරනවා.
+          Invoice <span class="gold-em">Remove</span> කළ විට recovery tab එකට move වෙනවා — permanent delete / restore options available.
+        </p>
+      </div>
+
+      <!-- Inventory Health -->
+      <div class="tab-card">
+        <div class="tab-card-header">
+          <div class="tab-card-icon">
+            <img src="../assets/about/whitecat_counter/inventory_health.png" alt="Inventory Health icon" width="48" height="48">
+          </div>
+          <div>
+            <div class="tab-card-name">Inventory Health</div>
+            <div class="tab-card-sub">Stock Monitor</div>
+          </div>
+        </div>
+        <p class="tab-card-desc">
+          <span class="si-em">Inventory Health page</span> — stock levels real-time monitor කරන page.
+          Stock quantity ≤ low stock alert number (default 3) වූ items <span class="gold-em">Warning</span> (රතු) ලෙස mark වෙනවා.
+          Good count, warning count, total products count header summary box එකේ show වෙනවා.
+          <br><br>
+          Table columns: Product, Stock, Status, Low Alert, Sell Price, Cost Price, Profit/Item.
+          Column click කළ විට sort කරන්නට පුළුවන්.
+          <span class="gold-em">Edit Stock</span> button click කළ විට direct stock quantity update කරන්නට prompt open වෙනවා — page reload නැතිව.
+        </p>
+      </div>
+
+      <!-- Account Manage -->
+      <div class="tab-card" style="grid-column: span 2;">
+        <div class="tab-card-header">
+          <div class="tab-card-icon">
+            <img src="../assets/about/whitecat_counter/account_manage.png" alt="Account Manage icon" width="48" height="48">
+          </div>
+          <div>
+            <div class="tab-card-name">Account Manage</div>
+            <div class="tab-card-sub">Settings, Branding &amp; Security</div>
+          </div>
+        </div>
+        <p class="tab-card-desc">
+          <span class="si-em">Account Manage page</span> — shop identity, branding, cashier list, password, account deletion handle කරන page.
+          <br><br>
+          <strong style="color:var(--text)">Shop &amp; Profile:</strong>
+          Username, owner name, shop name, address, phone, WhatsApp, other info, receipt footer message, currency, default tax rate set කරන්නට.
+          Tax default on/off toggle, negative stock default toggle — counter page default behavior set කරනවා.
+          <br><br>
+          <strong style="color:var(--text)">Logo Upload:</strong>
+          Shop logo upload කළ විට cloud storage (Supabase assets bucket) හි user folder එකේ save වෙනවා.
+          Receipt print කරද්දී shop logo automatically receipt top header එකේ show කරනවා.
+          <br><br>
+          <strong style="color:var(--text)">Cashier Management:</strong>
+          Cashier name, phone, role, notes add කරලා list maintain කරන්නට.
+          Counter page cashier select dropdown එකේ ගොඩ ගන්නට available.
+          <br><br>
+          <strong style="color:var(--text)">Password Change:</strong>
+          Login වෙලා ඉන්නා අතරතුරේ password change කරන්නට — minimum 6 characters.
+          <br><br>
+          <strong style="color:var(--text)">Account Delete (Danger Zone):</strong>
+          Account permanently delete කරන්නෙකු user data, cloud data, logo files සියල්ල delete වෙනවා.
+          "DELETE MY ACCOUNT" phrase type කරලා password confirm කරලා checkbox tick කළ විට proceed වෙනවා. ආපසු undo කළ නොහැකි.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Flow -->
+  <div class="wc-panel">
+    <h2>Data Save — Work Flow</h2>
+    <p>
+      WhiteCat Counter app හි data save workflow cloud-first architecture ලෙස design කර ඇත.
+      Login වූ user account data Supabase cloud හි store, local device හිදීත් backup ලෙස maintain කරනවා.
+    </p>
+
+    <div class="panel-label">&#9670; Data Save Steps</div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-step-num">1</div>
+        <div class="flow-step-body">
+          <div class="flow-step-title">Login &amp; Session Load</div>
+          <div class="flow-step-desc">
+            Login වෙද්දී Supabase auth session create වෙනවා. Session mode "remember me" (default) හෝ session-only ලෙස store.
+            Login session valid නම් app page load වෙද්දීම auto login වෙනවා.
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step-num">2</div>
+        <div class="flow-step-body">
+          <div class="flow-step-title">Profile Load</div>
+          <div class="flow-step-desc">
+            <span class="gold-em">whitecat_profiles</span> table හි user profile data pull කරනවා — username, shop name, logo URL, phone etc.
+            Profile data app settings merge වෙලා receipt header, footer, counter title update කරනවා.
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step-num">3</div>
+        <div class="flow-step-body">
+          <div class="flow-step-title">Cloud Data Load</div>
+          <div class="flow-step-desc">
+            <span class="gold-em">whitecat_user_data</span> table හි user data payload pull කරනවා.
+            Payload — products, deleted products, transactions, held bills, settings, invoice sequence — සියල්ල single JSON object ලෙස per-user store.
+            Cloud data load වූ ගමන් local backup ලෙසත් device save කරනවා.
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step-num">4</div>
+        <div class="flow-step-body">
+          <div class="flow-step-title">Changes Save (Auto Queue)</div>
+          <div class="flow-step-desc">
+            Product save, sale complete, settings update — ඕනෑම change කළ සෑම වේලාවකදීම 180ms debounce timer ලෙස cloud push queue වෙනවා.
+            ඒ සමගම device local storage backup (key: <code>whitecat_user_backup_v1_{userId}</code>) update.
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step-num">5</div>
+        <div class="flow-step-body">
+          <div class="flow-step-title">Offline Fallback</div>
+          <div class="flow-step-desc">
+            Cloud available නොවෙද්දී device local backup use කරලා app work කරනවා.
+            Cloud return වූ ගමන් changes sync කරනවා.
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-step-num">6</div>
+        <div class="flow-step-body">
+          <div class="flow-step-title">Logo Upload Path</div>
+          <div class="flow-step-desc">
+            Shop logo upload කළ විට <span class="gold-em">whitecat_assets</span> Supabase storage bucket හි
+            <code>{user_id}/logo_filename</code> path ලෙස save.
+            Profile table හි logo_url update. Receipt print කරද්දී logo URL ලෙස use කරනවා.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Storage & Limits -->
+  <div class="wc-panel">
+    <h2>Storage &amp; Hosting Limits</h2>
+    <p>
+      WhiteCat Counter app cloud infrastructure limits ගැන නව users දැන ගත යුතු details —
+      data usage plan කිරීමෙදී මේ limits ගැන aware ව සිටීම important.
+    </p>
+
+    <div class="panel-label">&#9670; Cloud Storage</div>
+    <div class="stat-grid">
+      <div class="stat-box">
+        <div class="stat-box-num">500<span style="font-size:16px">MB</span></div>
+        <div class="stat-box-lbl">Database Limit</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-box-num">1<span style="font-size:16px">GB</span></div>
+        <div class="stat-box-lbl">File Storage Limit</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-box-num">1<span style="font-size:16px">MB</span></div>
+        <div class="stat-box-lbl">Logo Per Upload</div>
+      </div>
+    </div>
+
+    <ul class="wc-list">
+      <li>
+        <strong>Database (500MB):</strong> Products, transactions, settings, held bills — සියල්ල per-user JSON payload ලෙස cloud database හි store. User count grow වෙද්දී limit reach වෙන්නේ නැහැ — සාමාන්ය shop use ලෙස MB ගොඩක් consume කරන්නේ නැහැ.
+      </li>
+      <li>
+        <strong>File Storage (1GB):</strong> Shop logos, assets — <span class="gold-em">whitecat_assets</span> bucket හි store. Per-upload max 1MB, PNG / JPG / WEBP only. Logo upload කිරීමේදී file size 1MB exceed නොකළ යුතු.
+      </li>
+      <li>
+        <strong>Logo Recommendation:</strong> Square logo (512×512 pixels), max 1MB, PNG format recommended. Receipt print හිදී logo proportionally scale කරනවා.
+      </li>
+    </ul>
+
+    <div class="panel-label" style="margin-top:1.4rem">&#9670; Hosting (Netlify)</div>
+    <ul class="wc-list">
+      <li>
+        <strong>Bandwidth:</strong> Netlify free tier monthly bandwidth limit 100GB. Normal usage ලෙස limit reach වෙන්නේ නැහැ — app static files small ව ඇත.
+      </li>
+      <li>
+        <strong>Monthly Credit Update:</strong> WhiteCat team Netlify billing page monitor කර monthly update handle කරනවා. Credit balance ඉවරවීම app offline වීමට හේතු වෙනවා — monthly renewal important.
+      </li>
+      <li>
+        <strong>Current Credit:</strong> WhiteCat team සතු Netlify credits <span class="gold-em">255</span> — monthly deploy / update ලෙස use කරනවා. Credit ඉවරවීමට පෙර renewal plan කළ යුතු.
+      </li>
+    </ul>
+
+    <div class="note-box note-warn">
+      <strong>Monthly reminder:</strong> Netlify credit balance check කර renewal කිරීමට සැලකිලිමත් විය යුතු. Credit ඉවරවෙවී app offline ගියවිට users login කරන්නට access blocked වෙනවා. Monthly credit update = app live maintain.
+    </div>
+  </div>
+
+  <!-- Account Management Detailed -->
+  <div class="wc-panel">
+    <h2>Account Management</h2>
+    <p>
+      Account Manage tab එකේ shop identity, branding සහ security සම්පූර්ණයෙන්ම handle කරනවා.
+      නව user account create කළ ගමන් Account Manage tab open කර shop details configure කිරීම recommend කරනවා.
+    </p>
+
+    <div class="panel-label">&#9670; Setup කළ යුතු Steps (නව User)</div>
+    <ul class="wc-list">
+      <li>
+        <span class="gold-em">Shop Name</span> set කරන්න — counter page header සහ receipt top header හිදී show.
+      </li>
+      <li>
+        <span class="gold-em">Owner Name, Address, Phone, WhatsApp</span> fill කරන්න — receipt customer info section හිදී print.
+      </li>
+      <li>
+        <span class="gold-em">Logo Upload</span> — shop logo upload කළ විට receipt top gold-sheen header හිදී show. 512×512px square, max 1MB recommended.
+      </li>
+      <li>
+        <span class="gold-em">Receipt Footer Message</span> — "Thank you for shopping with us." default. Custom message set කරන්නට පුළුවන්.
+      </li>
+      <li>
+        <span class="gold-em">Currency</span> — default LKR. Change කළ හැකි.
+      </li>
+      <li>
+        <span class="gold-em">Default Tax Rate (%)</span> — default 18%. Counter page tax on කළ විට මේ rate apply.
+      </li>
+      <li>
+        <span class="gold-em">Cashier List</span> — cashiers add කළ විට Counter page cashier select dropdown හිදී available.
+      </li>
+    </ul>
+
+    <div class="note-box">
+      Account details save කළ ගමන් Cloud (Supabase profiles table) හිදී update වෙනවා. Logo cloud storage bucket හිදී save. ඕනෑ device එකෙන් login කළවිට same details load කරනවා.
+    </div>
+  </div>
+
+  <!-- Terms & Notes -->
+  <div class="wc-panel">
+    <h2>Notes &amp; Terms</h2>
+
+    <div class="terms-panel">
+      <h3>General Notes</h3>
+      <ul class="wc-list">
+        <li>WhiteCat Counter app WhiteCat team members සහ නව users සඳහා designed official web tool.</li>
+        <li>App data Supabase cloud හිදී per-user basis ලෙස store — user data isolated, privacy maintained.</li>
+        <li>Receipt print කිරීම browser print window use කරනවා — PDF save / physical print support.</li>
+        <li>App offline ගිය විට local device backup use කරලා data available — cloud return වූ ගමන් sync.</li>
+        <li>Account delete කළ විට profiles, user data, logo files සියල්ල permanently delete — undo කළ නොහැකි.</li>
+      </ul>
+    </div>
+
+    <div class="terms-panel" style="margin-top:1rem">
+      <h3>User Responsibilities</h3>
+      <ul class="wc-list">
+        <li>Logo upload file size 1MB exceed නොකරන්නෙකු recommend — upload fail වෙනවා.</li>
+        <li>Password change Account Manage page හරහා login session ඇති අතරදී පමණක් කළ හැකි — safe ව store කරන්නෙකු important.</li>
+        <li>Netlify credit monthly update WhiteCat team responsibility — team members billing alert maintain කළ යුතු.</li>
+        <li>Direct cloud backup (Supabase / Netlify ඉදිරිපත් කරන services ඉතා) ඔබ්බෙ additional backup WhiteCat team support නොකරයි.</li>
+      </ul>
+    </div>
+
+    <div class="wc-btns" style="justify-content:flex-start; margin-top:1.8rem; margin-bottom:0;">
+      <a class="wc-btn gold" href="https://whitecat-counter.netlify.app/" target="_blank" rel="noreferrer">
+        App Open කරන්න &#8599;
+      </a>
+      <a class="wc-btn ghost" href="../about_index.html">
+        &#8592; WhiteCat Vault
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-left">WhiteCat Counter &middot; Official Info</div>
+  <div class="footer-right">Built by <a href="../about_index.html">PMax</a> &middot; WhiteCat &middot; 2026</div>
+</footer>
+
+<script src="../scripts/site/nav-links.js"></script>
+<script src="../site.js"></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>

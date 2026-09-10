@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="White Cat Vault — Games, Movies, Anime and more from Sri Lanka. Official portfolio and project showcase.">
+<meta name="theme-color" content="#080a0e">
+<meta name="google-site-verification" content="googleca0c8bac8576eb5a">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="canonical" href="https://whitecatvault.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="White Cat Vault">
+<meta property="og:title" content="White Cat Vault — Games, Movies &amp; Digital Portfolio">
+<meta property="og:description" content="White Cat Vault — A curated collection of games, movies, anime and digital creations from Sri Lanka.">
+<meta property="og:url" content="https://whitecatvault.netlify.app/">
+<meta property="og:image" content="https://whitecatvault.netlify.app/assets/preview_banner.webp">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="White Cat Vault">
+<meta name="twitter:description" content="White Cat Vault — Games, Movies, Anime and more from Sri Lanka.">
+<meta name="twitter:image" content="https://whitecatvault.netlify.app/assets/preview_banner.webp">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="White Cat Studio">
+<meta name="keywords" content="white cat vault, PC games, movies, anime, software tools, Sri Lanka, game collection, PWA">
+<link rel="alternate" hreflang="en" href="https://whitecatvault.netlify.app/">
+<title>White Cat Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "White Cat Vault",
+  "url": "https://whitecatvault.netlify.app/",
+  "logo": "https://whitecatvault.netlify.app/assets/logo.webp",
+  "description": "A curated collection of games, movies, anime and digital creations from Sri Lanka",
+  "sameAs": ["https://github.com/whitecat-studio"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "White Cat Vault",
+  "url": "https://whitecatvault.netlify.app/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://whitecatvault.netlify.app/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "White Cat Vault",
+      "item": "https://whitecatvault.netlify.app/"
+    }
+  ]
+}
+</script>
+<style>
+/* ── HUB PAGE SPECIFIC ── */
+.hub-hero {
+  min-height: 38vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  position: relative;
+}
+.hub-hero-orb-1 {
+  position: absolute; top: 0; left: 30%;
+  width: 500px; height: 300px;
+  background: radial-gradient(ellipse, rgba(232,197,90,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hub-hero-orb-2 {
+  position: absolute; bottom: 0; right: 20%;
+  width: 400px; height: 200px;
+  background: radial-gradient(ellipse, rgba(90,139,232,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hub-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .35em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1rem;
+  opacity: 0; animation: fadeUp .7s ease .1s forwards;
+}
+.hub-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(64px, 12vw, 120px);
+  letter-spacing: .05em; line-height: .9;
+  background: linear-gradient(140deg, #eaeaea 0%, #f0d06a 45%, var(--gold) 70%, var(--gold2) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 20px;
+  text-shadow: 0 0 80px rgba(232,197,90,0.3);
+  opacity: 0; animation: fadeUp .7s ease .25s forwards;
+}
+.hub-sub {
+  font-size: 14px; color: var(--muted);
+  max-width: 440px; line-height: 1.7;
+  opacity: 0; animation: fadeUp .7s ease .4s forwards;
+}
+
+/* ── PORTAL GRID ── */
+.portal-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 24px 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  opacity: 0; animation: fadeUp .7s ease .6s forwards;
+}
+
+.portal-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  transition: transform .35s cubic-bezier(.23,.1,.32,1.1), border-color .3s, box-shadow .3s;
+  min-height: 240px;
+}
+.portal-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(232,197,90,.3);
+  box-shadow: 0 24px 60px rgba(0,0,0,.5), 0 0 40px rgba(232,197,90,.1);
+}
+
+.portal-card-bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  filter: brightness(.22) saturate(.6);
+  transition: filter .4s ease;
+}
+.portal-card:hover .portal-card-bg {
+  filter: brightness(.32) saturate(.8);
+}
+.portal-card::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(160deg, transparent 30%, rgba(8,10,14,.85) 100%);
+  pointer-events: none;
+}
+
+.portal-card-content {
+  position: relative; z-index: 2;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 340px;
+}
+@keyframes iconGlow {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(232,197,90,.3)); }
+  50% { filter: drop-shadow(0 0 24px rgba(232,197,90,.7)); }
+}
+.portal-card-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  display: block;
+  object-fit: contain;
+  animation: iconGlow 3s ease-in-out infinite;
+}
+.portal-card-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 9px; font-weight: 700;
+  letter-spacing: .3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: .4rem;
+  display: flex; align-items: center; gap: 8px;
+}
+.portal-card-label::before {
+  content: '◆';
+  font-size: 7px;
+}
+.portal-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 4vw, 46px);
+  letter-spacing: .06em; line-height: 1;
+  color: #fff; margin-bottom: .7rem;
+}
+.portal-card-title span { color: var(--gold); }
+.portal-card-desc {
+  font-size: 13px; color: var(--muted);
+  line-height: 1.6; margin-bottom: 1.2rem;
+  max-width: 300px;
+}
+.portal-card-meta {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 1.4rem;
+}
+.portal-meta-tag {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(232,197,90,.08);
+  border: 1px solid rgba(232,197,90,.2);
+  padding: 4px 12px; border-radius: 100px;
+}
+.portal-meta-tag.blue {
+  color: #9bb8ff;
+  background: rgba(155,184,255,.08);
+  border-color: rgba(155,184,255,.2);
+}
+.portal-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Syne', sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--bg);
+  background: var(--gold);
+  padding: 10px 22px; border-radius: 100px;
+  text-decoration: none;
+  width: fit-content;
+  transition: background .2s, transform .2s;
+}
+.portal-card:hover .portal-btn {
+  background: #f0d06a;
+  transform: translateX(4px);
+}
+
+/* ── SOFTWARE PROMO ── */
+.hub-software {
+  max-width: 960px;
+  margin: 0 auto 3rem;
+  padding: 0 24px;
+}
+.hub-software-inner {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  padding: 1.2rem 1.6rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+}
+.hub-software-left {
+  display: flex; align-items: center; gap: 14px;
+}
+.hub-software-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 8px rgba(232,197,90,.5);
+  flex-shrink: 0;
+}
+.hub-software-text {
+  font-family: 'Syne', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--text);
+}
+.hub-software-sub {
+  font-size: 12px; color: var(--muted); margin-top: 2px;
+}
+.hub-software-btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(232,197,90,.3);
+  background: rgba(232,197,90,.05);
+  padding: 8px 18px; border-radius: 100px;
+  text-decoration: none;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.hub-software-btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+
+/* ── Portal card gradient backgrounds (replace removed webp BGs) ── */
+.portal-card-bg {
+  position: absolute; inset: 0;
+  transition: opacity .4s ease;
+}
+.portal-card-bg.game-bg {
+  background: linear-gradient(135deg,
+    rgba(232,197,90,.09) 0%, rgba(78,203,113,.05) 55%, rgba(155,184,255,.04) 100%),
+    linear-gradient(160deg, #13161e 0%, #0d0f16 60%, #0a0c12 100%);
+  filter: none;
+}
+.portal-card-bg.watch-bg {
+  background: linear-gradient(135deg,
+    rgba(155,184,255,.09) 0%, rgba(232,197,90,.05) 55%, rgba(78,203,113,.04) 100%),
+    linear-gradient(160deg, #13161e 0%, #0d0f16 60%, #0a0c12 100%);
+  filter: none;
+}
+.portal-card:hover .portal-card-bg.game-bg,
+.portal-card:hover .portal-card-bg.watch-bg { opacity: .75; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .portal-section {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 16px 4rem;
+    gap: 16px;
+  }
+  .portal-card {
+    min-height: 280px;
+  }
+  .portal-card-content {
+    min-height: 280px;
+    padding: 1.5rem;
+  }
+  .hub-hero {
+    padding: 3rem 1.5rem 2rem;
+  }
+}
+@media (min-width: 641px) and (max-width: 900px) {
+  .portal-section {
+    gap: 16px;
+    padding: 2rem 20px 4rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="ambient"></div>
+
+<header class="site-header">
+  <a class="logo" href="index.html">
+    <img class="logo-img" src="assets/logo.webp" alt="White Cat Vault Logo" width="38" height="38" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <button class="nav-toggle" onclick="toggleNav()" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation"></nav>
+</header>
+
+<main id="main-content">
+<section class="hub-hero">
+  <div class="hub-hero-orb-1"></div>
+  <div class="hub-hero-orb-2"></div>
+  <p class="hub-label">&#9670; White Cat · Personal Vault</p>
+  <h1 class="hub-title">THE<br><span>VAULT</span></h1>
+  <p class="hub-sub">Games, movies, anime and tools — handpicked and honest. Choose your world.</p>
+</section>
+
+<div class="portal-section">
+
+  <!-- GAME VAULT CARD -->
+  <a class="portal-card" href="/game_index.html">
+    <div class="portal-card-bg game-bg"></div>
+    <div class="portal-card-content">
+      <img class="portal-card-icon" src="/assets/home/games.svg" alt="Games Vault Icon">
+      <div class="portal-card-label">PC Games Collection</div>
+      <div class="portal-card-title">GAME<br><span>VAULT</span></div>
+      <p class="portal-card-desc">
+        Handpicked PC games with honest notes, real screenshots and full lore guides.
+      </p>
+      <div class="portal-card-meta">
+        <span class="portal-meta-tag" id="home-games-count">Games</span>
+        <span class="portal-meta-tag" id="home-games-shots">Screenshots</span>
+        <span class="portal-meta-tag blue">Indie · FPS · Racing</span>
+      </div>
+      <span class="portal-btn">Browse Games &#8594;</span>
+    </div>
+  </a>
+
+  <!-- WATCH VAULT CARD -->
+  <a class="portal-card" href="/watch_index.html">
+    <div class="portal-card-bg watch-bg"></div>
+    <div class="portal-card-content">
+      <img class="portal-card-icon" src="/assets/home/movie.svg" alt="Watch Vault Icon">
+      <div class="portal-card-label">Movies · Anime · Series</div>
+      <div class="portal-card-title">WATCH<br><span>VAULT</span></div>
+      <p class="portal-card-desc">
+        Cartoon movies, live action films, anime series and more — all in one place.
+      </p>
+      <div class="portal-card-meta">
+        <span class="portal-meta-tag" id="home-watch-count">Collections</span>
+        <span class="portal-meta-tag" id="home-watch-items">Items</span>
+        <span class="portal-meta-tag blue">EN &amp; Sinhala Dub</span>
+      </div>
+      <span class="portal-btn">Browse Watch &#8594;</span>
+    </div>
+  </a>
+
+</div>
+
+<div class="hub-software">
+  <div class="hub-software-inner">
+    <div class="hub-software-left">
+      <div class="hub-software-dot"></div>
+      <div>
+        <div class="hub-software-text">White Cat Drive — Pro Software Collection</div>
+        <div class="hub-software-sub">Game tools, video editing, coding, MS Office, pixel art and more.</div>
+      </div>
+    </div>
+    <a href="/tool_index.html" class="hub-software-btn">View Tools &#8594;</a>
+  </div>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-left">White Cat &middot; Vault</div>
+  <div class="footer-right">Built by <a href="/about_index.html">PMax</a> &middot; WhiteCat &middot; 2026</div>
+</footer>
+
+<script src="/scripts/site/nav-links.js" defer></script>
+<script src="/site.js" defer></script>
+<script src="/scripts/game/game-price-rating.js"></script>
+<script src="/scripts/watch/watch-library.js"></script>
+<script src="/scripts/site/site-stats.js"></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>

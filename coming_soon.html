@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="White Cat Vault — New content and features coming soon. Stay tuned for games, movies, anime and more from Sri Lanka.">
+<meta name="theme-color" content="#080a0e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="canonical" href="https://whitecatvault.netlify.app/coming_soon.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="White Cat Vault">
+<meta property="og:title" content="White Cat Coming Soon">
+<meta property="og:description" content="White Cat Vault — New content and features coming soon. Stay tuned for games, movies, anime and more from Sri Lanka.">
+<meta property="og:url" content="https://whitecatvault.netlify.app/coming_soon.html">
+<meta property="og:image" content="https://whitecatvault.netlify.app/assets/preview_banner.webp">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="White Cat Coming Soon">
+<meta name="twitter:description" content="White Cat Vault — New content and features coming soon. Stay tuned for games, movies, anime and more from Sri Lanka.">
+<meta name="twitter:image" content="https://whitecatvault.netlify.app/assets/preview_banner.webp">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="White Cat Studio">
+<meta name="keywords" content="white cat vault, coming soon, new features, Sri Lanka gaming">
+<link rel="alternate" hreflang="en" href="https://whitecatvault.netlify.app/coming_soon.html">
+<title>White Cat · Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+.soon-wrap {
+  min-height: calc(100vh - 64px);
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem 4rem;
+}
+
+.soon-card {
+  width: min(760px, 100%);
+  background: linear-gradient(180deg, rgba(17,20,28,0.95), rgba(12,14,20,0.95));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2.2rem 1.3rem 1.6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 22px 50px rgba(0,0,0,0.45);
+}
+
+.soon-card::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle, rgba(232,197,90,0.2) 0%, rgba(232,197,90,0.05) 28%, transparent 62%);
+  filter: blur(10px);
+  animation: pulseGlow 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(0.9); opacity: 0.5; }
+  50% { transform: scale(1.12); opacity: 0.95; }
+}
+
+.loader-wrap {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 1.1rem;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+
+.loader-wrap::before {
+  content: "";
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,197,90,0.35) 0%, rgba(232,197,90,0.1) 42%, transparent 70%);
+  animation: rotateGlow 6s linear infinite;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg) scale(0.95); }
+  50% { transform: rotate(180deg) scale(1.05); }
+  to { transform: rotate(360deg) scale(0.95); }
+}
+
+.loader-frame {
+  width: 46px;
+  height: 46px;
+  image-rendering: auto;
+  z-index: 1;
+}
+
+.soon-label {
+  position: relative;
+  z-index: 1;
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+
+.soon-title {
+  position: relative;
+  z-index: 1;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.08em;
+  line-height: 0.95;
+  font-size: clamp(52px, 9vw, 88px);
+  background: linear-gradient(145deg, #f6f6f6 0%, #f0d06a 46%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.soon-sub {
+  position: relative;
+  z-index: 1;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto 1.2rem;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.soon-info {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  margin: 0 auto 1.4rem;
+  max-width: 540px;
+}
+
+.soon-info p {
+  color: #c7cede;
+  font-size: 13px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+
+.soon-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.soon-btn {
+  text-decoration: none;
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 11px 18px;
+  transition: all .25s ease;
+}
+
+.soon-btn.home {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+}
+
+.soon-btn.home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(232,197,90,0.25);
+}
+
+.soon-btn.alt {
+  color: var(--text);
+  background: rgba(255,255,255,0.03);
+}
+
+.soon-btn.alt:hover {
+  border-color: rgba(232,197,90,.35);
+  color: var(--gold);
+}
+
+.soon-rec {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+}
+
+.soon-rec a {
+  text-decoration: none;
+  color: #d8deec;
+  font-size: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  padding: 10px 12px;
+  transition: all .25s ease;
+}
+
+.soon-rec a:hover {
+  color: var(--gold);
+  border-color: rgba(232,197,90,.35);
+}
+
+@media (max-width: 560px) {
+  .soon-card { padding: 1.9rem 1rem 1.2rem; border-radius: 18px; }
+  .soon-sub { font-size: 13px; }
+  .soon-info p { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="ambient"></div>
+
+<header class="site-header">
+  <a class="logo" href="/index.html">
+    <img class="logo-img" src="/assets/logo.webp" alt="White Cat Vault Logo" width="38" height="38" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <button class="nav-toggle" onclick="toggleNav()" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation"></nav>
+</header>
+
+<main class="soon-wrap" id="main-content">
+  <section class="soon-card">
+    <div class="loader-wrap">
+      <img class="loader-frame" id="loader-frame" src="/assets/coming_soon/loading_1.svg" alt="Loading animation frame">
+    </div>
+
+    <p class="soon-label">&#9670; White Cat Update</p>
+    <h1 class="soon-title">COMING<br>SOON</h1>
+    <p class="soon-sub">
+      This page is currently under development. We are polishing the layout, adding final content, and testing everything to match the White Cat style quality.
+    </p>
+
+    <div class="soon-info">
+      <p>Fast update: Core structure is in progress and will be published after final checks.</p>
+      <p>If you reached this page from a link, no issue on your side. It will be live soon.</p>
+    </div>
+
+    <div class="soon-actions">
+      <a class="soon-btn home" href="/index.html">Back To Home</a>
+      <a class="soon-btn alt" href="game_index.html">Browse Games</a>
+      <a class="soon-btn alt" href="watch_index.html">Browse Watch</a>
+    </div>
+
+    <div class="soon-rec">
+      <a href="game_index.html">Recommended: Explore Game Vault</a>
+      <a href="watch_index.html">Recommended: Check Watch Vault</a>
+      <a href="/about_index.html">Recommended: Meet The Creator</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-left">White Cat &middot; Coming Soon</div>
+  <div class="footer-right">Built by <a href="/about_index.html">PMax</a> &middot; WhiteCat &middot; 2026</div>
+</footer>
+
+<script src="/scripts/site/nav-links.js" defer></script>
+<script src="/site.js" defer></script>
+<script>
+(function () {
+  var frameEl = document.getElementById('loader-frame');
+  var frames = [
+    '/assets/coming_soon/loading_1.svg',
+    '/assets/coming_soon/loading_2.svg',
+    '/assets/coming_soon/loading_3.svg',
+    '/assets/coming_soon/loading_4.svg'
+  ];
+  var i = 0;
+  var timerMs = 500;
+
+  function nextFrame() {
+    i = (i + 1) % frames.length;
+    frameEl.src = frames[i];
+  }
+
+  frameEl.addEventListener('error', function () {
+    frameEl.alt = 'Loading image missing';
+  });
+
+  setInterval(nextFrame, timerMs);
+})();
+</script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>

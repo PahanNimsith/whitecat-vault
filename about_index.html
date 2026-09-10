@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About White Cat — PMax, Sri Lanka. Games, Movies and Digital Creations.">
+<meta name="theme-color" content="#080a0e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="canonical" href="https://whitecatvault.netlify.app/about_index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="White Cat Vault">
+<meta property="og:title" content="White Cat Vault – About">
+<meta property="og:description" content="About White Cat – Creator Portfolio. Games, Movies, Anime and Digital Creations from Sri Lanka.">
+<meta property="og:url" content="https://whitecatvault.netlify.app/about_index.html">
+<meta property="og:image" content="https://whitecatvault.netlify.app/assets/preview_banner.webp">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="White Cat Vault – About">
+<meta name="twitter:description" content="About White Cat – Creator Portfolio. Games, Movies, Anime and Digital Creations from Sri Lanka.">
+<meta name="twitter:image" content="https://whitecatvault.netlify.app/assets/preview_banner.webp">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="White Cat Studio">
+<meta name="keywords" content="about white cat vault, PMax, Sri Lanka developer, game creator, digital portfolio">
+<link rel="alternate" hreflang="en" href="https://whitecatvault.netlify.app/about_index.html">
+<title>White Cat Vault – About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "White Cat Studio",
+  "url": "https://whitecatvault.netlify.app/about_index.html",
+  "sameAs": ["https://github.com/whitecat-studio"],
+  "description": "Creator and developer of games, movies, anime content and digital projects",
+  "image": "https://whitecatvault.netlify.app/assets/logo.webp"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "White Cat Vault",
+      "item": "https://whitecatvault.netlify.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://whitecatvault.netlify.app/about_index.html"
+    }
+  ]
+}
+</script>
+<style>
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp   { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+@keyframes pulse    { 0%,100% { box-shadow: 0 0 14px rgba(232,197,90,.45), 0 0 28px rgba(232,197,90,.18), 0 0 48px rgba(232,197,90,.08); }
+                      50%     { box-shadow: 0 0 24px rgba(232,197,90,.75), 0 0 48px rgba(232,197,90,.35), 0 0 80px rgba(232,197,90,.18); } }
+@keyframes floatY   { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
+@keyframes shimmer  { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+@keyframes scanline { 0% { top:-100%; } 100% { top:200%; } }
+@keyframes accentPulse { 0%,100% { opacity:.7; } 50% { opacity:1; } }
+
+/* ── HEADER ── */
+.site-header .logo-img { animation: pulse 3s ease-in-out infinite; }
+
+/* ══════════════════════════════════════════
+   HERO SECTION
+══════════════════════════════════════════ */
+.about-hero {
+  position:relative; z-index:1;
+  padding: 6rem 2.5rem 5rem;
+  display:flex; flex-direction:column; align-items:center;
+  text-align:center; overflow:hidden;
+}
+.hero-glow {
+  position:absolute; top:0; left:50%; transform:translateX(-50%);
+  width:600px; height:400px;
+  background:radial-gradient(ellipse, rgba(232,197,90,0.08) 0%, transparent 65%);
+  pointer-events:none;
+}
+.about-logo-wrap {
+  position:relative; margin-bottom:2rem;
+  animation: fadeUp .8s ease .1s both;
+}
+.about-logo-ring {
+  position:absolute; inset:-10px; border-radius:50%;
+  background: conic-gradient(from 0deg, transparent 0%, rgba(232,197,90,.5) 25%, transparent 50%, rgba(232,197,90,.3) 75%, transparent 100%);
+  animation: spin 8s linear infinite;
+  opacity:.4;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+.about-logo-ring2 {
+  position:absolute; inset:-18px; border-radius:50%;
+  background: conic-gradient(from 180deg, transparent 0%, rgba(155,184,255,.2) 30%, transparent 60%);
+  animation: spin 14s linear infinite reverse;
+  opacity:.3;
+}
+.about-logo-img {
+  width:120px; height:120px; border-radius:50%;
+  border:3px solid var(--gold); object-fit:cover; position:relative; z-index:2;
+  animation: pulse 3s ease-in-out infinite, floatY 6s ease-in-out infinite;
+  box-shadow:
+    0 0 20px rgba(232,197,90,.5),
+    0 0 50px rgba(232,197,90,.25),
+    0 0 90px rgba(232,197,90,.1),
+    inset 0 0 20px rgba(232,197,90,.08);
+  display:block;
+}
+.about-logo-img-err {
+  width:110px; height:110px; border-radius:50%;
+  border:3px solid var(--gold);
+  background: radial-gradient(circle, #181c27 0%, #0d0f16 100%);
+  position:relative; z-index:2;
+  animation: pulse 3s ease-in-out infinite, floatY 6s ease-in-out infinite;
+  display:flex; align-items:center; justify-content:center;
+}
+.about-hero-label {
+  font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:.35em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:.8rem;
+  opacity:0; animation:fadeUp .7s ease .3s forwards;
+}
+.about-hero-name {
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(70px,7vw,140px); line-height:.88; letter-spacing:.04em;
+  background: linear-gradient(140deg, #ffffff 0%, #f5e9b0 30%, var(--gold) 60%, var(--gold2) 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  opacity:0; animation:fadeUp .7s ease .45s forwards;
+}
+.about-hero-nick {
+  font-family:'Syne',sans-serif; font-size:13px; font-weight:700;
+  letter-spacing:.3em; text-transform:uppercase;
+  color:var(--muted); margin-top:.5rem;
+  opacity:0; animation:fadeUp .7s ease .6s forwards;
+}
+.about-hero-nick span { color:var(--gold); }
+.about-hero-tagline {
+  max-width:720px; font-size:15px; color:#8a91b0;
+  line-height:1.9; margin:1.6rem auto 0;
+  opacity:0; animation:fadeUp .7s ease .75s forwards;
+}
+.about-hero-loc {
+  display:inline-flex; align-items:center; gap:8px;
+  margin-top:1.6rem;
+  font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase;
+  color:var(--muted);
+  background:var(--surface); border:1px solid var(--border);
+  padding:7px 18px; border-radius:100px;
+  opacity:0; animation:fadeUp .7s ease .9s forwards;
+}
+.about-hero-loc span { color:var(--gold); }
+
+/* ══════════════════════════════════════════
+   MAIN CONTENT
+══════════════════════════════════════════ */
+.about-content {
+  position:relative; z-index:1;
+  max-width:1240px; margin:0 auto; padding:0 34px 6rem;
+}
+.about-layout {
+  display:grid;
+  grid-template-columns:2.5fr 1fr;
+  gap:34px;
+  margin-bottom:32px;
+}
+@media (max-width:1020px) { .about-layout { grid-template-columns:1fr; } }
+
+/* ══ ABOUT ME PANEL ══ */
+.about-panel {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--radius); padding:1.8rem;
+  position:relative; overflow:hidden;
+  animation:fadeUp .7s ease .1s both;
+}
+.about-panel::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent 5%, var(--gold) 30%, #f5e9b0 50%, var(--gold) 70%, transparent 95%);
+  box-shadow:0 0 18px rgba(232,197,90,.5), 0 0 36px rgba(232,197,90,.2);
+  animation: accentPulse 3s ease-in-out infinite;
+}
+.about-panel::after {
+  content:''; position:absolute; top:0; right:0;
+  width:240px; height:200px;
+  background:radial-gradient(circle at top right, rgba(232,197,90,.07) 0%, transparent 65%);
+  pointer-events:none;
+}
+
+.section-title {
+  display:flex; flex-direction:column; align-items:flex-start;
+  gap:8px; margin-bottom:1.6rem;
+}
+.section-title h2 {
+  font-family:'Bebas Neue',sans-serif; font-size:36px;
+  letter-spacing:.06em; color:var(--text); margin:0;
+  background:linear-gradient(135deg, #fff 0%, var(--gold) 80%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.section-title span {
+  color:var(--gold); font-size:11px; font-weight:700;
+  letter-spacing:.35em; text-transform:uppercase;
+}
+
+/* section label */
+.ab-label {
+  font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:.3em; text-transform:uppercase; color:var(--gold);
+  display:flex; align-items:center; gap:10px; margin-bottom:1.2rem;
+}
+.ab-label::after {
+  content:''; flex:1; height:1px;
+  background:linear-gradient(90deg, rgba(232,197,90,.4), transparent);
+}
+
+/* ── IDENTITY CARDS ROW ── */
+.identity-row {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+  margin-bottom:20px;
+  opacity:0; transform:translateY(20px);
+  transition:opacity .6s ease, transform .6s ease;
+}
+.identity-row.visible { opacity:1; transform:translateY(0); }
+@media (max-width:640px) { .identity-row { grid-template-columns:1fr; } }
+
+.id-card {
+  background:var(--surface2); border:1px solid rgba(232,197,90,.08);
+  border-radius:var(--radius); padding:1.6rem;
+  position:relative; overflow:hidden;
+  transition:border-color .3s, box-shadow .3s, transform .3s;
+}
+.id-card:hover {
+  border-color:rgba(232,197,90,.3);
+  box-shadow:0 8px 32px rgba(0,0,0,.3), 0 0 24px rgba(232,197,90,.08);
+  transform:translateY(-2px);
+}
+.id-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity:0; transition:opacity .3s;
+}
+.id-card:hover::before { opacity:1; }
+.id-card-icon {
+  font-size:28px; margin-bottom:.8rem; display:block;
+  filter:drop-shadow(0 0 8px rgba(232,197,90,.4));
+}
+.id-card-title {
+  font-family:'Bebas Neue',sans-serif; font-size:22px;
+  letter-spacing:.08em; color:var(--text); margin-bottom:.3rem;
+}
+.id-card-title span { color:var(--gold); }
+.id-card-sub {
+  font-family:'Syne',sans-serif; font-size:9px; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
+  margin-bottom:.7rem;
+}
+.id-card-desc { font-size:13px; color:#8a91b0; line-height:1.65; }
+
+/* ── WHAT I DO ── */
+.do-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:14px;
+  margin-bottom:20px;
+  opacity:0; transform:translateY(20px);
+  transition:opacity .6s ease .1s, transform .6s ease .1s;
+}
+.do-grid.visible { opacity:1; transform:translateY(0); }
+@media (max-width:740px) { .do-grid { grid-template-columns:1fr 1fr; } }
+@media (max-width:460px) { .do-grid { grid-template-columns:1fr; } }
+
+.do-card {
+  background:var(--surface2); border:1px solid var(--border);
+  border-radius:var(--radius-sm); padding:1.3rem;
+  transition:border-color .3s, box-shadow .3s, transform .3s;
+  cursor:default;
+}
+.do-card:hover {
+  border-color:rgba(232,197,90,.2);
+  box-shadow:0 6px 24px rgba(0,0,0,.25);
+  transform:translateY(-3px);
+}
+.do-card-emoji { font-size:22px; margin-bottom:.6rem; display:block; }
+.do-card-name {
+  font-family:'Syne',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--text);
+  margin-bottom:.4rem;
+}
+.do-card-note { font-size:12px; color:var(--muted); line-height:1.5; }
+
+/* ── VAULT CARDS ── */
+.vault-row {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+  margin-bottom:20px;
+  opacity:0; transform:translateY(20px);
+  transition:opacity .6s ease .15s, transform .6s ease .15s;
+}
+.vault-row.visible { opacity:1; transform:translateY(0); }
+@media (max-width:580px) { .vault-row { grid-template-columns:1fr; } }
+
+.vault-card {
+  background:var(--surface2); border:1px solid var(--border);
+  border-radius:var(--radius); padding:1.6rem;
+  display:flex; flex-direction:column; gap:.6rem;
+  transition:border-color .3s, box-shadow .3s, transform .3s;
+  text-decoration:none;
+}
+.vault-card:hover {
+  border-color:rgba(232,197,90,.25);
+  box-shadow:0 8px 32px rgba(0,0,0,.3), 0 0 24px rgba(232,197,90,.08);
+  transform:translateY(-2px);
+}
+.vault-card-top { display:flex; align-items:center; gap:12px; }
+.vault-card-icon {
+  width:44px; height:44px; border-radius:12px;
+  background:rgba(232,197,90,.08); border:1px solid rgba(232,197,90,.18);
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px; flex-shrink:0;
+}
+.vault-card-icon.blue { background:rgba(155,184,255,.08); border-color:rgba(155,184,255,.18); }
+.vault-card-name {
+  font-family:'Bebas Neue',sans-serif; font-size:22px;
+  letter-spacing:.08em; color:var(--text);
+}
+.vault-card-badge {
+  font-family:'Syne',sans-serif; font-size:9px; font-weight:700;
+  letter-spacing:.15em; text-transform:uppercase;
+  color:var(--bg); background:var(--gold);
+  padding:3px 10px; border-radius:100px; align-self:flex-start;
+}
+.vault-card-badge.blue { background:var(--soul); }
+.vault-card-desc { font-size:13px; color:#8a91b0; line-height:1.6; }
+.vault-card-link {
+  font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:.15em; text-transform:uppercase;
+  color:var(--gold); margin-top:.2rem;
+  display:flex; align-items:center; gap:6px;
+  transition:gap .25s;
+}
+.vault-card:hover .vault-card-link { gap:10px; }
+.vault-card-link.blue { color:var(--soul); }
+
+/* ── SKILLS/TOOLS ── */
+.skills-wrap {
+  background:var(--surface2); border:1px solid var(--border);
+  border-radius:var(--radius); padding:1.8rem;
+  margin-bottom:20px;
+  opacity:0; transform:translateY(20px);
+  transition:opacity .6s ease .2s, transform .6s ease .2s;
+}
+.skills-wrap.visible { opacity:1; transform:translateY(0); }
+.skills-grid { display:flex; flex-wrap:wrap; gap:10px; margin-top:.4rem; }
+.skill-pill {
+  display:inline-flex; align-items:center; gap:6px;
+  font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase;
+  padding:7px 14px; border-radius:100px; border:1px solid;
+  transition:all .2s; cursor:default;
+}
+.skill-pill.gold  { color:var(--gold);  background:rgba(232,197,90,.07);  border-color:rgba(232,197,90,.2); }
+.skill-pill.blue  { color:var(--soul);  background:rgba(155,184,255,.07); border-color:rgba(155,184,255,.2); }
+.skill-pill.green { color:#4ecb71;      background:rgba(78,203,113,.07);  border-color:rgba(78,203,113,.2); }
+.skill-pill.dim   { color:var(--muted); background:var(--surface2);       border-color:var(--border); }
+.skill-pill:hover { transform:translateY(-2px); box-shadow:0 4px 14px rgba(0,0,0,.25); }
+
+/* ── FACT ROW ── */
+.fact-row {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:12px;
+  margin-bottom:20px;
+  opacity:0; transform:translateY(20px);
+  transition:opacity .6s ease .25s, transform .6s ease .25s;
+}
+.fact-row.visible { opacity:1; transform:translateY(0); }
+@media (max-width:680px) { .fact-row { grid-template-columns:1fr 1fr; } }
+
+.fact-card {
+  background:var(--surface2); border:1px solid var(--border);
+  border-radius:var(--radius-sm); padding:1.2rem; text-align:center;
+  transition:border-color .3s, box-shadow .3s;
+}
+.fact-card:hover { border-color:rgba(232,197,90,.18); box-shadow:0 4px 16px rgba(232,197,90,.06); }
+.fact-num {
+  font-family:'Bebas Neue',sans-serif; font-size:32px;
+  color:var(--gold); letter-spacing:.05em; line-height:1;
+}
+.fact-lbl {
+  font-family:'Syne',sans-serif; font-size:9px; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-top:4px;
+}
+
+/* ══ WEBSITES PANEL ══ */
+.websites-panel {
+  position:relative;
+  display:flex; flex-direction:column; gap:18px;
+  animation:fadeUp .8s ease .22s both;
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius);
+  padding:1.8rem;
+  box-shadow:0 18px 40px rgba(0,0,0,.2);
+  overflow:hidden;
+}
+.websites-panel::before {
+  content:'';
+  position:absolute; inset:0;
+  border-radius:var(--radius);
+  background:radial-gradient(circle at top right, rgba(232,197,90,.07), transparent 55%);
+  pointer-events:none;
+}
+.websites-panel::after {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent 5%, rgba(232,197,90,.6) 40%, rgba(232,197,90,.8) 50%, rgba(232,197,90,.6) 60%, transparent 95%);
+  animation: accentPulse 4s ease-in-out infinite;
+}
+
+.websites-panel .section-title { margin-bottom:1rem; }
+
+/* ── SITE CARD SHARED ── */
+.site-card {
+  position:relative; overflow:hidden;
+  background:rgba(8,10,14,.8); border:1px solid rgba(255,255,255,.07);
+  border-radius:var(--radius-sm); padding:1.4rem; display:flex; flex-direction:column;
+  gap:12px; transition:border-color .3s, box-shadow .3s, transform .3s;
+}
+.site-card:hover {
+  transform:translateY(-2px);
+  box-shadow:0 18px 40px rgba(0,0,0,.18);
+}
+.site-card-top {
+  display:flex; align-items:center; gap:12px;
+}
+.site-card-logo {
+  width:52px; height:52px; border-radius:16px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px; overflow:hidden; flex-shrink:0;
+}
+.site-card-logo img {
+  width:100%; height:100%; object-fit:cover; display:block;
+}
+.site-card-meta { display:flex; flex-direction:column; gap:5px; }
+.site-card-title {
+  font-family:'Bebas Neue',sans-serif; font-size:20px;
+  letter-spacing:.08em; color:var(--text); margin:0; line-height:1;
+}
+.site-card-badge {
+  display:inline-flex; align-items:center; padding:4px 11px;
+  border-radius:999px;
+  font-family:'Syne',sans-serif; font-size:9px; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase; width:fit-content;
+}
+.site-card-desc { color:#98a1c7; font-size:13px; line-height:1.7; }
+.site-card-footer {
+  margin-top:auto; display:flex; flex-wrap:wrap; gap:10px;
+}
+.site-card-link {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:120px; padding:10px 16px; border-radius:999px;
+  font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase;
+  text-decoration:none; border:1px solid;
+  transition:all .25s ease;
+}
+
+/* ─── COUNTER CARD — GOLD ACCENT ─── */
+.site-card.card-counter {
+  border-color:rgba(232,197,90,.14);
+  background:linear-gradient(145deg, rgba(12,11,6,.95) 0%, rgba(8,10,14,.98) 100%);
+}
+.site-card.card-counter::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent, var(--gold), #f5e9b0, var(--gold), transparent);
+  box-shadow:0 0 12px rgba(232,197,90,.5);
+}
+.site-card.card-counter::after {
+  content:''; position:absolute; top:0; right:0;
+  width:120px; height:120px;
+  background:radial-gradient(circle at top right, rgba(232,197,90,.1), transparent 70%);
+  pointer-events:none;
+}
+.site-card.card-counter:hover {
+  border-color:rgba(232,197,90,.32);
+  box-shadow:0 18px 48px rgba(0,0,0,.2), 0 0 32px rgba(232,197,90,.08);
+}
+.site-card.card-counter .site-card-logo {
+  background:rgba(232,197,90,.1); border:1px solid rgba(232,197,90,.25);
+  box-shadow:0 0 14px rgba(232,197,90,.15);
+}
+.site-card.card-counter .site-card-title { color:var(--gold); }
+.site-card.card-counter .site-card-badge {
+  background:rgba(232,197,90,.12); color:var(--gold);
+  border:1px solid rgba(232,197,90,.25);
+}
+.site-card.card-counter .site-card-link {
+  color:var(--gold); border-color:rgba(232,197,90,.22);
+  background:rgba(232,197,90,.06);
+}
+.site-card.card-counter .site-card-link:hover {
+  background:rgba(232,197,90,.18); border-color:rgba(232,197,90,.4); color:#fff;
+  transform:translateY(-1px);
+}
+.site-card.card-counter .site-card-link.primary {
+  background:linear-gradient(135deg, #f1d36a 0%, #d2a832 100%);
+  color:#080a0e; border-color:transparent;
+  box-shadow:0 6px 18px rgba(232,197,90,.25);
+}
+.site-card.card-counter .site-card-link.primary:hover {
+  background:linear-gradient(135deg, #f8e08a 0%, #e0b840 100%);
+  box-shadow:0 8px 24px rgba(232,197,90,.35);
+}
+
+/* ─── VAULT CARD — PURPLE/DIM ACCENT ─── */
+.site-card.card-vault {
+  border-color:rgba(155,184,255,.1);
+  background:linear-gradient(145deg, rgba(8,10,16,.95) 0%, rgba(8,10,14,.98) 100%);
+}
+.site-card.card-vault::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent, rgba(155,184,255,.5), rgba(155,184,255,.7), rgba(155,184,255,.5), transparent);
+}
+.site-card.card-vault::after {
+  content:''; position:absolute; top:0; right:0;
+  width:100px; height:100px;
+  background:radial-gradient(circle at top right, rgba(155,184,255,.07), transparent 70%);
+  pointer-events:none;
+}
+.site-card.card-vault:hover {
+  border-color:rgba(155,184,255,.25);
+  box-shadow:0 18px 48px rgba(0,0,0,.2), 0 0 24px rgba(155,184,255,.06);
+}
+.site-card.card-vault .site-card-logo {
+  background:rgba(155,184,255,.08); border:1px solid rgba(155,184,255,.2);
+}
+.site-card.card-vault .site-card-title { color:#c8d8ff; }
+.site-card.card-vault .site-card-badge {
+  background:rgba(155,184,255,.1); color:var(--soul);
+  border:1px solid rgba(155,184,255,.2);
+}
+.site-card.card-vault .site-card-link {
+  color:var(--soul); border-color:rgba(155,184,255,.2);
+  background:rgba(155,184,255,.06);
+}
+.site-card.card-vault .site-card-link:hover {
+  background:rgba(155,184,255,.16); border-color:rgba(155,184,255,.38); color:#fff;
+  transform:translateY(-1px);
+}
+
+/* Preview image */
+.site-preview {
+  width:100%; border-radius:var(--radius-sm); display:block;
+  border:1px solid rgba(255,255,255,.08);
+  aspect-ratio:16/9; object-fit:cover;
+}
+.card-counter .site-preview { border-color:rgba(232,197,90,.12); }
+
+/* ── BUTTON ROW ── */
+.button-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:1rem; }
+.cta-btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:10px; padding:12px 20px; border-radius:999px;
+  text-decoration:none; font-family:'Syne',sans-serif;
+  font-size:11px; font-weight:700; letter-spacing:.16em;
+  text-transform:uppercase; transition:transform .2s, background .2s, border-color .2s;
+}
+.cta-btn.gold {
+  color:var(--bg); background:var(--gold); border:1px solid var(--gold);
+}
+.cta-btn.gold:hover { transform:translateY(-1px); background:var(--gold2); }
+.cta-btn.ghost {
+  color:var(--gold); background:rgba(232,197,90,.08);
+  border:1px solid rgba(232,197,90,.2);
+}
+.cta-btn.ghost:hover { transform:translateY(-1px); background:rgba(232,197,90,.15); }
+
+/* ── CONTACT / CONNECT ── */
+.connect-wrap {
+  background:var(--surface); border:1px solid rgba(232,197,90,.12);
+  border-radius:var(--radius); padding:1.8rem;
+  display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  opacity:0; transform:translateY(20px);
+  transition:opacity .6s ease .3s, transform .6s ease .3s;
+  position:relative; overflow:hidden;
+}
+.connect-wrap::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse at left, rgba(232,197,90,.05) 0%, transparent 60%);
+  pointer-events:none;
+}
+.connect-wrap.visible { opacity:1; transform:translateY(0); }
+.connect-title {
+  font-family:'Bebas Neue',sans-serif; font-size:28px;
+  letter-spacing:.08em; color:var(--text); margin-bottom:.3rem;
+}
+.connect-title span { color:var(--gold); }
+.connect-sub { font-size:13px; color:var(--muted); }
+.connect-btns { display:flex; gap:10px; flex-wrap:wrap; }
+
+/* ── RESPONSIVE ── */
+@media (max-width:900px) {
+  .about-layout { grid-template-columns:1fr; gap:24px; }
+}
+
+@media (max-width:740px) {
+  .do-grid { grid-template-columns:1fr 1fr; }
+  .vault-row { grid-template-columns:1fr; }
+}
+
+@media (max-width:580px) {
+  .about-hero { padding:3.5rem 1.5rem 3rem; }
+  .about-content { padding:0 18px 4rem; }
+  .about-hero-name { font-size:clamp(48px,12vw,76px); }
+  .about-hero-tagline { max-width:100%; font-size:15px; }
+  .connect-wrap { flex-direction:column; }
+  .about-panel, .websites-panel { padding:1.4rem; }
+  .vault-card { padding:1.3rem; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="ambient"></div>
+
+<header class="site-header">
+  <a class="logo" href="/index.html">
+    <img class="logo-img" src="/assets/logo.webp" alt="White Cat"
+         onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <button class="nav-toggle" onclick="toggleNav()" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation"></nav>
+</header>
+
+<main id="main-content">
+<section class="about-hero">
+  <div class="hero-glow"></div>
+  <div class="about-logo-wrap">
+    <div class="about-logo-ring"></div>
+    <div class="about-logo-ring2"></div>
+    <img class="about-logo-img"
+         src="/assets/logo.webp"
+         alt="White Cat Logo"
+         onerror="this.outerHTML='<div class=\'about-logo-img-err\'>WC</div>'">
+  </div>
+  <p class="about-hero-label">&#9670; The Person Behind The Vault</p>
+  <h1 class="about-hero-name">PMAX</h1>
+  <p class="about-hero-nick">aka <span>WhiteCat</span> &nbsp;·&nbsp; Digital Creator</p>
+  <p class="about-hero-tagline">
+    Building digital things from Sri Lanka — game vaults, watch collections,
+    web tools and software. Everything is made with care, dark themes and a lot of gold.
+  </p>
+  <div class="about-hero-loc">
+    LK &nbsp;<span>Sri Lanka</span>&nbsp; · &nbsp;Est. 2025
+  </div>
+</section>
+
+<div class="about-content">
+  <div class="about-layout">
+
+    <!-- ══ ABOUT ME PANEL ══ -->
+    <div class="about-panel">
+      <div class="section-title">
+        <h2>About Me</h2>
+        <span>White Cat Vault</span>
+      </div>
+
+      <p class="ab-label">&#9670; Identity</p>
+      <div class="identity-row">
+        <div class="id-card">
+          <img class="id-card-icon" src="/assets/about/whitecat.svg" alt="White Cat" width="48" height="48" />
+          <div class="id-card-title">White<span>Cat</span></div>
+          <div class="id-card-sub">Company / Brand Name</div>
+          <p class="id-card-desc">
+            White Cat is the brand behind all vaults, tools and digital products.
+            Everything built here is made with attention to detail, a dark aesthetic,
+            and a polished gold identity.
+          </p>
+        </div>
+        <div class="id-card">
+          <img class="id-card-icon" src="/assets/about/creator.svg" alt="Creator" width="48" height="48" />
+          <div class="id-card-title"><span>P</span>Max</div>
+          <div class="id-card-sub">Nickname / Creator Handle</div>
+          <p class="id-card-desc">
+            PMax is the creator of White Cat — designing, coding, and curating everything
+            across these sites. Built from Sri Lanka with a love for clean dark UI.
+          </p>
+        </div>
+      </div>
+
+      <p class="ab-label">&#9670; What I Do</p>
+      <div class="do-grid">
+        <div class="do-card">
+          <img class="do-card-emoji" src="/assets/about/games.svg" alt="Games" width="48" height="48" />
+          <div class="do-card-name">Game Curation</div>
+          <p class="do-card-note">Handpicking and presenting PC games with honest notes, ratings and screenshots.</p>
+        </div>
+        <div class="do-card">
+          <img class="do-card-emoji" src="/assets/about/movie_1.svg" alt="Movies" width="48" height="48" />
+          <div class="do-card-name">Watch Vault</div>
+          <p class="do-card-note">Organizing movies, anime and series into a browsable personal collection.</p>
+        </div>
+        <div class="do-card">
+          <img class="do-card-emoji" src="/assets/about/web_dev.svg" alt="Web Dev" width="48" height="48" />
+          <div class="do-card-name">Web Dev</div>
+          <p class="do-card-note">Building sites and web tools from scratch using HTML, CSS and JavaScript.</p>
+        </div>
+        <div class="do-card">
+          <img class="do-card-emoji" src="/assets/about/ui.svg" alt="UI Design" width="48" height="48" />
+          <div class="do-card-name">UI Design</div>
+          <p class="do-card-note">Designing rich dark interfaces with strong typography and polished motion.</p>
+        </div>
+        <div class="do-card">
+          <img class="do-card-emoji" src="/assets/about/pixel_art.svg" alt="Pixel Art" width="48" height="48" />
+          <div class="do-card-name">Pixel Art</div>
+          <p class="do-card-note">Creating icons and visual assets for the site ecosystem.</p>
+        </div>
+        <div class="do-card">
+          <img class="do-card-emoji" src="/assets/about/software.svg" alt="Software" width="48" height="48" />
+          <div class="do-card-name">Software Tools</div>
+          <p class="do-card-note">Packaging useful desktop tools and distributing them through White Cat Drive.</p>
+        </div>
+      </div>
+
+      <p class="ab-label">&#9670; My Vaults</p>
+      <div class="vault-row">
+        <a class="vault-card" href="/game_index.html">
+          <div class="vault-card-top">
+            <img class="vault-card-icon" src="/assets/about/games.svg" alt="Games" width="24" height="24" />
+            <div class="vault-card-name">GAME VAULT</div>
+          </div>
+          <span class="vault-card-badge">PC Games</span>
+          <p class="vault-card-desc">
+            Handpicked PC game collection with honest ratings, screenshots and personal notes.
+            Find your next favorite game here.
+          </p>
+          <div class="vault-card-link">Browse Games &#8594;</div>
+        </a>
+        <a class="vault-card" href="/watch_index.html">
+          <div class="vault-card-top">
+            <img class="vault-card-icon blue" src="/assets/about/movie.svg" alt="Movies" width="24" height="24" />
+            <div class="vault-card-name">WATCH VAULT</div>
+          </div>
+          <span class="vault-card-badge blue">Movies &amp; Anime</span>
+          <p class="vault-card-desc">
+            Personal watch collection — movies, anime series, anime films and cartoon movies.
+            Organized, rated and ready to browse.
+          </p>
+          <div class="vault-card-link blue">Browse Watch &#8594;</div>
+        </a>
+      </div>
+
+      <p class="ab-label">&#9670; Skills &amp; Tools</p>
+      <div class="skills-wrap">
+        <div class="skills-grid">
+          <span class="skill-pill gold">HTML</span>
+          <span class="skill-pill gold">CSS</span>
+          <span class="skill-pill gold">JavaScript</span>
+          <span class="skill-pill blue">Python</span>
+          <span class="skill-pill blue">VS Code</span>
+          <span class="skill-pill green">Figma</span>
+          <span class="skill-pill green">Pixel Art</span>
+          <span class="skill-pill green">UI Design</span>
+          <span class="skill-pill dim">Canva</span>
+          <span class="skill-pill dim">NSIS</span>
+          <span class="skill-pill dim">GitHub Pages</span>
+          <span class="skill-pill dim">Notepad</span>
+          <span class="skill-pill gold">Web Design</span>
+          <span class="skill-pill blue">WordPress</span>
+        </div>
+      </div>
+
+      <p class="ab-label">&#9670; Quick Facts</p>
+      <div class="fact-row">
+        <div class="fact-card">
+          <div class="fact-num" id="about-games-listed">—</div>
+          <div class="fact-lbl">Games Listed</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-num" id="about-watch-titles">—</div>
+          <div class="fact-lbl">Watch Titles</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-num">2026</div>
+          <div class="fact-lbl">Started</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-num">LK</div>
+          <div class="fact-lbl">Sri Lanka</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ MY OTHER WEBSITES PANEL ══ -->
+    <aside class="websites-panel">
+      <div class="section-title">
+        <h2>My Other Websites</h2>
+        <span>Live Projects</span>
+      </div>
+
+      <!-- WhiteCat Counter — Gold card -->
+      <div class="site-card card-counter">
+        <div class="site-card-top">
+          <div class="site-card-logo">
+            <img src="assets/about/whitecat_counter/logo.png" alt="WhiteCat Counter" width="52" height="52" />
+          </div>
+          <div class="site-card-meta">
+            <p class="site-card-title">WhiteCat Counter</p>
+            <span class="site-card-badge">&#x2022; Live Web App</span>
+          </div>
+        </div>
+        <p class="site-card-desc">
+          Official inventory &amp; sales tracker — shop item management, receipt printing,
+          account settings, logo upload and cloud data via Supabase.
+        </p>
+        <img class="site-preview" src="assets/about/whitecat_counter/preview_banner.webp"
+             alt="WhiteCat Counter preview" loading="lazy">
+        <div class="site-card-footer">
+          <a class="site-card-link primary" href="https://whitecat-counter.netlify.app" target="_blank" rel="noreferrer">Visit App &#8599;</a>
+          <a class="site-card-link" href="about/whitecat-counter.html">View Details</a>
+        </div>
+      </div>
+
+      <!-- WhiteCat Vault — Blue/dim card -->
+      <div class="site-card card-vault">
+        <div class="site-card-top">
+          <div class="site-card-logo">
+            <img src="/assets/logo.webp" alt="WhiteCat Vault" width="52" height="52" />
+          </div>
+          <div class="site-card-meta">
+            <p class="site-card-title">WhiteCat Vault</p>
+            <span class="site-card-badge">Portfolio Site</span>
+          </div>
+        </div>
+        <p class="site-card-desc">
+          The White Cat hub for games, watch lists and project information.
+          This site is the portfolio and brand showcase for WhiteCat Studio.
+        </p>
+        <div class="site-card-footer">
+          <a class="site-card-link" href="/index.html">Go to Home</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <p class="ab-label">&#9670; Connect</p>
+  <div class="connect-wrap">
+    <div class="connect-left">
+      <div class="connect-title">Any <span>Questions?</span></div>
+      <p class="connect-sub">Need help with the Counter app, site setup or account management?</p>
+    </div>
+    <div class="connect-btns">
+      <a class="cta-btn gold" href="about/whitecat-counter.html">Counter Details</a>
+      <a class="cta-btn ghost" href="https://whitecat-counter.netlify.app" target="_blank">Visit Live App &#8599;</a>
+    </div>
+  </div>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-left">White Cat &middot; About</div>
+  <div class="footer-right">Built by <a href="/about_index.html">PMax</a> &middot; WhiteCat &middot; 2026</div>
+</footer>
+
+<script src="/scripts/site/nav-links.js" defer></script>
+<script src="/site.js" defer></script>
+<script src="/scripts/game/game-price-rating.js"></script>
+<script src="/scripts/watch/watch-library.js"></script>
+<script src="/scripts/site/site-stats.js"></script>
+<script>
+var io = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.07 });
+document.querySelectorAll(
+  '.identity-row, .do-grid, .vault-row, .skills-wrap, .fact-row, .connect-wrap'
+).forEach(function(el) { io.observe(el); });
+</script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "whitecatvault",
+  "version": "1.0.0",
+  "description": "White Cat Vault — Curated PC games, software tools, anime and movies from Sri Lanka",
+  "homepage": "https://whitecatvault.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whitecat-studio/whitecatvault.git"
+  },
+  "keywords": ["white-cat", "vault", "games", "tools", "anime", "movies", "sri-lanka", "pwa"],
+  "author": "PMax <whitecatstudio@example.com>",
+  "license": "MIT",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev":       "node server.js",
+    "dev:dist":  "node server.js 3001 --dist",
+    "build":     "node build.js",
+    "build:prod":"node build.js --prod --clean",
+    "preview":   "node build.js && node server.js 3001 --dist"
+  },
+  "devDependencies": {}
+}

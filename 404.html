@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,follow"><meta name="theme-color" content="#080a0e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<title>404 — White Cat Vault</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;700&display=swap">
+<link rel="stylesheet" href="/style.css">
+<style>
+.e{min-height:calc(100vh - 64px);display:flex;align-items:center;justify-content:center;padding:2rem;text-align:center}
+.e-inner{max-width:520px}
+.e-code{font-family:'Bebas Neue',sans-serif;font-size:clamp(100px,20vw,180px);line-height:.85;background:linear-gradient(140deg,#eaeaea 0%,#f0d06a 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;animation:fadeUp .6s ease .1s forwards}
+.e-msg{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,5vw,40px);color:#eaeaea;margin-bottom:1rem;opacity:0;animation:fadeUp .6s ease .25s forwards}
+.e-sub{font-size:14px;color:var(--muted);max-width:360px;margin:0 auto 2rem;line-height:1.7;opacity:0;animation:fadeUp .6s ease .4s forwards}
+.e-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .6s ease .55s forwards}
+.e-btn{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:11px 22px;border-radius:100px;text-decoration:none;transition:all .2s}
+.e-btn.p{background:var(--gold);color:var(--bg)}.e-btn.p:hover{background:#f0d06a;transform:translateY(-2px)}
+.e-btn.s{border:1px solid var(--border);color:var(--text)}.e-btn.s:hover{border-color:rgba(232,197,90,.4);color:var(--gold)}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="ambient"></div>
+<header class="site-header">
+  <a class="logo" href="/index.html" aria-label="White Cat Vault"><img class="logo-img" src="/assets/logo.webp" alt="White Cat Vault Logo" width="38" height="38" onerror="this.src='/assets/logo.png'"><span class="logo-text">White<span>Cat</span></span></a>
+  <button class="nav-toggle" onclick="toggleNav()" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation"></nav>
+</header>
+<main class="e" id="main-content">
+  <div class="e-inner">
+    <div class="e-code" aria-label="Error 404">404</div>
+    <div class="e-msg">Page Not Found</div>
+    <p class="e-sub">This page doesn't exist or was moved. Head back to the vault.</p>
+    <div class="e-btns">
+      <a class="e-btn p" href="/index.html">Back to Home</a>
+      <a class="e-btn s" href="/game_index.html">Game Vault</a>
+      <a class="e-btn s" href="/watch_index.html">Watch Vault</a>
+      <a class="e-btn s" href="/tool_index.html">Tools</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-left">White Cat · Vault</div>
+  <div class="footer-right">Built by <a href="/about_index.html">PMax</a> · WhiteCat · 2026</div>
+</footer>
+<script src="/scripts/site/nav-links.js" defer></script>
+<script src="/site.js" defer></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>
