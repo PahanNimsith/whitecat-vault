@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hollow Knight · White Cat Game Vault</title>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../scripts/game/game-detail.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-img-wrap">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <img id="lb-img" src="" alt="">
+  </div>
+  
+  <div class="lb-nav">
+    <span class="lb-counter" id="lb-counter">1 / 27</span>
+    <div class="lb-controls">
+      <button class="lb-arrow" onclick="lbMove(-1)">&#8592; Back</button>
+      <button class="lb-arrow" onclick="lbMove(1)">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../../../index.html">
+    <img class="logo-img" src="../../../assets/logo.webp" alt="White Cat" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <a class="header-back" href="../../../game_index.html" aria-label="Back to games">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M19 12H5M12 5l-7 7 7 7"/>
+  </svg>
+</a>
+</header>
+
+<div class="game-hero">
+  <div class="game-hero-bg" style="background-image:url('cover.webp')"></div>
+  <div class="game-hero-content">
+    <div class="game-hero-tag">&#9670; Indie &bull; Metroidvania &bull; 2017</div>
+    <h1 class="game-hero-title">HOLLOW<br><span>KNIGHT</span></h1>
+    <p class="game-hero-sub">Team Cherry &bull; A Hand-Drawn Descent into Darkness</p>
+    <div class="hero-badges">
+      <span class="hero-badge">★★★★★ 9.8 / 10</span>
+      <span class="hero-badge soul">Overwhelmingly Positive</span>
+      <span class="hero-badge green">Multi-Award Winner</span>
+      <span class="hero-badge">40–60+ Hours</span>
+    </div>
+  </div>
+</div>
+
+<div class="price-float">
+  <div class="price-float-title">HOLLOW KNIGHT</div>
+  <div class="price-float-right">
+    <div class="price-float-rating">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;--</div>
+    <div class="price-float-val">--</div>
+  </div>
+</div>
+
+<div class="game-content">
+  <div class="section-block">
+    <div class="sec-label">&#9670; Official Media</div>
+    <div class="sec-title">The Descent Begins</div>
+    <div class="video-wrap">
+      <iframe 
+        src="https://www.youtube.com/embed/DOt-CLCuJUY" 
+        title="Hollow Knight Gameplay" 
+        allow="autoplay; fullscreen" 
+        frameborder="0" 
+        allowfullscreen 
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="gallery-section">
+      <div class="cf-wrap">
+        <div class="cf-stage" id="cf-stage"></div>
+      </div>
+      <div class="cf-controls">
+
+        <div class="cf-dots" id="cf-dots"></div>
+        <div class="cf-nav-row">
+          <button class="cf-nav-btn" onclick="cfMove(-1)">⬅</button>
+          <div class="cf-nav-counter" id="counterEl">1/27</div>
+          <button class="cf-nav-btn" onclick="cfMove(1)">➡</button>
+        </div>
+      </div>
+
+
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--dim);margin-top:12px;font-family:'Syne',sans-serif;letter-spacing:.1em;">
+      TAP CENTER IMAGE TO ENLARGE &bull; SWIPE TO NAVIGATE
+    </p>
+  </div>
+<div class="section-block">
+    <div class="sec-label">🛡️ Technical Specifications</div>
+    <div class="sec-title">System Requirements</div>
+    
+    <div class="req-grid">
+      <div class="req-box">
+        <div class="req-type">Minimum</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 7 (64bit)</span></li>
+          <li><strong>CPU</strong> <span>Intel Core 2 Duo E5200</span></li>
+          <li><strong>RAM</strong> <span>4 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>GeForce 9800GTX+ (1GB)</span></li>
+          <li><strong>Storage</strong> <span>9 GB available</span></li>
+        </ul>
+      </div>
+
+      <div class="req-box recommended">
+        <div class="req-type">Recommended</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 10 (64bit)</span></li>
+          <li><strong>CPU</strong> <span>Intel Core i5</span></li>
+          <li><strong>RAM</strong> <span>8 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>GeForce GTX 560</span></li>
+          <li><strong>Storage</strong> <span>9 GB available</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="section-block" id="Prologue" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAME OVERVIEW</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Hollow Knight: Descent into Hallownest</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Hollow Knight කියන්නේ ruined underground kingdom එකක ගැඹුරුම රහස් හොයන exploration-heavy Metroidvania එකක්. ඔබ control කරන්නේ speech නැති <strong>The Knight</strong> ව. Dirtmouth වලින් descent එක start වෙලා Forgotten Crossroads, City of Tears, Deepnest, Ancient Basin වගේ zones හරහා story, combat, platforming, and lore එක එකට බැඳෙන ගමනක් මෙතැන ගොඩනැගෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: A haunting action-platformer where exploration reveals a fallen civilization.</em></p>
+      <p>ගේම් එකේ tone එක dark කියලා එක පදයෙන් කියලා ඉවර කරන්න බෑ. මේ ලෝකය melancholy, mystery, danger, and wonder කියන feelings එකට දෙනවා. එක් side එකක quiet benches, sad piano themes, and abandoned streets තියෙනවා; අනෙක් side එකක frame-tight boss fights, risky corpse runs, and high-precision platforming sequences තියෙනවා. මේ contrast එක තමයි Hollow Knight එකේ emotional identity.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Hallownest balances silence and brutality with rare consistency.</em></p>
+      <p>Player progression pure stat grind එකක් නෙවෙයි. New movement tools (Mothwing Cloak, Mantis Claw, Crystal Heart, Monarch Wings), spell upgrades, charms, and map knowledge combine වෙලා ඔබේ freedom එක expand වෙනවා. First playthrough එකේ confusing වගේ දැනෙන routes, later stages වල interconnected mastery map එකක් වෙලා feel වෙනවා. මේකේ value එක story ending එකට විතරක් සීමා වෙන්නේ නෑ; route memory, combat expression, and lore decoding එකත් equally important.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The game rewards curiosity, execution skill, and interpretation.</em></p>
+    </div>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;">
+      <strong>Why You Should Play This</strong>
+      <ul style="margin:10px 0 0 18px; padding:0;">
+        <li>Sinhala: Tight combat + movement progression එක genuinely skill-based. <br><em>English: Every upgrade changes how you traverse and fight.</em></li>
+        <li>Sinhala: Hallownest map design එක organic interconnectivity masterclass එකක්. <br><em>English: Backtracking always reveals meaningful shortcuts or secrets.</em></li>
+        <li>Sinhala: Boss roster එක visually and mechanically distinct. <br><em>English: Fights like Mantis Lords, NKG, and Pure Vessel stay memorable.</em></li>
+        <li>Sinhala: Lore delivery එක environmental clues, dialogue fragments, Dream Nail text මත build වෙනවා. <br><em>English: You uncover story through discovery, not exposition dumps.</em></li>
+        <li>Sinhala: Value for money ඉතා ඉහළයි, DLC content free updates හරහා ලැබෙනවා. <br><em>English: A premium-scale indie with exceptional replay depth.</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-block" id="The-Knight" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; STORY &amp; LORE</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">From The Radiance to the Final Vessel</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Hallownest ඉස්සර Pale King රාජධානිය වන්නට පෙර, dream-light deity එකක් වන <strong>The Radiance</strong> මගින් Moth tribe සහ bugs world එක influence වුණා. Pale King (Wyrm form එකෙන් rebirth වෙලා) bugs වලට higher thought දුන්නාම civilization, architecture, and institutions හැදෙනවා. ඒ වෙනස්ම order එක සමඟ Radiance worship decay වෙලා, collective memory එකෙන් Radiance අමතක වෙන්න පටන් ගන්නවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Hallownest was born when intellect replaced dream obedience.</em></p>
+      <p>Radiance erased වීම accept නොකළ නිසා dream-space හරහා return වෙලා <strong>The Infection</strong> spread කරනවා. Orange corruption එක bugs minds distort කරලා violence, madness, and collapse create කරනවා. Pale King මේ threat එකට direct war solution එකකට යන්න බැරිව, Void-based containment plan එකක් build කරනවා. ඒකට source එක <strong>The Abyss</strong>; එතැනින් emotionless vessels create කරලා one perfect shell එකකට Radiance seal කරන්න උත්සාහ කරනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Infection is not just disease; it is memory and will returning.</em></p>
+      <p>රජු තෝරාගත්ත vessel එක <strong>The Hollow Knight</strong>. Black Egg Temple seals හරහා containment temporary success වෙනවා. හැබැයි vessel purity imperfect නිසා Radiance slowly leak වෙලා kingdom නැවත ruin වෙනවා. ඉතිරි වන්නේ Dirtmouth මතකය, scattered NPC stories, and dead infrastructure. අපි control කරන <strong>The Knight</strong> කියන්නේ Abyss discarded sibling එකක්; spoken dialogue නැති, but willful action තියෙන character. මෙයාගේ journey එක revenge story එකක් නෙවෙයි, rather sacrifice cycle එක break කරන identity trial එකක්.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The Knight's path is about ending a failed system, not inheriting a throne.</em></p>
+      <div style="position:relative; margin:28px 0 16px 8px; padding-left:26px; border-left:2px solid #D4AF37;">
+        <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Beginning: Dream Forgotten</h4><p style="margin:0; color:#a0a0a0;">Radiance influence fades after Pale King's rise.</p></div>
+        <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Middle: Infection &amp; Sealing</h4><p style="margin:0; color:#a0a0a0;">Abyss vessels and Hollow Knight containment plan.</p></div>
+        <div style="position:relative;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">End: Void Reclamation</h4><p style="margin:0; color:#a0a0a0;">Void Heart and Dream No More break the cycle.</p></div>
+      </div>
+    </div>
+    <div class="lore-highlight" style="background:linear-gradient(135deg,
+  #161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37;
+  padding:25px; margin:25px 0; border-radius:0 8px 8px 0;">
+      <em style="color:#D4AF37; font-size:1.1em;">"<strong>No mind to think. No will to break.</strong>"</em>
+      <p style="color:#a0a0a0; margin-top:10px;">මේ line එක Hollow Knight universe එකේ biggest irony එක. perfect vessel concept එක theoretically strong වුණත්, practical world එකේ memory, pain, and attachment වලින් purity එක සුරක්ෂිත වෙන්නේ නෑ.</p>
+    </div>
+  </div>
+
+  <div class="section-block" id="World" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; WORLD / MAP / ENVIRONMENT</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Core Regions of Hallownest</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Hallownest එක zone-based dungeon map එකක් වුණත්, linear order එකකට lock වෙලා නෑ. routes unlock වෙන්නේ abilities, keys, tram access, and player curiosity මත. එක් region එකකට තමන්ගේ own enemy ecology, audio palette, traversal friction, and narrative clues තියෙන නිසා location change එක gameplay change එකක් වගේම lore perspective shift එකක් වෙලා දැනෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Every biome changes both movement logic and story mood.</em></p>
+    </div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ Dirtmouth</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Surface hub town<br><strong>Key Feature:</strong> Elderbug, Stag Station access, late-game returns<br><strong>Mood:</strong> Quiet, fading, reflective</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Forgotten Crossroads</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Central connector zone<br><strong>Key Feature:</strong> False Knight, Vengeful Spirit, early branching<br><strong>Mood:</strong> Decayed, tense, foundational</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Greenpath</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Overgrown traversal biome<br><strong>Key Feature:</strong> Hornet (Protector), Mothwing Cloak<br><strong>Mood:</strong> Lush, alive, dangerous</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #8e44ad;"><h4 style="color:#ffffff; margin-bottom:8px;">● Fungal Wastes</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Platforming and tribal region<br><strong>Key Feature:</strong> Mantis Village, Mantis Claw unlock<br><strong>Mood:</strong> Bouncy, toxic, ritualistic</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">★ City of Tears</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Capital city complex<br><strong>Key Feature:</strong> Soul Sanctum, Nailsmith path, lore density<br><strong>Mood:</strong> Rain-soaked, grand, mournful</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #e67e22;"><h4 style="color:#ffffff; margin-bottom:8px;">🎮 Crystal Peak</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Vertical hazard zone<br><strong>Key Feature:</strong> Crystal Heart super dash routes<br><strong>Mood:</strong> Sharp, industrial, lethal</p></div>
+    </div>
+  </div>
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; WORLD / MAP / ENVIRONMENT</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Deep Regions and Dream Planes</div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ Resting Grounds</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Spiritual memorial zone<br><strong>Key Feature:</strong> Dream Nail acquisition<br><strong>Mood:</strong> Sacred, quiet, haunted</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Royal Waterways</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Sewer undercity<br><strong>Key Feature:</strong> Dung Defender, Flukemarm, Isma route<br><strong>Mood:</strong> Wet, grotesque, echoing</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #8e44ad;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Deepnest</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Predator labyrinth<br><strong>Key Feature:</strong> Nosk encounter, Tram Pass links<br><strong>Mood:</strong> Claustrophobic, deceptive, terrifying</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">● Queen's Gardens</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Noble overgrowth zone<br><strong>Key Feature:</strong> Traitor Lord, White Lady access<br><strong>Mood:</strong> Elegant, thorny, tragic</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">★ Kingdom's Edge &amp; Basin</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Endgame lore belt<br><strong>Key Feature:</strong> King's Brand, Monarch Wings, Abyss descent<br><strong>Mood:</strong> Bleak, ancient, fated</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #e67e22;"><h4 style="color:#ffffff; margin-bottom:8px;">🎮 White Palace / Godhome</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Type:</strong> Dream-only challenge realms<br><strong>Key Feature:</strong> Path of Pain, Pantheons, Absolute Radiance<br><strong>Mood:</strong> Divine, punishing, transcendent</p></div>
+    </div>
+    <div style="margin-top:24px; background:#141414; border:1px solid #2a2a2a; border-radius:8px; padding:18px;">
+      <p style="margin:0 0 12px 0; color:#D4AF37; font-weight:700;">World Structure Diagram</p>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">Dirtmouth (Hub)</div>
+        <div style="width:2px; height:14px; background:#D4AF37;"></div>
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">Crossroads - Greenpath - Fungal Wastes</div>
+        <div style="width:2px; height:14px; background:#D4AF37;"></div>
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">City of Tears - Crystal Peak - Waterways</div>
+        <div style="width:2px; height:14px; background:#D4AF37;"></div>
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">Deepnest - Basin - Abyss - Dream Realms</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block" id="NPCs" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; CHARACTERS / FACTIONS</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Key Figures Across the Ruin</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Hollow Knight narrative එක dialogue-heavy RPG එකක් නෙවෙයි. Character arcs build වෙන්නේ small conversations, quest outcomes, location context, and optional encounters මත. ඒ නිසා Hornet, Quirrel, Seer, Grimm, and Dreamers වගේ චරිතවල meaning player discovery depth එකට අනුව වෙනස් වෙලා දැනෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Character writing is subtle, layered, and player-driven.</em></p>
+    </div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">★ The Knight</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Role:</strong> Silent Vessel protagonist<br><strong>Faction:</strong> Abyss-born lineage<br><strong>Bio:</strong> Discarded vessel হলেও world-end decision point එක මෙයාගේ action එකෙන් තීරණය වෙනවා.</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ The Radiance</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Role:</strong> True metaphysical antagonist<br><strong>Faction:</strong> Dream-light deity force<br><strong>Bio:</strong> Forgotten worship reclaim කරන්න Infection වශයෙන් mindspace invade කරන entity එක.</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Hornet</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Role:</strong> Tester and guardian<br><strong>Faction:</strong> Hallownest royal bloodline<br><strong>Bio:</strong> Early duels හරහා player readiness check කරන, later endings වල critical support character එක.</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">● Quirrel</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Role:</strong> Wanderer-scholar<br><strong>Faction:</strong> Monomon-linked past<br><strong>Bio:</strong> Memory, duty, and identity themes එකට human warmth එක ගෙනෙන most beloved side arc එක.</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #8e44ad;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ The Hollow Knight</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Role:</strong> Sealed vessel / final gate<br><strong>Faction:</strong> Pale King containment plan<br><strong>Bio:</strong> Tragic figure whose imperfection proves that forced purity cannot hold living pain forever.</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #e67e22;"><h4 style="color:#ffffff; margin-bottom:8px;">🎮 Grimm &amp; Godseeker</h4><p style="color:#a0a0a0; font-size:0.9em;"><strong>Role:</strong> DLC challenge catalysts<br><strong>Faction:</strong> Nightmare Troupe / Godhome<br><strong>Bio:</strong> Optional content වල difficulty ceiling and lore abstraction extreme level එකට push කරන duo anchors.</p></div>
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Faction</th>
+          <th style="padding:12px; color:#111; text-align:left;">Side</th>
+          <th style="padding:12px; color:#111; text-align:left;">Goal</th>
+          <th style="padding:12px; color:#111; text-align:left;">Signature Trait</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Pale Court Legacy</td>
+          <td style="padding:10px; color:#a0a0a0;">Old Hallownest Order</td>
+          <td style="padding:10px; color:#a0a0a0;">Contain Infection, preserve kingdom memory</td>
+          <td style="padding:10px; color:#a0a0a0;">Void-based vessel strategy</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Dreamers</td>
+          <td style="padding:10px; color:#a0a0a0;">Seal Keepers</td>
+          <td style="padding:10px; color:#a0a0a0;">Maintain Black Egg lock</td>
+          <td style="padding:10px; color:#a0a0a0;">Lurien, Monomon, Herrah dream seal</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Mantis Tribe</td>
+          <td style="padding:10px; color:#a0a0a0;">Independent Neutral</td>
+          <td style="padding:10px; color:#a0a0a0;">Honor-based border defense</td>
+          <td style="padding:10px; color:#a0a0a0;">Mantis Lords duel test</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Grimm Troupe</td>
+          <td style="padding:10px; color:#a0a0a0;">External Ritual Force</td>
+          <td style="padding:10px; color:#a0a0a0;">Nightmare flame cycle</td>
+          <td style="padding:10px; color:#a0a0a0;">Troupe Master / NKG trials</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" id="Shops" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAMEPLAY MECHANICS</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Loop, Economy, and Difficulty Curve</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Main loop එක clear structure එකක් follow කරනවා: explore new route, fight enemy clusters, collect Geo, unlock benches/stations, acquire ability, return to blocked paths, then challenge bosses. Death economy එක වැදගත් because Geo drop වෙලා Shade encounter එකක් create වෙනවා. recover fail වුණොත් resource loss permanent. මේ system එක tension maintain කරනවා even in routine traversal.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Progression in Hollow Knight is a risk-managed loop, not simple checkpoint running.</em></p>
+      <p>Progression layers parallel විදිහට ඉදිරියට යනවා. Movement upgrades map access open කරන අතර, Nail upgrades (Old to Pure) direct DPS scaling දෙයි. Charm Notches build complexity unlock කරයි. Soul Vessels සහ Mask upgrades sustain potential වැඩි කරයි. Merchant network එකෙන් මේ systems practical වෙන්නේ: <strong>Sly</strong> general utility, <strong>Salubra</strong> charms/notches, <strong>Nailsmith</strong> nail tiers. Geo spending priority mismanage කළොත් early-mid game pressure වැඩි වෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Build freedom grows only when movement, gear, and economy are balanced.</em></p>
+      <p>Difficulty curve predictable tutorial pattern එකක් නෙවෙයි. Player power spikes mostly skill-based; timing, spacing, pogo control, invincibility frame awareness, and healing windows identify කරන sense එක critical. Late-game content (Trial of the Fool, Path of Pain, Pantheons, NKG) mechanical mastery demand කරනවා. මේ නිසා progression stat gated වගේ නෙවෙයි, execution gated experience එකක්.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The game tests understanding, not just level or gear.</em></p>
+    </div>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;">✦ This game's most unique feature is <strong>ability-gated map recursion</strong>: every new movement skill redefines old rooms into new puzzle routes.</div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Control Action</th>
+          <th style="padding:12px; color:#111; text-align:left;">Keyboard/Pad</th>
+          <th style="padding:12px; color:#111; text-align:left;">Usage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Move / Jump</td>
+          <td style="padding:10px; color:#a0a0a0;">Arrow/WASD + Jump button</td>
+          <td style="padding:10px; color:#a0a0a0;">Core traversal, pogo setups, platform precision</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Nail Attack</td>
+          <td style="padding:10px; color:#a0a0a0;">Attack button</td>
+          <td style="padding:10px; color:#a0a0a0;">Primary damage, Soul generation, recoil movement</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Focus / Heal</td>
+          <td style="padding:10px; color:#a0a0a0;">Focus button hold</td>
+          <td style="padding:10px; color:#a0a0a0;">Soul-to-health conversion during safe windows</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Spell Cast</td>
+          <td style="padding:10px; color:#a0a0a0;">Quick cast / cast button</td>
+          <td style="padding:10px; color:#a0a0a0;">Burst damage and utility i-frame tools</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" id="Bosses" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; LEVELS / MISSIONS / CAMPAIGN</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Campaign Route and Boss Milestones</div>
+    <div style="position:relative; margin:22px 0 8px 8px; padding-left:28px; border-left:2px solid #D4AF37;">
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">1</span><p style="margin:0; color:#ffffff;"><strong>Crossroads Awakening</strong> | Objective: Unlock map flow and Vengeful Spirit | Difficulty: Medium | Location: Forgotten Crossroads</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">2</span><p style="margin:0; color:#ffffff;"><strong>Greenpath Trial</strong> | Objective: Defeat Hornet and gain dash | Difficulty: Medium | Location: Greenpath</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">3</span><p style="margin:0; color:#ffffff;"><strong>Mantis Rite</strong> | Objective: Earn respect through Mantis Lords | Difficulty: Hard | Location: Fungal Wastes</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">4</span><p style="margin:0; color:#ffffff;"><strong>City Collapse</strong> | Objective: Beat Soul Master and unlock Dive routes | Difficulty: Hard | Location: City of Tears</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">5</span><p style="margin:0; color:#ffffff;"><strong>Dreamer Hunt</strong> | Objective: Remove Lurien, Monomon, Herrah seals | Difficulty: Hard | Location: Watcher's Spire / Teacher's Archives / Beast's Den</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">6</span><p style="margin:0; color:#ffffff;"><strong>Abyss Legacy</strong> | Objective: Claim King's Brand, Void Heart path | Difficulty: Very Hard | Location: Kingdom's Edge / Ancient Basin / Abyss</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">7</span><p style="margin:0; color:#ffffff;"><strong>Black Egg Confrontation</strong> | Objective: Face The Hollow Knight | Difficulty: Very Hard | Location: Temple of the Black Egg</p></div>
+      <div style="position:relative;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">8</span><p style="margin:0; color:#ffffff;"><strong>Dream No More / Godhome</strong> | Objective: Radiance or Pantheon clears | Difficulty: Extreme | Location: Dream Realm / Godhome</p></div>
+    </div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Main campaign සාමාන්‍ය exploration pace එකට 30-45 hours අතර යන්න පුළුවන්. completionist run එක (charms, grubs, pantheons, dream bosses, delicate paths) 60+ hours දක්වා දිග යනවා. Side content quality main story quality එකට සමාන නිසා optional කියන එක practical අර්ථයෙන් half-true.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Optional routes often hold some of the game's best encounters.</em></p>
+    </div>
+  </div>
+  <div class="section-block" id="Charms" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; WEAPONS / TOOLS / ABILITIES</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Charm, Nail, and Spell Toolkit</div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Name</th>
+          <th style="padding:12px; color:#111; text-align:left;">Type</th>
+          <th style="padding:12px; color:#111; text-align:left;">Power / Role</th>
+          <th style="padding:12px; color:#111; text-align:left;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Pure Nail</td>
+          <td style="padding:10px; color:#a0a0a0;">Weapon</td>
+          <td style="padding:10px; color:#a0a0a0;">Highest base melee damage</td>
+          <td style="padding:10px; color:#a0a0a0;">Requires multi-stage Nailsmith upgrades + Pale Ore</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Shaman Stone</td>
+          <td style="padding:10px; color:#a0a0a0;">Charm</td>
+          <td style="padding:10px; color:#a0a0a0;">Major spell damage amplification</td>
+          <td style="padding:10px; color:#a0a0a0;">Core for Shade Soul / Abyss Shriek builds</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Quick Slash</td>
+          <td style="padding:10px; color:#a0a0a0;">Charm</td>
+          <td style="padding:10px; color:#a0a0a0;">Attack speed increase</td>
+          <td style="padding:10px; color:#a0a0a0;">Excellent with Fragile/Unbreakable Strength</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Vengeful Spirit / Shade Soul</td>
+          <td style="padding:10px; color:#a0a0a0;">Spell</td>
+          <td style="padding:10px; color:#a0a0a0;">Fast forward projectile burst</td>
+          <td style="padding:10px; color:#a0a0a0;">Reliable pressure in mobile boss phases</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Desolate Dive / Descending Dark</td>
+          <td style="padding:10px; color:#a0a0a0;">Spell</td>
+          <td style="padding:10px; color:#a0a0a0;">Ground slam + invincibility window</td>
+          <td style="padding:10px; color:#a0a0a0;">Excellent panic reset and hit-confirm tool</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Howling Wraiths / Abyss Shriek</td>
+          <td style="padding:10px; color:#a0a0a0;">Spell</td>
+          <td style="padding:10px; color:#a0a0a0;">Highest vertical burst damage</td>
+          <td style="padding:10px; color:#a0a0a0;">Key finisher for Radiance-style aerial patterns</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ Nail Build</h4><p style="color:#a0a0a0; font-size:0.9em;">Quick Slash + Fragile Strength + Mark of Pride වලින් close-range DPS maximize වෙන traditional boss shred setup.</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Spell Build</h4><p style="color:#a0a0a0; font-size:0.9em;">Shaman Stone + Soul Catcher/Soul Eater + Spell Twister loop එක high burst with efficient Soul cycling දෙයි.</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Sustain Build</h4><p style="color:#a0a0a0; font-size:0.9em;">Quick Focus + Shape of Unn + Grubsong combo longer fights වල heal windows safer කරන survival-focused style එක.</p></div>
+    </div>
+  </div>
+
+  <div class="section-block" id="Soul" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; REPLAYABILITY</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Challenge Layers Beyond the First Ending</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Multiplayer mode එකක් නැති single-player title එකක් වුණත් Hollow Knight replay value industry top tier එකකට යනවා. reason එක simple: build variation + route variance + challenge modes. same map එක second run එකේ completely වෙනස් feel වෙනවා because player route intelligence, skip knowledge, and risk appetite වැඩි වෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Replayability comes from mastery, not random loot churn.</em></p>
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Mode</th>
+          <th style="padding:12px; color:#111; text-align:left;">Focus</th>
+          <th style="padding:12px; color:#111; text-align:left;">Challenge Level</th>
+          <th style="padding:12px; color:#111; text-align:left;">Why It Matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Steel Soul</td>
+          <td style="padding:10px; color:#a0a0a0;">Permadeath discipline</td>
+          <td style="padding:10px; color:#a0a0a0;">Very High</td>
+          <td style="padding:10px; color:#a0a0a0;">Route safety and consistency become essential</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Speedrun Goals</td>
+          <td style="padding:10px; color:#a0a0a0;">Time optimization</td>
+          <td style="padding:10px; color:#a0a0a0;">High</td>
+          <td style="padding:10px; color:#a0a0a0;">Forces efficient movement and boss routing</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Pantheons (Godhome)</td>
+          <td style="padding:10px; color:#a0a0a0;">Boss gauntlet endurance</td>
+          <td style="padding:10px; color:#a0a0a0;">Extreme</td>
+          <td style="padding:10px; color:#a0a0a0;">Demands matchup knowledge across full roster</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Charm-Restricted Runs</td>
+          <td style="padding:10px; color:#a0a0a0;">Build experimentation</td>
+          <td style="padding:10px; color:#a0a0a0;">Medium to High</td>
+          <td style="padding:10px; color:#a0a0a0;">Shows depth of combat design and adaptability</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;"><strong>Pro mastery note:</strong> Bench placement, Soul reserve management, and panic-heal discipline are the three habits that separate average clears from clean endgame runs.</div>
+  </div>
+
+  <div class="section-block" id="GreatKnights" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; DEEP LORE ARCHIVE</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">The Five Great Knights Legacy</div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ Ogrim</h4><p style="color:#a0a0a0; font-size:0.9em;">Known as Dung Defender in the present. Loyalty intact even after kingdom collapse; dream battle White Defender reveals his memory of the Pale Court.</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Isma</h4><p style="color:#a0a0a0; font-size:0.9em;">Associated with acid adaptation. Her legacy survives through Isma's Tear, one of the most important traversal unlocks.</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #8e44ad;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Hegemol</h4><p style="color:#a0a0a0; font-size:0.9em;">Mighty armored knight whose shell becomes tied to False Knight's false identity arc.</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">● Ze'mer</h4><p style="color:#a0a0a0; font-size:0.9em;">Grey Mourner questline through Delicate Flower presents grief, devotion, and impossible tenderness in a hostile world.</p></div>
+      <div class="dark-card" style="background:#161616;
+  border:1px solid #2a2a2a; padding:20px; border-radius:8px;
+  border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">★ Dryya</h4><p style="color:#a0a0a0; font-size:0.9em;">Fallen protector of White Lady. Her remains and context reinforce the cost of guarding a dying order.</p></div>
+    </div>
+    <div class="lore-highlight" style="background:linear-gradient(135deg,
+  #161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37;
+  padding:25px; margin:25px 0; border-radius:0 8px 8px 0;">
+      <em style="color:#D4AF37; font-size:1.1em;">"<strong>Hallownest remembers through ruins, not through kings.</strong>"</em>
+      <p style="color:#a0a0a0; margin-top:10px;">Great Knights lore එක optional collectible layers වලින් rebuild කරන නිසා, player investigation එක narrative completion එකේ essential part එකක් වෙනවා.</p>
+    </div>
+  </div>
+
+  <div class="section-block" id="ArtSound" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAME HISTORY &amp; DEVELOPMENT</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Team Cherry Timeline and Legacy</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p><strong>Team Cherry</strong> (Australia) Hollow Knight develop කරලා launch කළේ 2017 දී. Project එක funded වුණේ Kickstarter support සහ community trust මත. Engine එක <strong>Unity</strong>; art direction hand-drawn frame workflow එකකට build වෙලා, score compose කළේ <strong>Christopher Larkin</strong>. Low team size එක තිබුණත් polish quality AAA consistency එකට ලඟින් තියෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: A small team delivered one of the genre's modern benchmarks.</em></p>
+    </div>
+    <div style="margin-top:22px; background:#141414; border:1px solid #2a2a2a; border-radius:8px; padding:18px;">
+      <p style="margin:0 0 12px 0; color:#D4AF37; font-weight:700;">Milestone Timeline</p>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <div style="padding:8px 10px; border:1px solid #2a2a2a; border-radius:6px; color:#ffffff; background:#1a1a1a;">2014-2016 Concept &amp; Build</div>
+        <div style="width:26px; height:2px; background:#D4AF37;"></div>
+        <div style="padding:8px 10px; border:1px solid #2a2a2a; border-radius:6px; color:#ffffff; background:#1a1a1a;">2017 PC Launch</div>
+        <div style="width:26px; height:2px; background:#D4AF37;"></div>
+        <div style="padding:8px 10px; border:1px solid #2a2a2a; border-radius:6px; color:#ffffff; background:#1a1a1a;">2017-2018 Free Content Packs</div>
+        <div style="width:26px; height:2px; background:#D4AF37;"></div>
+        <div style="padding:8px 10px; border:1px solid #2a2a2a; border-radius:6px; color:#ffffff; background:#1a1a1a;">2018 Voidheart Edition</div>
+      </div>
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Expansion / Pack</th>
+          <th style="padding:12px; color:#111; text-align:left;">Content Added</th>
+          <th style="padding:12px; color:#111; text-align:left;">Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Hidden Dreams</td>
+          <td style="padding:10px; color:#a0a0a0;">Dream boss variants, quality updates</td>
+          <td style="padding:10px; color:#a0a0a0;">2017</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">The Grimm Troupe</td>
+          <td style="padding:10px; color:#a0a0a0;">New questline, charms, Nightmare King Grimm</td>
+          <td style="padding:10px; color:#a0a0a0;">2017</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Lifeblood</td>
+          <td style="padding:10px; color:#a0a0a0;">Balance pass and systems tuning</td>
+          <td style="padding:10px; color:#a0a0a0;">2018</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Godmaster</td>
+          <td style="padding:10px; color:#a0a0a0;">Godhome, Pantheons, Absolute Radiance endgame</td>
+          <td style="padding:10px; color:#a0a0a0;">2018</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Reception side එකෙන් game එක strong critical + player alignment ලැබුවා. Metacritic PC score high-80s range (widely cited around <strong>87</strong>) and Nintendo Switch version around <strong>90</strong>. Steam status long-term <strong>Overwhelmingly Positive</strong>. මේ combination එක indie space එකේ rare signal එකක්: critics praise design cohesion, community praise replay depth and combat feel.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Hollow Knight is one of the clearest examples of sustained long-tail acclaim.</em></p>
+    </div>
+  </div>
+
+  <div class="section-block" id="Endings" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; COMMUNITY CONTENT BOX</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Endings, Fun Fact, and Pro Route</div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Ending</th>
+          <th style="padding:12px; color:#111; text-align:left;">Requirement</th>
+          <th style="padding:12px; color:#111; text-align:left;">Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">The Hollow Knight</td>
+          <td style="padding:10px; color:#a0a0a0;">Beat final boss without Void Heart path</td>
+          <td style="padding:10px; color:#a0a0a0;">Cycle continues through new containment</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Sealed Siblings</td>
+          <td style="padding:10px; color:#a0a0a0;">Hornet involvement + Void Heart route</td>
+          <td style="padding:10px; color:#a0a0a0;">Temple re-sealed with heavier cost</td>
+        </tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Dream No More</td>
+          <td style="padding:10px; color:#a0a0a0;">Radiance confrontation in dream space</td>
+          <td style="padding:10px; color:#a0a0a0;">Infection cycle decisively broken</td>
+        </tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;">
+          <td style="padding:10px; color:#a0a0a0;">Embrace the Void / Delicacy Variant</td>
+          <td style="padding:10px; color:#a0a0a0;">Godhome Pantheon completion paths</td>
+          <td style="padding:10px; color:#a0a0a0;">Void ascension with variant closure</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="lore-highlight" style="background:linear-gradient(135deg,
+  #161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37;
+  padding:25px; margin:25px 0; border-radius:0 8px 8px 0;">
+      <em style="color:#D4AF37; font-size:1.1em;">"<strong>Fun Fact:</strong> Mantis Lords fight is often cited as the moment players fully understand Hollow Knight's combat rhythm."</em>
+      <p style="color:#a0a0a0; margin-top:10px;">මෙහි pacing, telegraph clarity, and fair punish windows නිසා beginner-to-intermediate skill jump එක naturally trigger වෙන iconic duel එකක් ලෙස community එක සැලකුවා.</p>
+    </div>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;"><strong>PRO TIP:</strong> First playthrough එකේ Dreamers rush කරන්න එපා. Instead, Mantis Claw + Crystal Heart + key charm notches secure කරලා midgame map mobility full කරන්න. Endgame difficulty එක ඒකෙන් හුගක් manageable වෙනවා.</div>
+  </div>
+
+  <div class="section-block">
+    <p style="text-align: center; color: var(--hk-gold); font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.2em;">
+      THANK YOU FOR EXPLORING HALLOWNEST
+    </p>
+    <p style="text-align: center; font-size: 13px; color: var(--dim);">
+      Project by White Cat Game Vault &bull; 2026
+    </p>
+  </div>
+
+</div> <footer style="padding: 4rem 2rem; border-top: 1px solid var(--border); text-align: center; background: #05060a;">
+  <div style="font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--text); letter-spacing: 2px;">
+    WHITE<span style="color:var(--hk-gold)">CAT</span> VAULT
+  </div>
+  <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">Explore the unseen lore of the gaming world.</p>
+</footer>
+
+<script src="../../../scripts/game/game-detail.js"></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>

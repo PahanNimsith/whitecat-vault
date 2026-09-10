@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mafia II · White Cat Game Vault</title>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../scripts/game/game-detail.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-img-wrap">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <img id="lb-img" src="" alt="">
+  </div>
+  
+  <div class="lb-nav">
+    <span class="lb-counter" id="lb-counter">1 / 9</span>
+    <div class="lb-controls">
+      <button class="lb-arrow" onclick="lbMove(-1)">&#8592; Back</button>
+      <button class="lb-arrow" onclick="lbMove(1)">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../../../index.html">
+    <img class="logo-img" src="../../../assets/logo.webp" alt="White Cat" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <a class="header-back" href="../../../game_index.html" aria-label="Back to games">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M19 12H5M12 5l-7 7 7 7"/>
+  </svg>
+</a>
+</header>
+
+<div class="game-hero">
+  <div class="game-hero-bg" style="background-image:url('cover.webp')"></div>
+  <div class="game-hero-content">
+    <div class="game-hero-tag">&#9670; Action &bull; Open World &bull; 2010</div>
+    <h1 class="game-hero-title">MAFIA<br><span>II</span></h1>
+    <p class="game-hero-sub">2K Czech &bull; Welcome to Empire Bay</p>
+    <div class="hero-badges">
+      <span class="hero-badge">★★★★★ 9.3 / 10</span>
+      <span class="hero-badge soul">Very Positive</span>
+      <span class="hero-badge green">Crime Drama</span>
+      <span class="hero-badge">12-15 Hours</span>
+    </div>
+  </div>
+</div>
+
+<div class="price-float">
+  <div class="price-float-title">MAFIA II</div>
+  <div class="price-float-right">
+    <div class="price-float-rating">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;--</div>
+    <div class="price-float-val">--</div>
+  </div>
+</div>
+
+<div class="game-content">
+  <div class="section-block">
+    <div class="sec-label">&#9670; Official Media</div>
+    <div class="sec-title">The Descent Begins</div>
+    <div class="video-wrap">
+      <iframe 
+        src="https://www.youtube.com/embed/wHoqwphzhzc" 
+        title="Mafia II Gameplay" 
+        allow="autoplay; fullscreen" 
+        frameborder="0" 
+        allowfullscreen 
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="gallery-section">
+      <div class="cf-wrap">
+        <div class="cf-stage" id="cf-stage"></div>
+      </div>
+      <div class="cf-controls">
+
+        <div class="cf-dots" id="cf-dots"></div>
+        <div class="cf-nav-row">
+          <button class="cf-nav-btn" onclick="cfMove(-1)">⬅</button>
+          <div class="cf-nav-counter" id="counterEl">1/9</div>
+          <button class="cf-nav-btn" onclick="cfMove(1)">➡</button>
+        </div>
+      </div>
+
+
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--dim);margin-top:12px;font-family:'Syne',sans-serif;letter-spacing:.1em;">
+      TAP CENTER IMAGE TO ENLARGE &bull; SWIPE TO NAVIGATE
+    </p>
+  </div>
+<div class="section-block">
+    <div class="sec-label">🛡️ Technical Specifications</div>
+    <div class="sec-title">System Requirements</div>
+    
+    <div class="req-grid">
+      <div class="req-box">
+        <div class="req-type">Minimum</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows XP / Vista / 7</span></li>
+          <li><strong>CPU</strong> <span>Pentium D 3Ghz / AMD Athlon 64 X2 3600+</span></li>
+          <li><strong>RAM</strong> <span>1.5 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>nVidia GeForce 8600 / ATI HD2600 Pro</span></li>
+          <li><strong>Storage</strong> <span>8 GB available</span></li>
+        </ul>
+      </div>
+
+      <div class="req-box recommended">
+        <div class="req-type">Recommended</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows XP / Vista / 7</span></li>
+          <li><strong>CPU</strong> <span>2.4 GHz Quad Core processor</span></li>
+          <li><strong>RAM</strong> <span>2 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>nVidia GeForce 9800 GTX / ATI HD3870</span></li>
+          <li><strong>Storage</strong> <span>8 GB available</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section-block" id="Prologue" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAME OVERVIEW</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Mafia II: Loyalty, Debt, and Empire Bay</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Mafia II කියන්නේ 1940-50 post-war America mood එක cinematic crime drama format එකෙන් playable experience එකක් කරපු story-driven action game එකක්. ඔබ play කරන්නේ Vito Scaletta ලෙසයි. war service පස්සේ Empire Bayට ආපසු එන Vito family debt pressure එකෙන් criminal world එකට ඇදෙන්න පටන් ගන්නවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: A period crime story where survival means choosing between morality and loyalty.</em></p>
+      <p>Game tone එක sandbox chaos එකකට වඩා narrative focus එකට design කරලා තියෙනවා. Vintage cars, licensed era music, wardrobe detail, weapon handling, and city atmosphere එක story mood එක reinforce කරනවා. Joe Barbaro, Henry Tomasino, Leo Galante වගේ characters එක්ක relationship dynamics game emotional weight එක build කරන central pillar එක.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Mafia II stands out for atmosphere, character chemistry, and tightly directed narrative pacing.</em></p>
+    </div>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;">
+      <strong>Why You Should Play This</strong>
+      <ul style="margin:10px 0 0 18px; padding:0;">
+        <li>Strong mafia-film narrative with memorable performances.</li>
+        <li>Empire Bay atmosphere still feels authentic and immersive.</li>
+        <li>Mission structure keeps story momentum consistently high.</li>
+        <li>Car physics and period driving feel weighty and distinct.</li>
+        <li>One of the best friendship arcs in crime games (Vito &amp; Joe).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; STORY &amp; LORE</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">From Returning Soldier to Made Man</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Vito story arc එක war return chapter එකෙන් begin වෙලා debt settlement criminal favors වලට shift වෙනවා. Joeගේ influence එකෙන් Vito small-time jobs වලින් organized family operations වලට move වෙනවා. Clemente, Falcone, Vinci power balance politics game middle phase tension define කරනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Vito climbs the ladder, but every step costs trust.</em></p>
+      <p>Henry betrayal storyline, drug-trade fallout, and final deal sequence එක narrative tragedy center point. Mafia II story lesson එක simple: mob world success temporary, but consequences permanent. Final line about Joe gives one of the most remembered endings in the genre because it denies clean victory fantasy.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The ending is powerful because it chooses realism over comfort.</em></p>
+      <div style="position:relative; margin:28px 0 16px 8px; padding-left:26px; border-left:2px solid #D4AF37;">
+        <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Beginning: Home and Debt</h4><p style="margin:0; color:#a0a0a0;">Vito returns from war and enters underworld jobs.</p></div>
+        <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Middle: Family Politics</h4><p style="margin:0; color:#a0a0a0;">Three families, shifting alliances, rising stakes.</p></div>
+        <div style="position:relative;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">End: The Price Paid</h4><p style="margin:0; color:#a0a0a0;">Vito survives, but friendship and certainty collapse.</p></div>
+      </div>
+    </div>
+    <div class="lore-highlight" style="background:linear-gradient(135deg,
+  #161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37;
+  padding:25px; margin:25px 0; border-radius:0 8px 8px 0;">
+      <em style="color:#D4AF37; font-size:1.1em;">"In Empire Bay, loyalty is real until power asks for something else."</em>
+      <p style="color:#a0a0a0; margin-top:10px;">Mafia II lore strength එක family power mechanics realistic politics එකට ගැලපෙන විදිහට present කරන එක. betrayal random twist එකක් නොවී system logic එකේ natural outcome එකක් විදියට build කරනවා.</p>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; WORLD / MAP / ENVIRONMENT</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Empire Bay District Anatomy</div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ Midtown Business Core</h4><p style="color:#a0a0a0; font-size:0.9em;">Corporate and political influence zone.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Docks and Industrial Strip</h4><p style="color:#a0a0a0; font-size:0.9em;">Smuggling, warehouses, and rough labor routes.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #8e44ad;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Little Italy Blocks</h4><p style="color:#a0a0a0; font-size:0.9em;">Cultural identity and family influence hubs.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">● Outskirts and Highways</h4><p style="color:#a0a0a0; font-size:0.9em;">Getaway driving routes and mission transitions.</p></div>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAMEPLAY MECHANICS</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Mission Loop, Economy Pressure, and Combat Flow</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Mafia II core gameplay loop එක mission briefing -> drive to location -> combat or stealth-style execution -> escape and payout pattern එකට යනවා. Free-roam elements තිබුණත් progression එක strictly story chapters මත lock වෙලා තියෙන නිසා pacing cinematic feel එකක් maintain කරනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The game rewards clean mission execution over random sandbox chaos.</em></p>
+      <p>Economy layer එක clothes, car tuning, weapon purchases, and police heat risk සමග practical decision-making add කරනවා. difficulty spikes mostly enemy positioning, cover usage, and ammo discipline මත depend වෙනවා. reckless run-and-gun style එකට වඩා measured movement and flank timing safer.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Money management and tactical gunfights shape the player journey.</em></p>
+      <div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">✦ <strong>This game's most unique feature is the film-like chapter structure with period-authentic world simulation.</strong><br>සිංහලෙන්: chapter-based storytelling සහ living city atmosphere එක එකතු කරලා mafia cinema experience එකක් player control එකෙන්ම දෙන එකයි මෙහි විශේෂම ලක්ෂණය.</div>
+      <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+        <thead>
+          <tr style="background:#D4AF37;">
+            <th style="padding:12px; color:#111; text-align:left;">Control</th>
+            <th style="padding:12px; color:#111; text-align:left;">Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">W/A/S/D</td><td style="padding:10px; color:#a0a0a0;">Movement / Driving steer</td></tr>
+          <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Right Mouse</td><td style="padding:10px; color:#a0a0a0;">Aim / Focus fire</td></tr>
+          <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Left Mouse</td><td style="padding:10px; color:#a0a0a0;">Shoot / melee strike</td></tr>
+          <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Space</td><td style="padding:10px; color:#a0a0a0;">Cover transition / handbrake</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; CHARACTERS / FACTIONS</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">People Who Define Empire Bay</div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:24px; border-radius:8px; border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">★ Vito Scaletta (Protagonist)</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: Soldier turned mob operative. Faction: Initially freelance, later tied to major families. Bio: Vito decisions mostly family debt and social mobility pressure driven. ඔහු hero fantasy එකක් නොවෙයි; mistakes, anger, and loyalty conflicts එකතු වුණ complex lead character එකක්.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:24px; border-radius:8px; border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">● Carlo Falcone (Antagonist Power)</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: High-level mafia boss. Faction: Falcone family. Bio: Falcone represents institutional control of crime economy. ඔහු direct villain වගේ පේන්නෙ late phase එකේ වුණත්, system corruption එක represent කරන political threat එක ඔහුගේ character එකෙන් strong වෙයි.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Joe Barbaro</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: Partner in crime and emotional anchor. Faction: Connected to multiple crews. Bio: reckless charm සහ friendship loyalty combine වෙලා game heart වෙන්නෙ Joe character එක.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ Leo Galante</h4><p style="color:#a0a0a0; font-size:0.9em;">Role: Strategic mediator. Faction: Vinci influence network. Bio: calm diplomacy එකෙන් power balance preserve කරන elder operator කෙනෙක්.</p></div>
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Faction</th>
+          <th style="padding:12px; color:#111; text-align:left;">Side</th>
+          <th style="padding:12px; color:#111; text-align:left;">Goal</th>
+          <th style="padding:12px; color:#111; text-align:left;">Signature Strength</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Falcone Family</td><td style="padding:10px; color:#a0a0a0;">Dominant bloc</td><td style="padding:10px; color:#a0a0a0;">City-wide control</td><td style="padding:10px; color:#a0a0a0;">Drug/trade leverage</td></tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Vinci Family</td><td style="padding:10px; color:#a0a0a0;">Old guard</td><td style="padding:10px; color:#a0a0a0;">Balance of power</td><td style="padding:10px; color:#a0a0a0;">Political connections</td></tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Clemente Family</td><td style="padding:10px; color:#a0a0a0;">Competing side</td><td style="padding:10px; color:#a0a0a0;">Revenue growth</td><td style="padding:10px; color:#a0a0a0;">Street operations</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; LEVELS / MISSIONS / CAMPAIGN</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Chapter Timeline Across Empire Bay</div>
+    <div style="position:relative; margin:10px 0 16px 8px; padding-left:26px; border-left:2px solid #D4AF37;">
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">1. Home Sweet Home</h4><p style="margin:0; color:#a0a0a0;">Objective: Restart life with Joe. Difficulty: Low. Location: Little Italy.</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">2. The Buzzsaw</h4><p style="margin:0; color:#a0a0a0;">Objective: Execute family hit operation. Difficulty: Medium. Location: Bar district and streets.</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">3. Room Service</h4><p style="margin:0; color:#a0a0a0;">Objective: Hotel infiltration and takedown. Difficulty: High. Location: Empire Arms Hotel.</p></div>
+      <div style="position:relative;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">4. Our Friend</h4><p style="margin:0; color:#a0a0a0;">Objective: Resolve fallout and survive power shift. Difficulty: High. Location: City-wide pursuit routes.</p></div>
+    </div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;">
+      <p>Base campaign එක chapter-driven structure එකෙන් roughly 12-15 hours range එකේ finish කරන්න පුළුවන්. DLC packs (Jimmy's Vendetta, Joe's Adventures) add වුනහම mission sandbox pressure සහ score-focused replay loop තවත් වැඩි වෙනවා.</p>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; WEAPONS / VEHICLES / TOOLS</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Arsenal and Wheels of the Era</div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">Name</th>
+          <th style="padding:12px; color:#111; text-align:left;">Type</th>
+          <th style="padding:12px; color:#111; text-align:left;">Damage / Speed</th>
+          <th style="padding:12px; color:#111; text-align:left;">Range / Handling</th>
+          <th style="padding:12px; color:#111; text-align:left;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">M1 Garand</td><td style="padding:10px; color:#a0a0a0;">Rifle</td><td style="padding:10px; color:#a0a0a0;">High</td><td style="padding:10px; color:#a0a0a0;">Long</td><td style="padding:10px; color:#a0a0a0;">Accurate in cover fights.</td></tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Thompson 1928</td><td style="padding:10px; color:#a0a0a0;">SMG</td><td style="padding:10px; color:#a0a0a0;">Medium-High</td><td style="padding:10px; color:#a0a0a0;">Mid</td><td style="padding:10px; color:#a0a0a0;">Strong suppression weapon.</td></tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Colt 1911</td><td style="padding:10px; color:#a0a0a0;">Pistol</td><td style="padding:10px; color:#a0a0a0;">Medium</td><td style="padding:10px; color:#a0a0a0;">Short-Mid</td><td style="padding:10px; color:#a0a0a0;">Reliable sidearm.</td></tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Shubert Frigate</td><td style="padding:10px; color:#a0a0a0;">Sedan</td><td style="padding:10px; color:#a0a0a0;">Speed: Medium</td><td style="padding:10px; color:#a0a0a0;">Handling: Stable</td><td style="padding:10px; color:#a0a0a0;">Common mission utility car.</td></tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Ascot Bailey</td><td style="padding:10px; color:#a0a0a0;">Luxury Car</td><td style="padding:10px; color:#a0a0a0;">Speed: High</td><td style="padding:10px; color:#a0a0a0;">Handling: Heavy</td><td style="padding:10px; color:#a0a0a0;">Status symbol in upper districts.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAME HISTORY &amp; DEVELOPMENT</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">2K Czech Craftsmanship and Legacy</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;">
+      <p>Mafia II developed by 2K Czech (formerly Illusion Softworks) and released in 2010. Engine work focused on destructible details, realistic cloth simulation, and driving feel tuned for period weight. team objective එක open-world freedom full sandbox pattern එක නොවෙයි; directed narrative experience එකකට city simulation support එක build කිරීමයි.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Development prioritized cinematic direction and historical atmosphere over unrestricted chaos.</em></p>
+      <p>Release period එකේ critics gameplay limitations ගැන mixed remarks දුන්නත්, story presentation, voice performance, and art direction consistent praise ලබලා cult following එකක් හදාගත්තා. Definitive Edition launch time technical complaints තිබුණත් original Mafia II narrative reputation තවම strong. Metacritic reception generally around the low-to-mid 70s band while Steam user sentiment stayed Mostly Positive / Very Positive depending on version.</p>
+    </div>
+    <div style="display:flex; align-items:center; gap:10px; margin:18px 0 8px 0;">
+      <span style="width:10px; height:10px; background:#D4AF37; border-radius:50%;"></span><span style="height:2px; flex:1; background:#D4AF37;"></span><span style="width:10px; height:10px; background:#D4AF37; border-radius:50%;"></span><span style="height:2px; flex:1; background:#D4AF37;"></span><span style="width:10px; height:10px; background:#D4AF37; border-radius:50%;"></span>
+    </div>
+    <div class="story-text" style="color:#a0a0a0; font-size:0.92em; line-height:1.8;">
+      <p><strong>2007-2009:</strong> Extended production with world detail upgrades -> <strong>2010:</strong> Global release -> <strong>2020:</strong> Mafia II: Definitive Edition re-release.</p>
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr style="background:#D4AF37;">
+          <th style="padding:12px; color:#111; text-align:left;">DLC / Edition</th>
+          <th style="padding:12px; color:#111; text-align:left;">Content</th>
+          <th style="padding:12px; color:#111; text-align:left;">Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">The Betrayal of Jimmy</td><td style="padding:10px; color:#a0a0a0;">Arcade-style mission packs</td><td style="padding:10px; color:#a0a0a0;">2010</td></tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Jimmy's Vendetta</td><td style="padding:10px; color:#a0a0a0;">Score-chasing criminal contracts</td><td style="padding:10px; color:#a0a0a0;">2010</td></tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Joe's Adventures</td><td style="padding:10px; color:#a0a0a0;">Joe perspective chapters</td><td style="padding:10px; color:#a0a0a0;">2010</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; REPLAYABILITY</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Why Single-Player Fans Revisit Mafia II</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;">
+      <p>Mafia II has no competitive multiplayer, but replay value comes from chapter replays, collectible hunting (Playboy magazines, wanted posters), higher-difficulty combat runs, and DLC contract scoring. story scenes revisit කරනකොට foreshadowing details තේරෙන නිසා second run emotional impact එකත් වෙනස් වෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Replayability is narrative-driven with meaningful side completion goals.</em></p>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px; border:1px solid #D4AF37;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; COMMUNITY CONTENT BOX</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Vault Notes for New Made Men</div>
+    <div class="lore-highlight" style="background:linear-gradient(135deg,
+  #161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37;
+  padding:25px; margin:25px 0; border-radius:0 8px 8px 0;">
+      <em style="color:#D4AF37; font-size:1.1em;">"Empire Bay is partly inspired by New York, San Francisco, and Chicago architecture blends."</em>
+      <p style="color:#a0a0a0; margin-top:10px;">Sinhala lore depth: city districts design කරලා තියෙන්නේ US industrial era vibe mix එකකින්. ඒක නිසා every street corner එකක්ම historical postcard එකක් වගේ feel වෙනවා.</p>
+    </div>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;"><strong>PRO TIP:</strong> Wanted level high වෙන mission segments වලදී speed alone නොවෙයි, alley routing සහ bridge exits memory build කරගෙන police cone break කරන්න.</div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;">
+      "Sorry, kid. Joe wasn't part of our deal." - Leo Galante
+    </div>
+  </div>
+
+
+  <div class="section-block">
+    <p style="text-align: center; color: var(--hk-gold); font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.2em;">
+      THANK YOU FOR EXPLORING MAFIA II
+    </p>
+    <p style="text-align: center; font-size: 13px; color: var(--dim);">
+      Project by White Cat Game Vault &bull; 2026
+    </p>
+  </div>
+
+</div> 
+<footer style="padding: 4rem 2rem; border-top: 1px solid var(--border); text-align: center; background: #05060a;">
+  <div style="font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--text); letter-spacing: 2px;">
+    WHITE<span style="color:var(--hk-gold)">CAT</span> VAULT
+  </div>
+  <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">Explore the unseen lore of the gaming world.</p>
+</footer>
+
+
+<script src="../../../scripts/game/game-detail.js"></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>

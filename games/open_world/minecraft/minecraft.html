@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft · White Cat Game Vault</title>
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../../scripts/game/game-detail.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-img-wrap">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <img id="lb-img" src="" alt="">
+  </div>
+  <div class="lb-nav">
+    <span class="lb-counter" id="lb-counter">1 / 12</span>
+    <div class="lb-controls">
+      <button class="lb-arrow" onclick="lbMove(-1)">&#8592; Back</button>
+      <button class="lb-arrow" onclick="lbMove(1)">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <a class="logo" href="../../../index.html">
+    <img class="logo-img" src="../../../assets/logo.webp" alt="White Cat" onerror="this.src='/assets/logo.png'">
+    <span class="logo-text">White<span>Cat</span></span>
+  </a>
+  <a class="header-back" href="../../../game_index.html" aria-label="Back to games">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M19 12H5M12 5l-7 7 7 7"/>
+  </svg>
+</a>
+</header>
+
+<div class="game-hero">
+  <div class="game-hero-bg" style="background-image:url('cover.webp')"></div>
+  <div class="game-hero-content">
+    <div class="game-hero-tag">&#9670; Open World &bull; Sandbox &bull; 2011</div>
+    <h1 class="game-hero-title">MINE<br><span>CRAFT</span></h1>
+    <p class="game-hero-sub">Mojang Studios &bull; Build Anything. Explore Everything.</p>
+    <div class="hero-badges">
+      <span class="hero-badge">★★★★★ 9.9 / 10</span>
+      <span class="hero-badge soul">Overwhelmingly Positive</span>
+      <span class="hero-badge green">All-Time Legend</span>
+      <span class="hero-badge">Infinite Hours</span>
+    </div>
+  </div>
+</div>
+
+<div class="price-float">
+  <div class="price-float-title">MINECRAFT</div>
+  <div class="price-float-right">
+    <div class="price-float-rating">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;--</div>
+    <div class="price-float-val">--</div>
+  </div>
+</div>
+
+<div class="game-content">
+  <div class="section-block">
+    <div class="sec-label">&#9670; Official Media</div>
+    <div class="sec-title">Your World Awaits</div>
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/1DhWXAiNgfQ"
+        title="Minecraft Gameplay"
+        allow="autoplay; fullscreen"
+        frameborder="0"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="gallery-section">
+      <div class="cf-wrap">
+        <div class="cf-stage" id="cf-stage"></div>
+      </div>
+      <div class="cf-controls">
+        <div class="cf-dots" id="cf-dots"></div>
+        <div class="cf-nav-row">
+          <button class="cf-nav-btn" onclick="cfMove(-1)">⬅</button>
+          <div class="cf-nav-counter" id="counterEl">1/12</div>
+          <button class="cf-nav-btn" onclick="cfMove(1)">➡</button>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--dim);margin-top:12px;font-family:'Syne',sans-serif;letter-spacing:.1em;">
+      TAP CENTER IMAGE TO ENLARGE &bull; SWIPE TO NAVIGATE
+    </p>
+  </div>
+
+  <div class="section-block">
+    <div class="sec-label">🛡️ Technical Specifications</div>
+    <div class="sec-title">System Requirements</div>
+    <div class="req-grid">
+      <div class="req-box">
+        <div class="req-type">Minimum</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 7 / 8 / 10 (64bit)</span></li>
+          <li><strong>CPU</strong> <span>Intel Core i3-3210 / AMD A8-7600</span></li>
+          <li><strong>RAM</strong> <span>4 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>Intel HD 4000 / AMD Radeon R5 (1GB)</span></li>
+          <li><strong>Storage</strong> <span>4 GB available</span></li>
+        </ul>
+      </div>
+      <div class="req-box recommended">
+        <div class="req-type">Recommended</div>
+        <ul class="req-list">
+          <li><strong>OS</strong> <span>Windows 10 / 11 (64bit)</span></li>
+          <li><strong>CPU</strong> <span>Intel Core i5-4690 / AMD A10-7800</span></li>
+          <li><strong>RAM</strong> <span>8 GB RAM</span></li>
+          <li><strong>GPU</strong> <span>NVIDIA GTX 700 / AMD Radeon RX 200 (2GB)</span></li>
+          <li><strong>Storage</strong> <span>4 GB available</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="section-block" id="Prologue" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAME OVERVIEW</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Minecraft: Infinite Sandbox, Infinite Stories</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Minecraft කියන්නේ scripted single path game එකක් නොවී player imagination එක main engine එක විදියට වැඩ කරන open-world sandbox title එකක්. Overworld, Nether, End කියන realms තුන හරහා survive, build, explore, automate, fight, and create කරන්න player ට full freedom තියෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Minecraft is not about following one story; it is about building your own.</em></p>
+      <p>Day-night cycle, hunger system, hostile mobs, and resource scarcity එක්ක survival tension එක build වෙනවා. Creative mode එකෙන් same world එක artistic playground එකක් වෙලා turn වෙනවා. ඒ නිසා game mood එක pure combat එකක් හෝ pure building එකක් කියලා lock වෙන්නේ නෑ.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: One world can become survival drama, engineering project, or peaceful builder life.</em></p>
+      <p>Multiplayer servers, mods, datapacks, and custom maps එකතු වුණාම content ceiling practically unlimited. ඒකයි Minecraft 2011 release එකක් වුණත් අදටත් global top-played ecosystem එකක්.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Minecraft's longevity comes from player-made possibilities.</em></p>
+    </div>
+    <div class="highlight-box" style="background:#1a1a1a;
+  border:1px solid #D4AF37; border-radius:8px; padding:20px;
+  margin:20px 0; color:#D4AF37; font-style:italic;">
+      <strong>Why You Should Play This</strong>
+      <ul style="margin:10px 0 0 18px; padding:0;">
+        <li>Build freedom unmatched in gaming history.</li>
+        <li>Simple loop that scales into deep systems mastery.</li>
+        <li>Single-player, SMP, and modded play all feel different.</li>
+        <li>Runs on low-end setups while supporting massive projects.</li>
+        <li>Every world creates unique personal memories.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; STORY &amp; LORE</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Player-Authored Narrative and Hidden Lore</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Minecraft fixed cinematic storyline එකක් නැති game එකක්. නමුත් ancient structures, strongholds, ruined portals, bastions, end cities වගේ world clues වලින් hidden lore layer එකක් build වෙනවා. Community theories හරහා මේ lore තවමත් evolve වෙනවා.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Minecraft has fragmented lore, but complete narrative freedom.</em></p>
+      <p>Default progression arc එක තිබ්බත් - first night survival, Nether advancement, Ender Dragon fight - game philosophy එක objective checklist forcing එක නෙවෙයි. You can ignore dragon, become trader, redstone engineer, map artist, or hardcore survival nomad.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: The official path exists, but your chosen path is what matters most.</em></p>
+      <div style="position:relative; margin:28px 0 16px 8px; padding-left:26px; border-left:2px solid #D4AF37;">
+        <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Beginning: First Night</h4><p style="margin:0; color:#a0a0a0;">Gather wood, craft tools, survive hostile mobs.</p></div>
+        <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">Middle: Nether Progression</h4><p style="margin:0; color:#a0a0a0;">Blaze rods, pearls, potion prep, portal route.</p></div>
+        <div style="position:relative;"><span style="position:absolute; left:-33px; top:5px; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span><h4 style="color:#ffffff; margin:0 0 6px 0;">End: Dragon and Beyond</h4><p style="margin:0; color:#a0a0a0;">Dragon defeat opens true sandbox endgame.</p></div>
+      </div>
+    </div>
+    <div class="lore-highlight" style="background:linear-gradient(135deg,
+  #161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37;
+  padding:25px; margin:25px 0; border-radius:0 8px 8px 0;">
+      <em style="color:#D4AF37; font-size:1.1em;">"Minecraft has no final chapter. Every world is chapter one for someone."</em>
+      <p style="color:#a0a0a0; margin-top:10px;">මෙම game එකේ lore strength එක concrete answers ට වඩා mystery space එකෙන් එන community storytelling power එක.</p>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; WORLD / MAP / ENVIRONMENT</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Overworld, Nether, End Structure</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;"><p>Procedural generation නිසා biomes, caves, and structures every seed එකකම වෙනස් feel එකක් දෙයි. Overworld base growth layer එක, Nether risk-and-resource layer එක, End boss-and-postgame layer එක.</p></div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #27ae60;"><h4 style="color:#ffffff; margin-bottom:8px;">✦ Overworld</h4><p style="color:#a0a0a0; font-size:0.9em;">Biomes, villages, caves, base building core.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Nether</h4><p style="color:#a0a0a0; font-size:0.9em;">Fast travel, blaze rods, dangerous fortress routes.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #8e44ad;"><h4 style="color:#ffffff; margin-bottom:8px;">▸ The End</h4><p style="color:#a0a0a0; font-size:0.9em;">Dragon battle, End cities, Elytra progression.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">● Deep Dark</h4><p style="color:#a0a0a0; font-size:0.9em;">Stealth-heavy cave biome with Warden pressure.</p></div>
+    </div>
+    <div style="margin-top:24px; background:#141414; border:1px solid #2a2a2a; border-radius:8px; padding:18px;">
+      <p style="margin:0 0 12px 0; color:#D4AF37; font-weight:700;">World Structure Diagram</p>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">Overworld Spawn</div>
+        <div style="width:2px; height:14px; background:#D4AF37;"></div>
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">Nether Progression</div>
+        <div style="width:2px; height:14px; background:#D4AF37;"></div>
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">Stronghold / End Portal</div>
+        <div style="width:2px; height:14px; background:#D4AF37;"></div>
+        <div style="padding:10px 14px; background:#1a1a1a; border:1px solid #2a2a2a; color:#ffffff; border-radius:6px;">The End and Postgame</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAMEPLAY MECHANICS</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Survive, Craft, Automate, Expand</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em;
+  line-height:1.9;">
+      <p>Core loop: gather resources, craft better tools, secure food and shelter, then scale into farms and automation. Early game survival pressure gradually turns into creative mastery. Difficulty feels organic because risk shifts from mobs to complex builds and ambitious projects.</p>
+      <p style="color:#d0d0d0; font-size:0.88em; margin-top:6px;"><em>English subtitle: Minecraft naturally evolves from survival stress to systems creativity.</em></p>
+    </div>
+    <div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;">✦ This game's most unique feature is seamless growth from basic survival into full-scale engineering through <strong>Redstone</strong> automation.</div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; CHARACTERS / FACTIONS</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Mobs, Villagers, and Survival Forces</div>
+    <div class="areas-grid" style="display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;
+  margin-top:20px;">
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #D4AF37;"><h4 style="color:#ffffff; margin-bottom:8px;">★ Steve / Alex</h4><p style="color:#a0a0a0; font-size:0.9em;">Player avatar representing pure sandbox freedom.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #c0392b;"><h4 style="color:#ffffff; margin-bottom:8px;">◆ Creeper</h4><p style="color:#a0a0a0; font-size:0.9em;">Iconic ambush mob that punishes positioning mistakes.</p></div>
+      <div class="dark-card" style="background:#161616; border:1px solid #2a2a2a; padding:20px; border-radius:8px; border-top:3px solid #2980b9;"><h4 style="color:#ffffff; margin-bottom:8px;">● Villagers</h4><p style="color:#a0a0a0; font-size:0.9em;">Trading economy and long-term progression support.</p></div>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; LEVELS / MISSIONS / CAMPAIGN</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Player-Driven Milestone Path</div>
+    <div style="position:relative; margin:22px 0 8px 8px; padding-left:28px; border-left:2px solid #D4AF37;">
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">1</span><p style="margin:0; color:#ffffff;"><strong>First Shelter</strong> | Objective: Survive first night | Difficulty: Medium | Location: Overworld spawn</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">2</span><p style="margin:0; color:#ffffff;"><strong>Diamond Stage</strong> | Objective: Secure core gear tier | Difficulty: Medium | Location: Deep caves</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">3</span><p style="margin:0; color:#ffffff;"><strong>Nether Access</strong> | Objective: Blaze rods and brewing route | Difficulty: Hard | Location: Nether fortress</p></div>
+      <div style="position:relative; margin-bottom:18px;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">4</span><p style="margin:0; color:#ffffff;"><strong>Stronghold Hunt</strong> | Objective: Activate End portal | Difficulty: Hard | Location: Stronghold</p></div>
+      <div style="position:relative;"><span style="position:absolute; left:-35px; top:3px; width:16px; height:16px; border-radius:50%; background:#D4AF37; color:#111; font-size:11px; line-height:16px; text-align:center; font-weight:700;">5</span><p style="margin:0; color:#ffffff;"><strong>Dragon Defeat</strong> | Objective: Complete End encounter | Difficulty: Very Hard | Location: The End</p></div>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; WEAPONS / TOOLS / ABILITIES</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Core Survival Loadout</div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead><tr style="background:#D4AF37;"><th style="padding:12px; color:#111; text-align:left;">Name</th><th style="padding:12px; color:#111; text-align:left;">Type</th><th style="padding:12px; color:#111; text-align:left;">Power</th><th style="padding:12px; color:#111; text-align:left;">Range</th><th style="padding:12px; color:#111; text-align:left;">Notes</th></tr></thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Diamond Sword</td><td style="padding:10px; color:#a0a0a0;">Melee</td><td style="padding:10px; color:#a0a0a0;">High</td><td style="padding:10px; color:#a0a0a0;">Short</td><td style="padding:10px; color:#a0a0a0;">Reliable all-purpose combat tool.</td></tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Bow</td><td style="padding:10px; color:#a0a0a0;">Ranged</td><td style="padding:10px; color:#a0a0a0;">Medium-High</td><td style="padding:10px; color:#a0a0a0;">Long</td><td style="padding:10px; color:#a0a0a0;">Important for Ender Dragon crystals and flying mobs.</td></tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Pickaxe</td><td style="padding:10px; color:#a0a0a0;">Tool</td><td style="padding:10px; color:#a0a0a0;">N/A</td><td style="padding:10px; color:#a0a0a0;">Block Reach</td><td style="padding:10px; color:#a0a0a0;">Progression gate for ore tiers.</td></tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Shield</td><td style="padding:10px; color:#a0a0a0;">Defense</td><td style="padding:10px; color:#a0a0a0;">High Mitigation</td><td style="padding:10px; color:#a0a0a0;">Front Arc</td><td style="padding:10px; color:#a0a0a0;">Negates critical incoming damage windows.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; GAME HISTORY &amp; DEVELOPMENT</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">From Indie Alpha to Global Platform</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;">
+      <p>Minecraft alpha 2009, full release 2011. 2014 Microsoft acquisition පස්සේ update cadence stable වුණා, platforms expand වුණා, and long-term ecosystem maturity එක massive scale එකකට ගියා. Nether Update, Caves &amp; Cliffs, Trails &amp; Tales වගේ updates game identity continuously refresh කළා.</p>
+      <p>Industry recognition අතින් Minecraft best-selling all-time tier එකේ ඉන්නවා. Critical + player reception දශකයකට වැඩි කාලයක් strong maintain වීම itself major achievement එකක්.</p>
+    </div>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; MULTIPLAYER / ONLINE</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Servers, Realms, and Community Worlds</div>
+    <div class="story-text" style="color:#a0a0a0; font-size:1em; line-height:1.9;"><p>Java servers (SMP, Skyblock, PvP, modded), Bedrock crossplay realms, and private worlds එකතු වෙලා Minecraft social layer එක huge වෙලා තියෙනවා. Ranked esports ladder official නැතිවුණත් PvP communities highly competitive.</p></div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead><tr style="background:#D4AF37;"><th style="padding:12px; color:#111; text-align:left;">Mode</th><th style="padding:12px; color:#111; text-align:left;">Player Count</th><th style="padding:12px; color:#111; text-align:left;">Description</th></tr></thead>
+      <tbody>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Single Player</td><td style="padding:10px; color:#a0a0a0;">1</td><td style="padding:10px; color:#a0a0a0;">Personal sandbox and survival progression.</td></tr>
+        <tr style="background:#1a1a1a; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Realms / Private SMP</td><td style="padding:10px; color:#a0a0a0;">2-20+</td><td style="padding:10px; color:#a0a0a0;">Persistent shared worlds with friends.</td></tr>
+        <tr style="background:#161616; border-bottom:1px solid #2a2a2a;"><td style="padding:10px; color:#a0a0a0;">Public Servers</td><td style="padding:10px; color:#a0a0a0;">Dozens to thousands</td><td style="padding:10px; color:#a0a0a0;">Custom economies, minigames, and PvP ecosystems.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" style="background:#111111; padding:40px;
+  border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.9);
+  margin-bottom:40px;">
+    <div class="sec-label" style="color:#D4AF37; font-size:0.9em;
+  text-transform:uppercase; letter-spacing:2px;">&#9670; COMMUNITY CONTENT BOX</div>
+    <div class="sec-title" style="color:#ffffff; font-size:2.2em;
+  font-weight:800; margin-bottom:20px;">Vault Notes for Builders</div>
+    <div class="lore-highlight" style="background:linear-gradient(135deg,
+  #161616 0%, #1a1a1a 100%); border-left:4px solid #D4AF37;
+  padding:25px; margin:25px 0; border-radius:0 8px 8px 0;"><em style="color:#D4AF37; font-size:1.1em;">"Fun Fact: Minecraft is widely recognized as one of the best-selling games ever made."</em><p style="color:#a0a0a0; margin-top:10px;">Visual realism නෙවෙයි, creative freedom + long-term updates එක තමයි mega success reason එක.</p></div>
+    <div class="highlight-box" style="background:#1a1a1a; border:1px solid #D4AF37; border-radius:8px; padding:20px; margin:20px 0; color:#D4AF37; font-style:italic;"><strong>PRO TIP:</strong> Early game priorities: food security, shield, iron tools, and safe branch mine. Decoration පස්සෙ කරන්න.</div>
+  </div>
+
+  <div class="section-block">
+    <div class="highlight-box">
+      "Minecraft doesn't give you a story. It gives you a world and lets you write your own." - Mojang Studios
+    </div>
+  </div>
+
+
+  <div class="section-block">
+    <p style="text-align: center; color: var(--hk-gold); font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.2em;">
+      THANK YOU FOR EXPLORING MINECRAFT
+    </p>
+    <p style="text-align: center; font-size: 13px; color: var(--dim);">
+      Project by White Cat Game Vault &bull; 2026
+    </p>
+  </div>
+
+</div>
+
+<footer style="padding: 4rem 2rem; border-top: 1px solid var(--border); text-align: center; background: #05060a;">
+  <div style="font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--text); letter-spacing: 2px;">
+    WHITE<span style="color:var(--hk-gold)">CAT</span> VAULT
+  </div>
+  <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">Explore the unseen lore of the gaming world.</p>
+</footer>
+
+<script src="../../../scripts/game/game-detail.js"></script>
+<script src="/scripts/site/pwa.js" defer></script>
+</body>
+</html>
